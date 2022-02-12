@@ -1,1 +1,4 @@
-@import './globals/test.css';
+@import './globals/typography.css';
+@import './globals/spacing.css';
+@import './globals/reset.css';
+@import './globals/responsive.css';

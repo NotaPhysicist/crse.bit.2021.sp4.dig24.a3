@@ -1,0 +1,45 @@
+/**************************************
+ GLOBALS / RESPONSIVE 
+ **************************************/
+
+/* 
+ * purecss.io breakpoints 
+ *
+ * sm @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-* 
+ * md @media screen and (min-width: 48em) ≥ 768px .pure-u-md-* 
+ * lg @media screen and (min-width: 64em) ≥ 1024px .pure-u-lg-* 
+ * xl @media screen and (min-width: 80em) ≥ 1280px .pure-u-xl-*
+ */
+ 
+/* mobile */  
+@media screen and (min-width: 38.5rem) {
+   :root {
+      /* text */ 
+      --text-scale-ratio: var(--text-base-size);
+   
+      /* spacing */ 
+      --space-unit: 1rem;
+   }
+}
+
+/* tablet */ 
+@media screen and (min-width: 48rem) {
+   :root {
+      /* text */ 
+      --text-scale-ratio: calc(var(--text-base-size) * 1.25);
+   
+      /* spacing */ 
+      --space-unit: 1.25rem;
+   }
+}
+
+/* desktop */ 
+@media screen and (min-width: 64rem) {
+   :root {
+      /* text */ 
+      --text-scale-ratio: calc(var(--text-base-size) * 1.35);
+
+      /* spacing */ 
+      --space-unit: 1.35rem;
+   }
+}

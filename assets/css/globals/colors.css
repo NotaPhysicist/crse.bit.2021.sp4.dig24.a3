@@ -1,0 +1,27 @@
+/**************************************
+ GLOBALS / COLORS
+ **************************************/ 
+
+/** 
+ * Colors used in the layout skeleton
+ * ----------------------------------
+ * 
+ * NOTE: Delete prior to deployment
+ */ 
+
+:root {
+   /**
+    * Skeleton colors. Delete before final deployment
+    */
+   --color-skeleton-grey-100: #292524;
+   --color-skeleton-grey-90:  #3e3b3a;
+   --color-skeleton-grey-80:  #545150;
+   --color-skeleton-grey-70:  #696666;
+   --color-skeleton-grey-60:  #7f7c7c;
+   --color-skeleton-grey-50:  #949292;
+   --color-skeleton-grey-40:  #a9a8a7;
+   --color-skeleton-grey-30:  #bfbebd;
+   --color-skeleton-grey-20:  #d4d3d3;
+   --color-skeleton-grey-10:  #eae9e9;
+   --color-skeleton-grey-00:  #ffffff;
+}

@@ -3,7 +3,7 @@
  **************************************/
 
 /* 
- * purecss.io breakpoints 
+ * purecss.io mobile-first breakpoints 
  *
  * sm @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-* 
  * md @media screen and (min-width: 48em) ≥ 768px .pure-u-md-* 
@@ -11,35 +11,37 @@
  * xl @media screen and (min-width: 80em) ≥ 1280px .pure-u-xl-*
  */
  
-/* mobile */  
-@media screen and (min-width: 38.5rem) {
+/* 1. default - as defined in global settings */ 
+
+/* 2. sm - mobile */  
+@media screen and (min-width: 38.5rem) { /* >= 568px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: var(--text-base-size);
+      --text-scale-ratio: var(--base-size);
    
       /* spacing */ 
-      --space-unit: 1rem;
+      --space-unit: var(--base-size);
    }
 }
 
-/* tablet */ 
-@media screen and (min-width: 48rem) {
+/* 3. md - tablet */ 
+@media screen and (min-width: 48rem) { /* >= 768px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: calc(var(--text-base-size) * 1.25);
+      --text-scale-ratio: calc(var(--base-size) * 1.25);
    
       /* spacing */ 
-      --space-unit: 1.25rem;
+      --space-unit: calc(var(--base-size) * 1.25);
    }
 }
 
-/* desktop */ 
-@media screen and (min-width: 64rem) {
+/* 4. lg - desktop */ 
+@media screen and (min-width: 64rem) { /* >= 1024px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: calc(var(--text-base-size) * 1.35);
+      --text-scale-ratio: calc(var(--base-size) * 1.35);
 
       /* spacing */ 
-      --space-unit: 1.35rem;
+      --space-unit: calc(var(--base-size) * 1.35);
    }
 }

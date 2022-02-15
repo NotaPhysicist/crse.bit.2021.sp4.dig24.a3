@@ -1,8 +1,38 @@
+/* Typography */ 
+
+/**
+ * Basic layout of the site, section by section
+ * --------------------------------------------
+ * 
+ * 1. Splash Animation+Introduction 
+ * 2. Who We Are 
+ * 3. How It Works + Image Carousel 
+ * 4. Definition: Happiness 
+ * 5. Definition: Happy 
+ * 6. Definition: Feeling 
+ * 7. Definition: Showing 
+ * 8. Definition: Pleasure 
+ * 9. Definition: Satisfaction 
+ * 10. Definition: Enjoyment 
+ * 11. Definition: Contentment 
+ * 12. Conclusion: Summary 
+ * 13. Conclusion: Wanting something and getting it 
+ * 14. Contact Us 15. Rewind
+ */ 
+
+body {
+   background-color: #ffedd5;
+} 
+
+.container {
+   margin-top: 3.5rem;
+} 
+
 /**************************************
  GLOBALS / TYPOGRAPHY
- **************************************/
+ **************************************/ 
 
-/* Adapted from: https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ */
+/* Adapted from: https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ */ 
 
 :root {
    /* body font size - nominally 16px */ 
@@ -20,304 +50,332 @@
    --text-xl:   calc(3.375 * var(--text-scale-ratio));
    --text-xxl:  calc(5.063 * var(--text-scale-ratio));
    --text-xxxl: calc(7.594 * var(--text-scale-ratio));
-}
+} 
 
-.text-xxxl         { font-size: var(--text-xxxl); }
+.text-xxxl         { font-size: var(--text-xxxl); } 
 
-h1, text-xxl       { font-size: var(--text-xxl); }
+h1, text-xxl       { font-size: var(--text-xxl); } 
 
-h2, text-xl        { font-size: var(--text-xl); }
+h2, text-xl        { font-size: var(--text-xl); } 
 
-h3, text-lg        { font-size: var(--text-lg); }
+h3, text-lg        { font-size: var(--text-lg); } 
 
-h4, text-md        { font-size: var(--text-md); }
+h4, text-md        { font-size: var(--text-md); } 
 
-.text-base         { font-size: var(--text-base); }
+.text-base         { font-size: var(--text-base); } 
 
-small, text-sm     { font-size: var(--text-sm); }
+small, text-sm     { font-size: var(--text-sm); } 
 
-.text-xs           { font-size: var(--text-xs); }
+.text-xs           { font-size: var(--text-xs); } 
 
-.text-xxs          { font-size: var(--text-xxs); }
+.text-xxs          { font-size: var(--text-xxs); } 
 
 /**************************************
  GLOBALS / SPACING
- **************************************/
+ **************************************/ 
 
 :root {
    /* body font size - nominally 16px */
    --space-unit: 1rem;
    
    /* spacing system (px) in multiples of 16 */
-   --space-2:   calc(var(--space) / 8);
-   --space-4:   calc(var(--space) / 4);
-   --space-8:   calc(var(--space) / 4 * 2);
-   --space-12:  calc(var(--space) / 4 * 3);
-   --space-16:  var(--space);
-   --space-32:  calc(var(--space) * 2);
-   --space-48:  calc(var(--space) * 3);
-   --space-64:  calc(var(--space) * 4);
-   --space-80:  calc(var(--space) * 5);
-   --space-96:  calc(var(--space) * 6);
-   --space-112: calc(var(--space) * 7);
-   --space-128: calc(var(--space) * 8);
-}
+   --space-2:   calc(var(--space-unit) / 8);
+   --space-4:   calc(var(--space-unit) / 4);
+   --space-8:   calc(var(--space-unit) / 4 * 2);
+   --space-12:  calc(var(--space-unit) / 4 * 3);
+   --space-16:  var(--space-unit);
+   --space-32:  calc(var(--space-unit) * 2);
+   --space-48:  calc(var(--space-unit) * 3);
+   --space-64:  calc(var(--space-unit) * 4);
+   --space-80:  calc(var(--space-unit) * 5);
+   --space-96:  calc(var(--space-unit) * 6);
+   --space-112: calc(var(--space-unit) * 7);
+   --space-128: calc(var(--space-unit) * 8);
+} 
 
-.margin-2   { margin: var(--space-2) };
+.margin-2   { margin: var(--space-2) } 
 
-.margin-4   { margin: var(--space-4) };
+.margin-4   { margin: var(--space-4) } 
 
-.margin-8   { margin: var(--space-8) };
+.margin-8   { margin: var(--space-8) } 
 
-.margin-12  { margin: var(--space-12) };
+.margin-12  { margin: var(--space-12) } 
 
-.margin-16  { margin: var(--space-16) };
+.margin-16  { margin: var(--space-16) } 
 
-.margin-32  { margin: var(--space-32) };
+.margin-32  { margin: var(--space-32) } 
 
-.margin-48  { margin: var(--space-48) };
+.margin-48  { margin: var(--space-48) } 
 
-.margin-64  { margin: var(--space-64) };
+.margin-64  { margin: var(--space-64) } 
 
-.margin-80  { margin: var(--space-80) };
+.margin-80  { margin: var(--space-80) } 
 
-.margin-96  { margin: var(--space-96) };
+.margin-96  { margin: var(--space-96) } 
 
-.margin-112 { margin: var(--space-112) };
+.margin-112 { margin: var(--space-112) } 
 
-.margin-128 { margin: var(--space-128) };
+.margin-128 { margin: var(--space-128) } 
 
-.margin-tp-2   { margin-top: var(--space-2) };
+.margin-tp-2   { margin-top: var(--space-2) } 
 
-.margin-tp-4   { margin-top: var(--space-4) };
+.margin-tp-4   { margin-top: var(--space-4) } 
 
-.margin-tp-8   { margin-top: var(--space-8) };
+.margin-tp-8   { margin-top: var(--space-8) } 
 
-.margin-tp-12  { margin-top: var(--space-12) };
+.margin-tp-12  { margin-top: var(--space-12) } 
 
-.margin-tp-16  { margin-top: var(--space-16) };
+.margin-tp-16  { margin-top: var(--space-16) } 
 
-.margin-tp-32  { margin-top: var(--space-32) };
+.margin-tp-32  { margin-top: var(--space-32) } 
 
-.margin-tp-48  { margin-top: var(--space-48) };
+.margin-tp-48  { margin-top: var(--space-48) } 
 
-.margin-tp-64  { margin-top: var(--space-64) };
+.margin-tp-64  { margin-top: var(--space-64) } 
 
-.margin-tp-80  { margin-top: var(--space-80) };
+.margin-tp-80  { margin-top: var(--space-80) } 
 
-.margin-tp-96  { margin-top: var(--space-96) };
+.margin-tp-96  { margin-top: var(--space-96) } 
 
-.margin-tp-112 { margin-top: var(--space-112) };
+.margin-tp-112 { margin-top: var(--space-112) } 
 
-.margin-tp-128 { margin-top: var(--space-128) };
+.margin-tp-128 { margin-top: var(--space-128) } 
 
-.margin-rt-2   { margin-right: var(--space-2) };
+.margin-rt-2   { margin-right: var(--space-2) } 
 
-.margin-rt-4   { margin-right: var(--space-4) };
+.margin-rt-4   { margin-right: var(--space-4) } 
 
-.margin-rt-8   { margin-right: var(--space-8) };
+.margin-rt-8   { margin-right: var(--space-8) } 
 
-.margin-rt-12  { margin-right: var(--space-12) };
+.margin-rt-12  { margin-right: var(--space-12) } 
 
-.margin-rt-16  { margin-right: var(--space-16) };
+.margin-rt-16  { margin-right: var(--space-16) } 
 
-.margin-rt-32  { margin-right: var(--space-32) };
+.margin-rt-32  { margin-right: var(--space-32) } 
 
-.margin-rt-48  { margin-right: var(--space-48) };
+.margin-rt-48  { margin-right: var(--space-48) } 
 
-.margin-rt-64  { margin-right: var(--space-64) };
+.margin-rt-64  { margin-right: var(--space-64) } 
 
-.margin-rt-80  { margin-right: var(--space-80) };
+.margin-rt-80  { margin-right: var(--space-80) } 
 
-.margin-rt-96  { margin-right: var(--space-96) };
+.margin-rt-96  { margin-right: var(--space-96) } 
 
-.margin-rt-112 { margin-right: var(--space-112) };
+.margin-rt-112 { margin-right: var(--space-112) } 
 
-.margin-rt-128 { margin-right: var(--space-128) };
+.margin-rt-128 { margin-right: var(--space-128) } 
 
-.margin-bm-2   { margin-bottom: var(--space-2) };
+.margin-bm-2   { margin-bottom: var(--space-2) } 
 
-.margin-bm-4   { margin-bottom: var(--space-4) };
+.margin-bm-4   { margin-bottom: var(--space-4) } 
 
-.margin-bm-8   { margin-bottom: var(--space-8) };
+.margin-bm-8   { margin-bottom: var(--space-8) } 
 
-.margin-bm-12  { margin-bottom: var(--space-12) };
+.margin-bm-12  { margin-bottom: var(--space-12) } 
 
-.margin-bm-16  { margin-bottom: var(--space-16) };
+.margin-bm-16  { margin-bottom: var(--space-16) } 
 
-.margin-bm-32  { margin-bottom: var(--space-32) };
+.margin-bm-32  { margin-bottom: var(--space-32) } 
 
-.margin-bm-48  { margin-bottom: var(--space-48) };
+.margin-bm-48  { margin-bottom: var(--space-48) } 
 
-.margin-bm-64  { margin-bottom: var(--space-64) };
+.margin-bm-64  { margin-bottom: var(--space-64) } 
 
-.margin-bm-80  { margin-bottom: var(--space-80) };
+.margin-bm-80  { margin-bottom: var(--space-80) } 
 
-.margin-bm-96  { margin-bottom: var(--space-96) };
+.margin-bm-96  { margin-bottom: var(--space-96) } 
 
-.margin-bm-112 { margin-bottom: var(--space-112) };
+.margin-bm-112 { margin-bottom: var(--space-112) } 
 
-.margin-bm-128 { margin-bottom: var(--space-128) };
+.margin-bm-128 { margin-bottom: var(--space-128) } 
 
-.margin-lt-2   { margin-left: var(--space-2) };
+.margin-lt-2   { margin-left: var(--space-2) } 
 
-.margin-lt-4   { margin-left: var(--space-4) };
+.margin-lt-4   { margin-left: var(--space-4) } 
 
-.margin-lt-8   { margin-left: var(--space-8) };
+.margin-lt-8   { margin-left: var(--space-8) } 
 
-.margin-lt-12  { margin-left: var(--space-12) };
+.margin-lt-12  { margin-left: var(--space-12) } 
 
-.margin-lt-16  { margin-left: var(--space-16) };
+.margin-lt-16  { margin-left: var(--space-16) } 
 
-.margin-lt-32  { margin-left: var(--space-32) };
+.margin-lt-32  { margin-left: var(--space-32) } 
 
-.margin-lt-48  { margin-left: var(--space-48) };
+.margin-lt-48  { margin-left: var(--space-48) } 
 
-.margin-lt-64  { margin-left: var(--space-64) };
+.margin-lt-64  { margin-left: var(--space-64) } 
 
-.margin-lt-80  { margin-left: var(--space-80) };
+.margin-lt-80  { margin-left: var(--space-80) } 
 
-.margin-lt-96  { margin-left: var(--space-96) };
+.margin-lt-96  { margin-left: var(--space-96) } 
 
-.margin-lt-112 { margin-left: var(--space-112) };
+.margin-lt-112 { margin-left: var(--space-112) } 
 
-.margin-lt-128 { margin-left: var(--space-128) };
+.margin-lt-128 { margin-left: var(--space-128) } 
 
-.padding-2   { padding: var(--space-2) };
+.padding-2   { padding: var(--space-2) } 
 
-.padding-4   { padding: var(--space-4) };
+.padding-4   { padding: var(--space-4) } 
 
-.padding-8   { padding: var(--space-8) };
+.padding-8   { padding: var(--space-8) } 
 
-.padding-12  { padding: var(--space-12) };
+.padding-12  { padding: var(--space-12) } 
 
-.padding-16  { padding: var(--space-16) };
+.padding-16  { padding: var(--space-16) } 
 
-.padding-32  { padding: var(--space-32) };
+.padding-32  { padding: var(--space-32) } 
 
-.padding-48  { padding: var(--space-48) };
+.padding-48  { padding: var(--space-48) } 
 
-.padding-64  { padding: var(--space-64) };
+.padding-64  { padding: var(--space-64) } 
 
-.padding-80  { padding: var(--space-80) };
+.padding-80  { padding: var(--space-80) } 
 
-.padding-96  { padding: var(--space-96) };
+.padding-96  { padding: var(--space-96) } 
 
-.padding-112 { padding: var(--space-112) };
+.padding-112 { padding: var(--space-112) } 
 
-.padding-128 { padding: var(--space-128) };
+.padding-128 { padding: var(--space-128) } 
 
-.padding-tp-2   { padding-top: var(--space-2) };
+.padding-tp-2   { padding-top: var(--space-2) } 
 
-.padding-tp-4   { padding-top: var(--space-4) };
+.padding-tp-4   { padding-top: var(--space-4) } 
 
-.padding-tp-8   { padding-top: var(--space-8) };
+.padding-tp-8   { padding-top: var(--space-8) } 
 
-.padding-tp-12  { padding-top: var(--space-12) };
+.padding-tp-12  { padding-top: var(--space-12) } 
 
-.padding-tp-16  { padding-top: var(--space-16) };
+.padding-tp-16  { padding-top: var(--space-16) } 
 
-.padding-tp-32  { padding-top: var(--space-32) };
+.padding-tp-32  { padding-top: var(--space-32) } 
 
-.padding-tp-48  { padding-top: var(--space-48) };
+.padding-tp-48  { padding-top: var(--space-48) } 
 
-.padding-tp-64  { padding-top: var(--space-64) };
+.padding-tp-64  { padding-top: var(--space-64) } 
 
-.padding-tp-80  { padding-top: var(--space-80) };
+.padding-tp-80  { padding-top: var(--space-80) } 
 
-.padding-tp-96  { padding-top: var(--space-96) };
+.padding-tp-96  { padding-top: var(--space-96) } 
 
-.padding-tp-112 { padding-top: var(--space-112) };
+.padding-tp-112 { padding-top: var(--space-112) } 
 
-.padding-tp-128 { padding-top: var(--space-128) };
+.padding-tp-128 { padding-top: var(--space-128) } 
 
-.padding-rt-2   { padding-right: var(--space-2) };
+.padding-rt-2   { padding-right: var(--space-2) } 
 
-.padding-rt-4   { padding-right: var(--space-4) };
+.padding-rt-4   { padding-right: var(--space-4) } 
 
-.padding-rt-8   { padding-right: var(--space-8) };
+.padding-rt-8   { padding-right: var(--space-8) } 
 
-.padding-rt-12  { padding-right: var(--space-12) };
+.padding-rt-12  { padding-right: var(--space-12) } 
 
-.padding-rt-16  { padding-right: var(--space-16) };
+.padding-rt-16  { padding-right: var(--space-16) } 
 
-.padding-rt-32  { padding-right: var(--space-32) };
+.padding-rt-32  { padding-right: var(--space-32) } 
 
-.padding-rt-48  { padding-right: var(--space-48) };
+.padding-rt-48  { padding-right: var(--space-48) } 
 
-.padding-rt-64  { padding-right: var(--space-64) };
+.padding-rt-64  { padding-right: var(--space-64) } 
 
-.padding-rt-80  { padding-right: var(--space-80) };
+.padding-rt-80  { padding-right: var(--space-80) } 
 
-.padding-rt-96  { padding-right: var(--space-96) };
+.padding-rt-96  { padding-right: var(--space-96) } 
 
-.padding-rt-112 { padding-right: var(--space-112) };
+.padding-rt-112 { padding-right: var(--space-112) } 
 
-.padding-rt-128 { padding-right: var(--space-128) };
+.padding-rt-128 { padding-right: var(--space-128) } 
 
-.padding-bm-2   { padding-bottom: var(--space-2) };
+.padding-bm-2   { padding-bottom: var(--space-2) } 
 
-.padding-bm-4   { padding-bottom: var(--space-4) };
+.padding-bm-4   { padding-bottom: var(--space-4) } 
 
-.padding-bm-8   { padding-bottom: var(--space-8) };
+.padding-bm-8   { padding-bottom: var(--space-8) } 
 
-.padding-bm-12  { padding-bottom: var(--space-12) };
+.padding-bm-12  { padding-bottom: var(--space-12) } 
 
-.padding-bm-16  { padding-bottom: var(--space-16) };
+.padding-bm-16  { padding-bottom: var(--space-16) } 
 
-.padding-bm-32  { padding-bottom: var(--space-32) };
+.padding-bm-32  { padding-bottom: var(--space-32) } 
 
-.padding-bm-48  { padding-bottom: var(--space-48) };
+.padding-bm-48  { padding-bottom: var(--space-48) } 
 
-.padding-bm-64  { padding-bottom: var(--space-64) };
+.padding-bm-64  { padding-bottom: var(--space-64) } 
 
-.padding-bm-80  { padding-bottom: var(--space-80) };
+.padding-bm-80  { padding-bottom: var(--space-80) } 
 
-.padding-bm-96  { padding-bottom: var(--space-96) };
+.padding-bm-96  { padding-bottom: var(--space-96) } 
 
-.padding-bm-112 { padding-bottom: var(--space-112) };
+.padding-bm-112 { padding-bottom: var(--space-112) } 
 
-.padding-bm-128 { padding-bottom: var(--space-128) };
+.padding-bm-128 { padding-bottom: var(--space-128) } 
 
-.padding-lt-2   { padding-left: var(--space-2) };
+.padding-lt-2   { padding-left: var(--space-2) } 
 
-.padding-lt-4   { padding-left: var(--space-4) };
+.padding-lt-4   { padding-left: var(--space-4) } 
 
-.padding-lt-8   { padding-left: var(--space-8) };
+.padding-lt-8   { padding-left: var(--space-8) } 
 
-.padding-lt-12  { padding-left: var(--space-12) };
+.padding-lt-12  { padding-left: var(--space-12) } 
 
-.padding-lt-16  { padding-left: var(--space-16) };
+.padding-lt-16  { padding-left: var(--space-16) } 
 
-.padding-lt-32  { padding-left: var(--space-32) };
+.padding-lt-32  { padding-left: var(--space-32) } 
 
-.padding-lt-48  { padding-left: var(--space-48) };
+.padding-lt-48  { padding-left: var(--space-48) } 
 
-.padding-lt-64  { padding-left: var(--space-64) };
+.padding-lt-64  { padding-left: var(--space-64) } 
 
-.padding-lt-80  { padding-left: var(--space-80) };
+.padding-lt-80  { padding-left: var(--space-80) } 
 
-.padding-lt-96  { padding-left: var(--space-96) };
+.padding-lt-96  { padding-left: var(--space-96) } 
 
-.padding-lt-112 { padding-left: var(--space-112) };
+.padding-lt-112 { padding-left: var(--space-112) } 
 
-.padding-lt-128 { padding-left: var(--space-128) };
+.padding-lt-128 { padding-left: var(--space-128) } 
+
+/**************************************
+ GLOBALS / COLORS
+ **************************************/ 
+
+/** 
+ * Colors used in the layout skeleton
+ * ----------------------------------
+ * 
+ * NOTE: Delete prior to deployment
+ */ 
+
+:root {
+   /**
+    * Skeleton colors. Delete before final deployment
+    */
+   --color-skeleton-grey-100: #292524;
+   --color-skeleton-grey-90:  #3e3b3a;
+   --color-skeleton-grey-80:  #545150;
+   --color-skeleton-grey-70:  #696666;
+   --color-skeleton-grey-60:  #7f7c7c;
+   --color-skeleton-grey-50:  #949292;
+   --color-skeleton-grey-40:  #a9a8a7;
+   --color-skeleton-grey-30:  #bfbebd;
+   --color-skeleton-grey-20:  #d4d3d3;
+   --color-skeleton-grey-10:  #eae9e9;
+   --color-skeleton-grey-00:  #ffffff;
+} 
 
 /**************************************
  GLOBALS / RESET
- **************************************/
+ **************************************/ 
 
-/* Adapted from: https://piccalil.li/blog/a-modern-css-reset/ */
+/* Adapted from: https://piccalil.li/blog/a-modern-css-reset/ */ 
 
-/* Box sizing rules */
+/* Box sizing rules */ 
 
 *,
 *::before,
 *::after {
    box-sizing: border-box;
-}
+} 
 
-/* Remove default margin */
+/* Remove default margin */ 
 
 body,
 h1,
@@ -330,56 +388,56 @@ blockquote,
 dl,
 dd {
    margin: 0;
-}
+} 
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */ 
 
 ul[role='list'],
 ol[role='list'] {
    list-style: none;
-}
+} 
 
-/* Set core root defaults */
+/* Set core root defaults */ 
 
 html:focus-within {
    scroll-behavior: smooth;
-}
+} 
 
-/* Set core body defaults */
+/* Set core body defaults */ 
 
 body {
    min-height: 100vh;
    text-rendering: optimizeSpeed;
    line-height: 1.5;
-}
+} 
 
-/* Anchor elements that don't have a class get default styles */
+/* Anchor elements that don't have a class get default styles */ 
 
 a:not([class]) {
    -webkit-text-decoration-skip: ink;
    text-decoration-skip-ink: auto;
-}
+} 
 
-/* Make images easier to work with */
+/* Make images easier to work with */ 
 
 img,
 picture {
    max-width: 100%;
    display: block;
-}
+} 
 
-/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and buttons */ 
 
 input,
 button,
 textarea,
 select {
    font: inherit;
-}
+} 
 
 /**************************************
  GLOBALS / RESPONSIVE 
- **************************************/
+ **************************************/ 
 
 /* 
  * purecss.io breakpoints 
@@ -388,9 +446,9 @@ select {
  * md @media screen and (min-width: 48em) ≥ 768px .pure-u-md-* 
  * lg @media screen and (min-width: 64em) ≥ 1024px .pure-u-lg-* 
  * xl @media screen and (min-width: 80em) ≥ 1280px .pure-u-xl-*
- */
+ */ 
 
-/* mobile */
+/* mobile */ 
 
 @media screen and (min-width: 38.5rem) {
    :root {
@@ -400,9 +458,9 @@ select {
       /* spacing */ 
       --space-unit: 1rem;
    }
-}
+} 
 
-/* tablet */
+/* tablet */ 
 
 @media screen and (min-width: 48rem) {
    :root {
@@ -412,11 +470,11 @@ select {
       /* spacing */ 
       --space-unit: 1.25rem;
    }
-}
+} 
 
-/* desktop */
+/* desktop */ 
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 64rem) { /* 1024px */ 
    :root {
       /* text */ 
       --text-scale-ratio: calc(var(--text-base-size) * 1.35);
@@ -424,4 +482,67 @@ select {
       /* spacing */ 
       --space-unit: 1.35rem;
    }
-}
+} 
+
+/**************************************
+ GLOBALS / UTILITIES
+ **************************************/ 
+
+/**
+ * ---------------- 
+ * Skeleton Classes
+ * ----------------
+ * 
+ * Classes used in the layout skeleton. 
+ * 
+ * NOTE: To be deleted prior to final deployment.  
+ */ 
+
+:root {
+   --test-color-green: green;
+} 
+
+.wireframe {
+   display: block;
+   width: 100%;
+   border: 1px solid var(--color-skeleton-grey-100);
+   color: var(--color-skeleton-grey-100);
+   height: calc(100vh - 3rem);
+} 
+
+.wf-s1-header {
+   height: 3.5rem;
+   background-color: var(--color-skeleton-grey-40);
+   position: fixed;
+   top: 0;
+} 
+
+.wf-s1-splash { background-color: var(--color-skeleton-grey-20); } 
+
+.wf-s2-who-we-are { background-color: var(--color-skeleton-grey-30); } 
+
+.wf-s3-how-it-works { background-color: var(--color-skeleton-grey-20); } 
+
+.wf-s4-defn-happiness { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s5-defn-happy { background-color: var(--color-skeleton-grey-20) } 
+
+.wf-s6-defn-feeling { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s7-defn-showing { background-color: var(--color-skeleton-grey-20) } 
+
+.wf-s8-defn-pleasure { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s9-defn-satisfaction { background-color: var(--color-skeleton-grey-20) } 
+
+.wf-s10-defn-enjoyment { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s11-defn-contentment { background-color: var(--color-skeleton-grey-20) } 
+
+.wf-s12-summary { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s13-conclusion { background-color: var(--color-skeleton-grey-20) } 
+
+.wf-s14-contact-us { background-color: var(--color-skeleton-grey-30) } 
+
+.wf-s15-rewind { background-color: var(--color-skeleton-grey-20) }

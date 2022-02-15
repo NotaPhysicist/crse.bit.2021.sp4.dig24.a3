@@ -1,1 +1,34 @@
 /* Typography */ 
+
+/**
+ * Basic layout of the site, section by section
+ * --------------------------------------------
+ * 
+ * 1. Splash Animation+Introduction 
+ * 2. Who We Are 
+ * 3. How It Works + Image Carousel 
+ * 4. Definition: Happiness 
+ * 5. Definition: Happy 
+ * 6. Definition: Feeling 
+ * 7. Definition: Showing 
+ * 8. Definition: Pleasure 
+ * 9. Definition: Satisfaction 
+ * 10. Definition: Enjoyment 
+ * 11. Definition: Contentment 
+ * 12. Conclusion: Summary 
+ * 13. Conclusion: Wanting something and getting it 
+ * 14. Contact Us 15. Rewind
+ */
+
+:root {
+   --base-size: 1rem; /* 16px per most user default settings */ 
+}
+
+body {
+   background-color: #ffedd5;
+}
+
+.container {
+   margin-top: 3.5rem;
+   position: relative;
+}

@@ -1,0 +1,31 @@
+/**************************************
+ GLOBALS / TYPOGRAPHY
+ **************************************/
+
+/* Adapted from: https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ */
+
+:root {
+   /* mobile-first default size */ 
+   --text-scale-ratio: calc(var(--base-size) * 0.8); 
+   
+   /* type-scale.com - 1.500 - Perfect Fitth */ 
+   --text-xxs:  calc(0.296 * var(--text-scale-ratio));
+   --text-xs:   calc(0.444 * var(--text-scale-ratio));
+   --text-sm:   calc(0.667 * var(--text-scale-ratio));
+   --text-base: calc(1     * var(--text-scale-ratio));
+   --text-md:   calc(1.50  * var(--text-scale-ratio));
+   --text-lg:   calc(2.25  * var(--text-scale-ratio));
+   --text-xl:   calc(3.375 * var(--text-scale-ratio));
+   --text-xxl:  calc(5.063 * var(--text-scale-ratio));
+   --text-xxxl: calc(7.594 * var(--text-scale-ratio));
+}
+   
+.text-xxxl        { font-size: var(--text-xxxl); }
+.text-xxl         { font-size: var(--text-xxl); }
+.text-xl          { font-size: var(--text-xl); }
+.text-lg          { font-size: var(--text-lg); }
+.text-md          { font-size: var(--text-md); }
+.text-base        { font-size: var(--text-base); }
+.text-sm, small   { font-size: var(--text-sm); }
+.text-xs          { font-size: var(--text-xs); }
+.text-xxs         { font-size: var(--text-xxs); }

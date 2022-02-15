@@ -1,0 +1,23 @@
+/**************************************
+ GLOBALS / SPACING
+ **************************************/
+
+ :root {
+   /* mobile-first default size */
+   --space-unit: calc(var(--base-unit) * 0.8);
+   
+   /* spacing system (px) in multiples of 16 */
+   --space-2:   calc(var(--space-unit) / 8);
+   --space-4:   calc(var(--space-unit) / 4);
+   --space-8:   calc(var(--space-unit) / 4 * 2);
+   --space-12:  calc(var(--space-unit) / 4 * 3);
+   --space-16:  var(--space-unit);
+   --space-32:  calc(var(--space-unit) * 2);
+   --space-48:  calc(var(--space-unit) * 3);
+   --space-64:  calc(var(--space-unit) * 4);
+   --space-80:  calc(var(--space-unit) * 5);
+   --space-96:  calc(var(--space-unit) * 6);
+   --space-112: calc(var(--space-unit) * 7);
+   --space-128: calc(var(--space-unit) * 8);
+}
+

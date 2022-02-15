@@ -1,0 +1,144 @@
+/**************************************/
+/* SECTIONS / SKELETON                */
+/**************************************/
+
+/** 
+ * Classes used in the layout skeleton. 
+ * 
+ * NOTE: To be deleted prior to final deployment.  
+ */
+
+:root {
+   --test-color-green: green;
+}
+
+.wireframe {
+   display: block;
+   width: 100%;
+   border: 1px solid var(--color-skeleton-grey-100);
+   color: var(--color-skeleton-grey-100);
+   height: calc(100vh - 3rem);
+}
+
+.wireframe-title {
+   position: absolute;
+   top: 0.5rem;
+   left: 0.5rem;
+}
+
+/*make purecss grid and unit classes visible */
+.pure-g {
+   box-sizing: border-box;
+   border: 1px solid #3b82f6;
+}
+
+.pure-g>* {
+   box-sizing: border-box;
+   border: 1px solid #f59e0b;
+}
+
+
+/* ---- sections ---- */
+
+.wf-s1-header {
+   height: 3.5rem;
+   background-color: var(--color-skeleton-grey-40);
+   position: fixed;
+   top: 0;
+}
+
+.wf-s1-splash {
+   background-color: var(--color-skeleton-grey-20);
+   /* position: relative; */
+}
+
+.wf-s2-who-we-are {
+   background-color: var(--color-skeleton-grey-30);
+}
+
+.wf-s3-how-it-works {
+   background-color: var(--color-skeleton-grey-20);
+}
+
+.wf-s4-defn-happiness {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s5-defn-happy {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+.wf-s6-defn-feeling {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s7-defn-showing {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+.wf-s8-defn-pleasure {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s9-defn-satisfaction {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+.wf-s10-defn-enjoyment {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s11-defn-contentment {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+.wf-s12-summary {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s13-conclusion {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+.wf-s14-contact-us {
+   background-color: var(--color-skeleton-grey-30)
+}
+
+.wf-s15-rewind {
+   background-color: var(--color-skeleton-grey-20)
+}
+
+/*
+.height-2
+.height-4
+.height-8
+.height-12
+.height-16
+.height-32
+.height-64
+.height-96
+.height-128
+.height-160
+.height-192
+.height-224
+.height-256
+.height-288
+.height-320
+.height-352
+.height-416
+.height-448
+.height-480
+*/
+
+.height-512 { height: calc(var(--space-unit) * 51.2) }
+.height-576 { height: calc(var(--space-unit) * 57.6) }
+.height-640 { height: calc(var(--space-unit) * 64.0) }
+.height-704 { height: calc(var(--space-unit) * 70.4) }
+.height-768 { height: calc(var(--space-unit) * 76.8) }
+.height-832 { height: calc(var(--space-unit) * 83.2) }
+.height-896 { height: calc(var(--space-unit) * 89.6) }
+.height-960 { height: calc(var(--space-unit) * 96.0) }
+
+
+
+

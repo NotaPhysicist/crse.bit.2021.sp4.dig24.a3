@@ -4,13 +4,69 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/main-min.css">
+   
+   <!-- purecss.io grid and responsive module only -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+
+   
+   <!-- shoelace.style -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
+   
+   <!-- custom css -->
+   <link rel="stylesheet" href="./assets/css/main.css">
+   <!-- <link rel="stylesheet" href="./assets/css/main-min.css"> -->
+   
    <title>Happiness, the word, dissected</title>
 </head>
 <body>
-   <h1>Happiness</h1>
-   <p>A word in the English language. </p>
-   <p>Bought to you by <strong>The Society for the Understanding of Important English Words</strong></p>
+   <!-- 
+      shoelace.style - must use 3 of:
+         * dialog
+         * progress bar
+         * switch
+         * tab panel
+         * tool tip 
+   -->
+   <div class="container">
+      
+      
+      <header class="header">
+         <div class="wireframe wf-s1-header">
+            <sl-progress-bar value="indeterminate" style="--height: 1rem;"></sl-progress-bar>
+         </div>
+      </header>
+      
+
+      <section class="wireframe wf-s1-splash">
+         <span class="wireframe-title">splash</span>
+         <div class="pure-g">
+            <div class="pure-u-lg-1-3">hello</div>
+            <div class="pure-u-lg-1-3">there</div>
+            <div class="pure-u-lg-1-3">world</div>
+         </div>
+      </section>
+      
+      <section class="wireframe wf-s2-who-we-are">who we are</section>
+      <section class="wireframe wf-s3-how-it-works">how it works</section>
+      <section class="wireframe wf-s4-defn-happiness">defn: happiness</section>
+      <section class="wireframe wf-s5-defn-happy">defn: happy</section>
+      <section class="wireframe wf-s6-defn-feeling">defn: feeling</section>
+      <section class="wireframe wf-s7-defn-showing">defn: showing</section>
+      <section class="wireframe wf-s8-defn-pleasure">defn: pleasure</section>
+      <section class="wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
+      <section class="wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
+      <section class="wireframe wf-s11-defn-contentment">defn: contentment</section>
+      <section class="wireframe wf-s12-summary">summary</section>
+      <section class="wireframe wf-s13-conclusion">conclusion</section>
+      <section class="wireframe wf-s14-contact-us">contact us</section>
+      <section class="wireframe wf-s15-rewind">rewind</section>
+
+   </div><!-- / div.container -->
+
    
+   
+   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
 </body>
 </html>

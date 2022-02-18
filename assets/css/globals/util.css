@@ -11,3 +11,34 @@
 .display-block { display: block; }
 .display-inline-block { display: inline-block; }
 
+
+/* --- underline animation --- */ 
+
+.link:link,
+.link:visited {
+   display: inline-block;
+   position: relative;
+   /* padding: 0 var(--space-4) */
+}
+
+.link::after {
+   display: block;
+   position: absolute;
+   content: "";
+   background-color: rgba(154, 52, 18, 0.50);
+   width: 110%;
+   transform: translateX(-5%) translateY(-110%);
+   transition: height 0.3s ease;
+   height: 0;
+}
+
+.link:hover::after,
+.link:active::after {
+   height: var(--space-12);
+}
+
+
+
+
+
+

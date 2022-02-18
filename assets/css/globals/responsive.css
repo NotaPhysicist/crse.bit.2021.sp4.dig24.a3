@@ -13,7 +13,7 @@
  
 /* 1. default - as defined in global settings */ 
 
-/* 2. sm - mobile */  
+/* 2. sm - small tablet */  
 @media screen and (min-width: 35.5rem) { /* >= 568px */ 
    :root {
       /* text */ 
@@ -24,7 +24,7 @@
    }
 }
 
-/* 3. md - tablet */ 
+/* 3. md - large tablet */ 
 @media screen and (min-width: 48rem) { /* >= 768px */ 
    :root {
       /* text */ 
@@ -32,6 +32,10 @@
    
       /* spacing */ 
       --space-unit: calc(var(--base-unit) * 1.1);
+   }
+
+   img.logo {
+      width: 16rem;
    }
 }
 
@@ -43,5 +47,9 @@
 
       /* spacing */ 
       --space-unit: calc(var(--base-unit) * 1.2);
+   }
+
+   img.logo {
+      width: 18rem;
    }
 }

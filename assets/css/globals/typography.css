@@ -27,6 +27,9 @@
    --text-xl:   calc(3.375 * var(--text-scale-ratio));
    --text-xxl:  calc(5.063 * var(--text-scale-ratio));
    --text-xxxl: calc(7.594 * var(--text-scale-ratio));
+
+   --line-height-xs: 1.05;
+   --line-height-md: 1.6;
 }
    
 .text-xxxl        { font-size: var(--text-xxxl); }
@@ -48,7 +51,7 @@ textarea,
 .pure-g [class *="pure-u"] {
    font-family: 'Poppins', sans-serif;
    font-weight: 300;
-   line-height: 1.6;
+   line-height: var(--line-height-md);
 }
 
 h1,

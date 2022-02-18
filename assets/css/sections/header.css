@@ -19,23 +19,20 @@
 .header__inner {
    display: flex;
    align-items: end;
-   justify-content: space-between;  
+   justify-content: space-between;
+   position: relative;  
 }
 
 .logo {
-   margin: var(--space-8);
-   width: 17rem;
+   display: inline-block;
+   margin: var(--space-8) var(--space-4) 0;
+   width: 14rem;
 }
 
-.header__link:link,
-.header__link:visited {
-   margin: var(--space-8) var(--space-12);
+.header__link {
+   margin: 0 var(--space-16);
 }
 
-.header__link:hover,
-.header__link:active {
-   text-decoration: underline;
-}
 
 
 

@@ -1,0 +1,43 @@
+/**************************************/
+/* SECTION / MENU                     */
+/**************************************/
+
+.header {
+   position: fixed;
+   width: 100%;
+}
+
+.progress-bar {
+   --track-color: none;
+   --indicator-color: var(--color-accent);
+}
+
+.progress-bar::part(base) {
+   border-radius: 0;
+}
+
+.header__inner {
+   display: flex;
+   align-items: end;
+   justify-content: space-between;  
+}
+
+.logo {
+   margin: var(--space-8);
+   width: 17rem;
+}
+
+.header__link:link,
+.header__link:visited {
+   margin: var(--space-8) var(--space-12);
+}
+
+.header__link:hover,
+.header__link:active {
+   text-decoration: underline;
+}
+
+
+
+
+

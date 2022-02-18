@@ -1,4 +1,6 @@
-/* Typography */ 
+/**************************************/
+/* GLOBALS / GLOBALS 
+/**************************************/
 
 /**
  * Basic layout of the site, section by section
@@ -21,14 +23,29 @@
  */
 
 :root {
-   --base-size: 1rem; /* 16px per most user default settings */ 
+   --base-unit: 1rem; /* 16px per most user default settings */
+   
+   --site-width: 120rem;
 }
 
 body {
-   background-color: #ffedd5;
+   background-color: var(--color-white);
+   
+   /* waiting for custom components to load */ 
+   opacity: 0;
 }
 
-.container {
-   margin-top: 3.5rem;
-   position: relative;
+/* custom compoents have loaded */ 
+body.ready {
+   opacity: 1;
+   transition: all 0.25s; 
+}
+
+a {
+   text-decoration: none;
+   color: var(--color--main);
+}
+
+.section {
+   min-height: 100vh;
 }

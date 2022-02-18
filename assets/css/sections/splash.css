@@ -1,0 +1,37 @@
+/**************************************/
+/* SECTION / SPLASH                   */ 
+/**************************************/
+
+.splash-section__inner {
+   height: 100vh;
+   
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.splash-title {
+   position: relative;
+}
+
+.splash-title__word {
+   font-size: var(--text-xl);
+   text-align: center;
+   font-weight: 400;
+   
+   display: block;
+   position: absolute;
+   transform: translateX(-50%) translateY(-50%);
+}
+
+.splash-title__word--1 { color: var(--color-main); }
+.splash-title__word--2 { color: var(--color-accent); }
+.splash-title__word--3 { color: var(--color-accent-tint-10); }
+.splash-title__word--4 { color: var(--color-accent-tint-20); }
+.splash-title__word--5 { color: var(--color-accent-tint-30); }
+.splash-title__word--6 { color: var(--color-accent-tint-40); }
+.splash-title__word--7 { color: var(--color-accent-tint-50); }
+.splash-title__word--8 { color: var(--color-accent-tint-60); }
+

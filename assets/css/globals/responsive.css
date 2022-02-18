@@ -14,13 +14,13 @@
 /* 1. default - as defined in global settings */ 
 
 /* 2. sm - mobile */  
-@media screen and (min-width: 38.5rem) { /* >= 568px */ 
+@media screen and (min-width: 35.5rem) { /* >= 568px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: var(--base-size);
+      --text-scale-ratio: var(--base-unit);
    
       /* spacing */ 
-      --space-unit: var(--base-size);
+      --space-unit: var(--base-unit);
    }
 }
 
@@ -28,10 +28,10 @@
 @media screen and (min-width: 48rem) { /* >= 768px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: calc(var(--base-size) * 1.25);
+      --text-scale-ratio: calc(var(--base-unit) * 1.1);
    
       /* spacing */ 
-      --space-unit: calc(var(--base-size) * 1.25);
+      --space-unit: calc(var(--base-unit) * 1.1);
    }
 }
 
@@ -39,9 +39,9 @@
 @media screen and (min-width: 64rem) { /* >= 1024px */ 
    :root {
       /* text */ 
-      --text-scale-ratio: calc(var(--base-size) * 1.35);
+      --text-scale-ratio: calc(var(--base-unit) * 1.2);
 
       /* spacing */ 
-      --space-unit: calc(var(--base-size) * 1.35);
+      --space-unit: calc(var(--base-unit) * 1.2);
    }
 }

@@ -2,11 +2,20 @@
  GLOBALS / TYPOGRAPHY
  **************************************/
 
-/* Adapted from: https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ */
-
+/**
+ * Fonts (both from fonts.google.com) 
+ * ----------------------------------  
+ * Body: 'Poppins', serif 
+ * Headings: 'Playfair Display', sans-serif
+ */
+ 
+/**
+ * Type scale implementation adapted from: 
+ * https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ 
+ */
 :root {
    /* mobile-first default size */ 
-   --text-scale-ratio: calc(var(--base-size) * 0.8); 
+   --text-scale-ratio: calc(var(--base-unit) * 0.9); 
    
    /* type-scale.com - 1.500 - Perfect Fitth */ 
    --text-xxs:  calc(0.296 * var(--text-scale-ratio));
@@ -29,3 +38,27 @@
 .text-sm, small   { font-size: var(--text-sm); }
 .text-xs          { font-size: var(--text-xs); }
 .text-xxs         { font-size: var(--text-xxs); }
+
+/* typography */
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *="pure-u"] {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 300;
+   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Playfair Display', sans-serif;
+   font-weight: 400;
+   line-height: 1.05;
+   letter-spacing: -1px;
+}

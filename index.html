@@ -10,6 +10,10 @@
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
 
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
    
    <!-- shoelace.style -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
@@ -21,52 +25,63 @@
    <title>Happiness, the word, dissected</title>
 </head>
 <body>
-   <!-- 
-      shoelace.style - must use 3 of:
-         * dialog
-         * progress bar
-         * switch
-         * tab panel
-         * tool tip 
-   -->
-   <div class="container">
-      
-      
-      <header class="header">
-         <div class="wireframe wf-s1-header">
-            <sl-progress-bar value="indeterminate" style="--height: 1rem;"></sl-progress-bar>
+   
+   <!-- HEADER, MENU AND PROGRESS BAR - fixed to top -->
+   <header class="header">
+      <sl-progress-bar value="2" class="progress-bar"></sl-progress-bar>
+      <div class="header__inner">
+         <img src="./assets/svg/suiew-logo.svg" alt="SUIEW logo" class="logo">
+         <a href="#" class="header__link text-base">Contact</a>
+      </div>
+   </header>
+   
+   <!-- SPLASH SECTION  -->
+   <section class="section splash-section">
+      <div class="splash-section__inner">
+         <div class="splash-title">
+            <span class="splash-title__word splash-title__word--8">contentment</span>
+            <span class="splash-title__word splash-title__word--7">enjoyment</span>
+            <span class="splash-title__word splash-title__word--6">satisfaction</span>
+            <span class="splash-title__word splash-title__word--5">pleasure</span>
+            <span class="splash-title__word splash-title__word--4">showing</span>
+            <span class="splash-title__word splash-title__word--3">feeling</span>
+            <span class="splash-title__word splash-title__word--2">happy</span>
+            <span class="splash-title__word splash-title__word--1">happiness</span>
          </div>
-      </header>
-      
+      </div>
+   </section>
+   
+   <!--  -->
 
-      <section class="wireframe wf-s1-splash">
-         <span class="wireframe-title">splash</span>
-         <div class="pure-g">
-            <div class="pure-u-lg-1-3">hello</div>
-            <div class="pure-u-lg-1-3">there</div>
-            <div class="pure-u-lg-1-3">world</div>
-         </div>
-      </section>
-      
-      <section class="wireframe wf-s2-who-we-are">who we are</section>
-      <section class="wireframe wf-s3-how-it-works">how it works</section>
-      <section class="wireframe wf-s4-defn-happiness">defn: happiness</section>
-      <section class="wireframe wf-s5-defn-happy">defn: happy</section>
-      <section class="wireframe wf-s6-defn-feeling">defn: feeling</section>
-      <section class="wireframe wf-s7-defn-showing">defn: showing</section>
-      <section class="wireframe wf-s8-defn-pleasure">defn: pleasure</section>
-      <section class="wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
-      <section class="wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
-      <section class="wireframe wf-s11-defn-contentment">defn: contentment</section>
-      <section class="wireframe wf-s12-summary">summary</section>
-      <section class="wireframe wf-s13-conclusion">conclusion</section>
-      <section class="wireframe wf-s14-contact-us">contact us</section>
-      <section class="wireframe wf-s15-rewind">rewind</section>
+   <section class="wireframe wf-s2-who-we-are">who we are</section>
+   <section class="wireframe wf-s3-how-it-works">how it works</section>
+   <section class="wireframe wf-s4-defn-happiness">defn: happiness</section>
+   <section class="wireframe wf-s5-defn-happy">defn: happy</section>
+   <section class="wireframe wf-s6-defn-feeling">defn: feeling</section>
+   <section class="wireframe wf-s7-defn-showing">defn: showing</section>
+   <section class="wireframe wf-s8-defn-pleasure">defn: pleasure</section>
+   <section class="wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
+   <section class="wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
+   <section class="wireframe wf-s11-defn-contentment">defn: contentment</section>
+   <section class="wireframe wf-s12-summary">summary</section>
+   <section class="wireframe wf-s13-conclusion">conclusion</section>
+   <section class="wireframe wf-s14-contact-us">contact us</section>
+   <section class="wireframe wf-s15-rewind">rewind</section>
 
-   </div><!-- / div.container -->
+
 
    
    
    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
+
+   <!-- eleminate FOUCE -->
+   <script type="module">
+      await Promise.allSettled([
+         customElements.whenDefined('sl-progress-bar'),
+         customElements.whenDefined('sl-icon')
+      ]);
+
+      document.body.classList.add('ready');
+   </script>
 </body>
 </html>

@@ -2,23 +2,48 @@
 /* SECTION / WHO WE ARE
 /**************************************/
 
-.column { }
+/* --- image column --- */
 
-.image {
-   
-   /* background-color: rgb(228, 227, 207);   */
+.image-col { 
+   /* height: 100vh; */
+   /* background-color: rgb(228, 227, 207);  */
+   border: 1px dashed rgb(196, 195, 195);
+
+   position: relative;
 }
 
-.text {
+.circle {
+   width: 100vw;
+   height: 100vw;
+   border: 2px solid var(--color-accent-tint-40);
+   border-radius: 50%;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -10;
+   transform: translate(-30vw, -7.5vw);
+}
+
+
+
+
+/* --- text column --- */
+
+.text-col {
    height: 100vh;
-   padding: var(--space-12);
    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    
-   border: 1px dashed rgb(196, 195, 195)
+   /* border: 1px dashed rgb(196, 195, 195) */
    /* background-color: rgb(192, 191, 176);   */
 }
 
-.aside {
-   
-   /* background-color: rgb(160, 159, 147);   */
-}
+
+
+
+/* --- aside column --- */
+
+/* .aside-col { background-color: rgb(160, 159, 147); } */

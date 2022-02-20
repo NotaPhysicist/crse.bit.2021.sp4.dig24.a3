@@ -12,6 +12,7 @@
    --space-8:   calc(var(--space-unit) / 4 * 2);
    --space-12:  calc(var(--space-unit) / 4 * 3);
    --space-16:  var(--space-unit);
+   --space-24:  calc(var(--space-unit) / 2 * 3);
    --space-32:  calc(var(--space-unit) * 2);
    --space-48:  calc(var(--space-unit) * 3);
    --space-64:  calc(var(--space-unit) * 4);

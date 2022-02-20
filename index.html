@@ -76,42 +76,56 @@
       <div class="container">
 
          <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-4-24 pure-u-md-7-24 pure-u-lg-8-24">
-               <div class="column image"></div>
+            <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+               <div class="image-col">
+                     <!-- rotating circle, positioned to the text-wrapper box -->
+                     <div class="circle"><!-- placeholder --></div>   
+               </div>
             </div>
+            
             <div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
-               <div class="column text">
-
-                  <h3 class="text__heading">
-                     Who we are<span class="period">.</span>
-                  </h3>                  
-                  <text class="text__p">
-                     The <b class="bold">Society for the Understanding of Important English Words</b>, is a scientific DAO dedicated to the exploration of the meanings of important English words. 
-                  </text>
-                  <h3 class="text__heading">
-                     What's a DAO<span class="period">?</span>
-                  </h3>                  
-                  <p class="text__p">
-                     A DAO is a <em>ecentralized autonomous 
-                        organisation</em><span class="period">.</span>
-                  </p>
-                  <p class="text__link">
-                     Learn more about a DAO ⟶
-                  </p>
-                  <h3 class="text__heading">
-                     More about us<span class="period">.</span>
-                  </h3>
-                  <p class="text__link">
-                     The <b class="bold">Society</b> is an invitation-only, private organization of like-minded, globally distributed language scholars with the shared mission of promoting important words of the English language. And not just English words, but important words in all languages everywhere. 
-                  </p>
-                  <p class="text_link">
-                     We're guilty of taking this a tiny bit too seriously. But here we are, and we love what we do: and we hope you'll stick around for a minute or two to view this experimental presentation.  
-                  </p>
+               <div class="text-col">
+                  
+                  <div class="text-wrapper">
+                     
+                     <h3 class="text__heading">
+                        Who we are<span class="period">.</span>
+                     </h3>                  
+                     <p class="text__p">
+                        The <b class="bold">Society for the Understanding of Important English Words</b>, is a scientific DAO dedicated to the exploration of the meanings of important English words. 
+                     </p>
+                     
+                     <h3 class="text__heading">
+                        What's a DAO<span class="period">?</span>
+                     </h3>                  
+                     <p class="text__p">
+                        A DAO is a <em>ecentralized autonomous 
+                           organisation</em><span class="period">.</span>
+                     </p>
+                     <p class="text__p">
+                        <a href="https://ethereum.org/en/dao/" class="text__link link">
+                           Learn more about a DAO
+                        </a>
+                        <sl-icon name="arrow-right" class="text__i-arrow"></sl-icon>
+                     </p>
+                     
+                     <h3 class="text__heading">
+                        More about us<span class="period">.</span>
+                     </h3>
+                     <p class="text__p">
+                        The <b class="bold">Society</b> is an invitation-only, private organization of like-minded, globally distributed language scholars with the shared mission of promoting important words of the English language. <em>And not just English words, but important words in all languages everywhere.</em> 
+                     </p>
+                     <p class="text__p">
+                        Some will say that we take this a tad too seriously; but here we are, and we love what we do; and we hope you'll stick around to view this experimental presentation.  
+                     </p>
+                  
+                  </div><!-- /div.text-wrapper -->
 
                </div>
             </div>
-            <div class="pure-u-1 pure-u-sm-1-24 pure-u-md-2-24 pure-u-lg-3-24">
-               <div class="column aside"></div>
+            
+            <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+               <div class="aside-col"></div>
             </div>
          </div>
 
@@ -139,7 +153,7 @@
    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
 
    <!-- eleminate FOUCE in shoelace.style components -->
-   <script type="module">
+      <script type="module">
       await Promise.allSettled([
          customElements.whenDefined('sl-progress-bar'),
          customElements.whenDefined('sl-icon')

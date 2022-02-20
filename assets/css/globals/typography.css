@@ -54,6 +54,7 @@ textarea,
    font-family: 'Poppins', sans-serif;
    font-weight: 300;
    line-height: var(--line-height-md);
+   color: var(--color--main);
 }
 
 h1,
@@ -65,8 +66,12 @@ h6 {
    font-family: 'Playfair Display', sans-serif;
    font-weight: 400;
    line-height: var(--line-height-sm);
-   letter-spacing: -1px;
    color: var(--color-main);
+}
+
+a {
+   text-decoration: none;
+   color: var(--color--main);
 }
 
 

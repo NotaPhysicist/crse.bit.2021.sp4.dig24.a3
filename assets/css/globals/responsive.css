@@ -11,26 +11,20 @@
  * xl @media screen and (min-width: 80em) ≥ 1280px .pure-u-xl-*
  */
  
-/* 1. default - as defined in global settings */ 
+/* default - mobile */ 
 
-/* 2. sm - small tablet */  
+/* sm - small tablet */  
 @media screen and (min-width: 35.5rem) { /* >= 568px */ 
    :root {
-      /* text */ 
       --text-scale-ratio: var(--base-unit);
-   
-      /* spacing */ 
       --space-unit: var(--base-unit);
    }
 }
 
-/* 3. md - large tablet */ 
+/* md - large tablet */ 
 @media screen and (min-width: 48rem) { /* >= 768px */ 
    :root {
-      /* text */ 
       --text-scale-ratio: calc(var(--base-unit) * 1.1);
-   
-      /* spacing */ 
       --space-unit: calc(var(--base-unit) * 1.1);
    }
 
@@ -39,13 +33,10 @@
    }
 }
 
-/* 4. lg - desktop */ 
+/* lg - desktop */ 
 @media screen and (min-width: 64rem) { /* >= 1024px */ 
    :root {
-      /* text */ 
       --text-scale-ratio: calc(var(--base-unit) * 1.2);
-
-      /* spacing */ 
       --space-unit: calc(var(--base-unit) * 1.2);
    }
 

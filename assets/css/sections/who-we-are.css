@@ -1,0 +1,24 @@
+/**************************************/
+/* SECTION / WHO WE ARE
+/**************************************/
+
+.column { }
+
+.image {
+   
+   /* background-color: rgb(228, 227, 207);   */
+}
+
+.text {
+   height: 100vh;
+   padding: var(--space-12);
+   
+   
+   border: 1px dashed rgb(196, 195, 195)
+   /* background-color: rgb(192, 191, 176);   */
+}
+
+.aside {
+   
+   /* background-color: rgb(160, 159, 147);   */
+}

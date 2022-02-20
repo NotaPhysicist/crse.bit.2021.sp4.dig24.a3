@@ -2,21 +2,23 @@
 /* SECTION / SPLASH                   */ 
 /**************************************/
 
-.splash-section__inner {
+.splash__inner {
    height: 100vh;
    
 
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+   gap: var(--space-64);
 
 }
 
-.splash-title {
+.title {
    position: relative;
 }
 
-.splash-title__word {
+.title__word {
    font-size: var(--text-xl);
    text-align: center;
    font-weight: 400;
@@ -26,12 +28,51 @@
    transform: translateX(-50%) translateY(-50%);
 }
 
-.splash-title__word--1 { color: var(--color-main); }
-.splash-title__word--2 { color: var(--color-accent); }
-.splash-title__word--3 { color: var(--color-accent-tint-10); }
-.splash-title__word--4 { color: var(--color-accent-tint-20); }
-.splash-title__word--5 { color: var(--color-accent-tint-30); }
-.splash-title__word--6 { color: var(--color-accent-tint-40); }
-.splash-title__word--7 { color: var(--color-accent-tint-50); }
-.splash-title__word--8 { color: var(--color-accent-tint-60); }
+.title__word--1 { color: var(--color-main); }
+.title__word--2 { color: var(--color-accent); }
+.title__word--3 { color: var(--color-accent-tint-10); }
+.title__word--4 { color: var(--color-accent-tint-20); }
+.title__word--5 { color: var(--color-accent-tint-30); }
+.title__word--6 { color: var(--color-accent-tint-40); }
+.title__word--7 { color: var(--color-accent-tint-50); }
+.title__word--8 { color: var(--color-accent-tint-60); }
+
+.subtitle {
+   margin: 0 var(--space-12);
+   max-width: 50rem;
+   text-align: center;
+   line-height: var(--line-height-sl);
+}
+
+/* --- chevron down icon --- */
+
+.cd-icon-wrapper {
+   position: absolute;
+   bottom: 0;
+   margin-bottom: var(--space-8);
+   width: 100%;
+   
+   --sl-tooltip-arrow-size: 0;
+}
+
+.cd-icon-wrapper__inner {
+   position: relative;
+   left: 50%;
+}
+
+.tool-tip {
+   margin: 0 auto;
+}
+
+.chevron-down {
+   font-size: var(--text-lg);
+   transition: all 0.3s;
+   transform: translateX(-50%);
+   color: var(--color-accent);
+   
+}
+
+.chevron-down:hover {
+   color: var(--color-main);
+}
 

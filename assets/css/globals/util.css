@@ -6,6 +6,7 @@
    max-width: var(--site-width);
    padding: 0 var(--space-32);
    margin: 0 auto;
+   /* background-color: darkgrey; */
 }
 
 .display-block { display: block; }
@@ -35,6 +36,12 @@
 .link:hover::after,
 .link:active::after {
    height: var(--space-12);
+}
+
+
+
+.period {
+   color: var(--color-accent);
 }
 
 

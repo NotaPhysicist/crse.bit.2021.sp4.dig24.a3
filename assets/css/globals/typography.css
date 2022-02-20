@@ -29,6 +29,8 @@
    --text-xxxl: calc(7.594 * var(--text-scale-ratio));
 
    --line-height-xs: 1.05;
+   --line-height-sm: 1.2;
+   --line-height-sl: 1.4
    --line-height-md: 1.6;
 }
    
@@ -62,6 +64,10 @@ h5,
 h6 {
    font-family: 'Playfair Display', sans-serif;
    font-weight: 400;
-   line-height: 1.05;
+   line-height: var(--line-height-sm);
    letter-spacing: -1px;
+   color: var(--color-main);
 }
+
+
+

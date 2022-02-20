@@ -25,7 +25,8 @@
 :root {
    --base-unit: 1rem; /* 16px per most user default settings */
    
-   --site-width: 120rem;
+   --site-width: 70rem;
+   --text-col-max-width: 40rem;
 }
 
 body {
@@ -49,3 +50,4 @@ a {
 .section {
    min-height: 100vh;
 }
+

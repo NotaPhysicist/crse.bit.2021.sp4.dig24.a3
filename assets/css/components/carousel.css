@@ -1,0 +1,16 @@
+/**************************************/
+/* COMPONENT / CAROUSEL
+/**************************************/
+  
+.slider__image {
+   height: 500px;
+   /* width: auto; */
+   filter: grayscale(0.8) brightness(1.2) contrast(1.2);
+   display: inline-block;
+   
+}
+
+.marquee-test-container {
+   overflow: hidden;
+}
+

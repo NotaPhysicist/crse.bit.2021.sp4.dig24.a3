@@ -13,12 +13,12 @@ Icon
 
 
 # Thumbnails
-._*
+._ * 
 
 # Files that might appear in the root of a volume
-.DocumentRevisions-V100
+.DocumentRevisions - V100
 .fseventsd
-.Spotlight-V100
+.Spotlight - V100
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
@@ -32,4 +32,5 @@ Temporary Items
 .apdisk
 
 # Project specific files to ignore
+/assets/images/sort
 

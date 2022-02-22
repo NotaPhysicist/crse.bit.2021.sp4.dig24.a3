@@ -28,8 +28,15 @@
       --space-unit: calc(var(--base-unit) * 1.1);
    }
 
+   /* logo */ 
    img.logo {
       width: 16rem;
+   }
+
+   /* image carousel 
+   */ 
+   img.slider__image {
+      height: 600px;
    }
 }
 
@@ -40,13 +47,21 @@
       --space-unit: calc(var(--base-unit) * 1.2);
    }
 
+   /* logo */ 
    img.logo {
       width: 18rem;
    }
 
+   /* circle on who-we-are page */ 
    div.circle {
       width: 80vw;
       height: 80vw;
       transform: translate(-15vw, -3.25vw);
+   }
+
+   /* image carousel 
+   */
+   img.slider__image {
+      height: 700px; 
    }
 }

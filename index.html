@@ -17,7 +17,10 @@
    
    <!-- shoelace.style -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
-   
+
+   <!-- tiny slider -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
    <!-- custom css -->
    <link rel="stylesheet" href="./assets/css/main.css">
    <!-- <link rel="stylesheet" href="./assets/css/main-min.css"> -->
@@ -99,7 +102,7 @@
                         What's a DAO<span class="period">?</span>
                      </h3>                  
                      <p class="text__p">
-                        A DAO is a <em>ecentralized autonomous 
+                        A DAO is a <em>decentralized autonomous 
                            organisation</em><span class="period">.</span>
                      </p>
                      <p class="text__p">
@@ -130,9 +133,35 @@
          </div>
 
       </div><!-- /div.container -->
-   </section>
+   </section><!-- /section.who-we-are -->
 
-   <section class="wireframe wf-s3-how-it-works">how it works</section>
+   <!-- IMAGE CAROUSEL -->
+ 
+ 
+   <div class="slider">
+      <img src="./assets/images/carousel/contemplative.jpg" alt="a man leaning against a wall" class="slider__image">
+      <img src="./assets/images/carousel/man-sculpture.jpg" alt="an image of a man made of stones on the ground" class="slider__image">
+      <img src="./assets/images/carousel/lovers.jpg" alt="a pair of lovers in an intimage embrace" class="slider__image">
+      <img src="./assets/images/carousel/smiling-woman.jpg" alt="a smiling woman" class="slider__image">
+      <img src="./assets/images/carousel/man-over-bed.jpg" alt="a man appearing to hover over a bed" class="slider__image">
+      <img src="./assets/images/carousel/smiling-child.jpg" alt="a smiling child with paint on her face" class="slider__image">
+      <img src="./assets/images/carousel/smiley-ballon.jpg" alt="a woman holding a smiley balloon in front of her face" class="slider__image">
+      <img src="./assets/images/carousel/smiling-woman-2.jpg" alt="a smiling woman" class="slider__image">
+      <img src="./assets/images/carousel/wedding.jpg" alt="" class="slider__image">
+   </div>
+
+   
+
+   <div class="marquee-test-containter">
+      <div id="marquee-test"></div>
+   </div>
+   
+   <section class="wireframe wf-s3-how-it-works">
+      
+      how it works
+   
+   </section>
+   
    <section class="wireframe wf-s4-defn-happiness">defn: happiness</section>
    <section class="wireframe wf-s5-defn-happy">defn: happy</section>
    <section class="wireframe wf-s6-defn-feeling">defn: feeling</section>
@@ -149,16 +178,21 @@
 
 
    
-   
+   <!-- vendor scripts -->
    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sp-supermarquee@latest/dist/SuperMarquee.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
+   <!-- custom scripts -->
+   <script src="./assets/js/main.js"></script>
+  
    <!-- eleminate FOUCE in shoelace.style components -->
-      <script type="module">
+   <script type="module">
       await Promise.allSettled([
-         customElements.whenDefined('sl-progress-bar'),
-         customElements.whenDefined('sl-icon')
+      customElements.whenDefined('sl-progress-bar'),
+      customElements.whenDefined('sl-icon')
       ]);
-
+      
       document.body.classList.add('ready');
    </script>
 </body>

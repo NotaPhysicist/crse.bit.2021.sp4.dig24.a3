@@ -14,3 +14,5 @@
 @import './sections/who-we-are.css';
 
 /* components */
+@import './components/text.css';
+@import './components/carousel.css'

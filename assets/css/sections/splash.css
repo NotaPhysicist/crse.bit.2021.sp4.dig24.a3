@@ -10,7 +10,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: var(--space-64);
+   gap: var(--space-80);
 
 }
 
@@ -44,36 +44,21 @@
    line-height: var(--line-height-sl);
 }
 
-/* --- chevron down icon --- */
+/* --- scroll indicator icon --- */
 
-.cd-icon-wrapper {
-   position: absolute;
-   bottom: 0;
-   margin-bottom: var(--space-8);
-   width: 100%;
-   
-   --sl-tooltip-arrow-size: 0;
+.scroll-indicator {
+   /* display: inline-block;  */
+   /* margin: 0 auto; */
+   /* align-self: center; */
 }
 
-.cd-icon-wrapper__inner {
-   position: relative;
-   left: 50%;
-}
-
-.tool-tip {
-   margin: 0 auto;
-}
-
-.chevron-down {
+.scroll-indicator__icon {
    font-size: var(--text-lg);
    transition: all 0.3s;
-   transform: translateX(-50%);
    color: var(--color-accent);
-   margin-bottom: var(--space-64);
-   
 }
 
-.chevron-down:hover {
+.scroll-indicator__icon:hover {
    color: var(--color-main);
 }
 

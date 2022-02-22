@@ -7,6 +7,8 @@
 @import './globals/responsive.css';
 @import './globals/util.css';
 
+/* @import './globals/debug.css'; */
+
 /* sections */ 
 @import './sections/wireframe.css';
 @import './sections/header.css';

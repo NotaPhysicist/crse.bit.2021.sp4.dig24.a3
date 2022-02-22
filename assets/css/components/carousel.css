@@ -10,7 +10,11 @@
    
 }
 
-.marquee-test-container {
-   overflow: hidden;
+/** 
+ * hide the slider 'stop' button (that by all other means has refused
+ * to go away) 
+ */ 
+#tns1-ow > button {
+   display: none;
 }
 

@@ -2,15 +2,6 @@
 /* SECTION / WHO WE ARE
 /**************************************/
 
-/* --- image column --- */
-
-.image-col { 
-   /* height: 100vh; */
-   /* background-color: rgb(228, 227, 207);  */
-   /* border: 1px dashed rgb(196, 195, 195); */
-
-   position: relative;
-}
 
 .circle {
    width: 100vw;
@@ -25,25 +16,3 @@
    transform: translate(-30vw, -7.5vw);
 }
 
-
-
-
-/* --- text column --- */
-
-.text-col {
-   height: 100vh;
-   
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   
-   /* border: 1px dashed rgb(196, 195, 195) */
-   /* background-color: rgb(192, 191, 176);   */
-}
-
-
-
-
-/* --- aside column --- */
-
-/* .aside-col { background-color: rgb(160, 159, 147); } */

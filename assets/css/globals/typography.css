@@ -33,18 +33,7 @@
    --line-height-sl: 1.4
    --line-height-md: 1.6;
 }
-   
-.text-xxxl        { font-size: var(--text-xxxl); }
-.text-xxl         { font-size: var(--text-xxl); }
-.text-xl          { font-size: var(--text-xl); }
-.text-lg          { font-size: var(--text-lg); }
-.text-md          { font-size: var(--text-md); }
-.text-base        { font-size: var(--text-base); }
-.text-sm, small   { font-size: var(--text-sm); }
-.text-xs          { font-size: var(--text-xs); }
-.text-xxs         { font-size: var(--text-xxs); }
 
-/* typography */
 html,
 button,
 input,
@@ -65,7 +54,7 @@ h5,
 h6 {
    font-family: 'Playfair Display', sans-serif;
    font-weight: 400;
-   line-height: var(--line-height-sm);
+   line-height: var(--line-height-xs);
    color: var(--color-main);
 }
 
@@ -73,6 +62,51 @@ a {
    text-decoration: none;
    color: var(--color--main);
 }
+
+.text-xxxl,
+.text-xxl,
+.text-xl,
+.text-lg,
+.text-md,
+.text-base,
+.text-sm, 
+.small,
+.text-xs,
+.text-xxs {
+   line-height: var(--line-height-xs);
+}
+
+.text-xxxl { 
+   font-size: var(--text-xxxl);
+   letter-spacing: -3px;
+}
+
+.text-xxl { 
+   font-size: var(--text-xxl); 
+   letter-spacing: -2.5px;
+}
+
+.text-xl { 
+   font-size: var(--text-xl); 
+   letter-spacing: -1.25px;
+}
+.text-lg{ 
+   font-size: var(--text-lg);
+   letter-spacing: -0.5px;
+}
+
+.text-md { 
+   font-size: var(--text-md); 
+   letter-spacing: -0.25x;
+}
+.text-base { 
+   font-size: var(--text-base); 
+   /* letter-spacing: -1px; */
+}
+.text-sm, small   { font-size: var(--text-sm); }
+.text-xs          { font-size: var(--text-xs); }
+.text-xxs         { font-size: var(--text-xxs); }
+
 
 
 

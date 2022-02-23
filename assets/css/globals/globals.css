@@ -42,7 +42,3 @@ body.ready {
    transition: all 0.25s; 
 }
 
-.section {
-   min-height: 100vh;
-}
-

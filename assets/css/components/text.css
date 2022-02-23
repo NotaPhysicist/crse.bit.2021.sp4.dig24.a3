@@ -31,6 +31,7 @@
 
 /* --- text component --- */ 
 
+/* wraps text in subtle background gradient */
 .text-wrapper {
    padding: var(--space-32);
    background-color: rgba(154, 52, 18, 0.15);
@@ -49,11 +50,12 @@
    font-size: 1.2em;
 }
 
+/* headings require a size utility class */ 
 .text__heading {
-   font-size: var(--text-md);
    margin-bottom: var(--space-12);
 }
 
+/* paragraphs are sized here */ 
 .text__p {
    font-size: var(--text-base);
    letter-spacing: 0.25px;

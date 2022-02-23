@@ -1,0 +1,28 @@
+/**************************************/
+/* COMPONENT / MARQUEE
+/**************************************/
+
+div.smq {
+   line-height: 1.25;
+   margin: var(--space-24);
+}
+
+.mq-level-1 {
+
+}
+
+.mq-level-2 {
+
+}
+
+.mq-level-3 {
+   
+}
+
+.mq-level-4 {
+
+}
+
+.mq-level-5 {
+
+}

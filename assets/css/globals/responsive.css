@@ -37,6 +37,11 @@
    img.slider__image {
       height: 600px;
    }
+
+   /* let's begin section */ 
+   section.section.lets-begin{
+      height: 38rem;
+   }
 }
 
 /* lg - desktop */ 
@@ -61,5 +66,10 @@
    /* image carousel */
    img.slider__image {
       height: 700px; 
+   }
+
+   /* let's begin section */ 
+   section.section.lets-begin {
+      height: 42rem;
    }
 }

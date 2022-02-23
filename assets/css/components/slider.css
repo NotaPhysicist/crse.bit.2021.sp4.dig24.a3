@@ -1,7 +1,11 @@
 /**************************************/
 /* COMPONENT / CAROUSEL
 /**************************************/
-  
+
+/**
+ * https: //github.com/ganlanyuan/tiny-slider
+ */
+
 .slider__image {
    height: 500px;
    /* width: auto; */

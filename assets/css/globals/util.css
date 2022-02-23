@@ -13,6 +13,12 @@
 .display-inline-block { display: inline-block; }
 .display-flex { display: flex; }
 
+.display-flex-column-centered {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
 
 
 

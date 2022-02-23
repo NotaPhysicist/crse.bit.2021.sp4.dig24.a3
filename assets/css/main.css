@@ -14,7 +14,10 @@
 @import './sections/header.css';
 @import './sections/splash.css';
 @import './sections/who-we-are.css';
+@import './sections/definition.css';
 
 /* components */
+@import './components/section.css';
 @import './components/text.css';
-@import './components/carousel.css'
+@import './components/slider.css';
+@import './components/marquee.css';

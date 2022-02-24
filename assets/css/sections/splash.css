@@ -2,6 +2,15 @@
 /* SECTION / SPLASH                   */ 
 /**************************************/
 
+.splash {
+   min-height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+
 .splash__inner {
    height: 100vh;
    

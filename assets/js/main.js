@@ -21,24 +21,10 @@ const slider = tns({
    autoplayButton: false
 });
 
-/* instantiate all the supermarquee's on the page to default values 
-const smq = document.querySelectorAll('.js-smq');
-smq.forEach( (scrollContainer) => {
-   new SuperMarquee(scrollContainer, {
-      'content': 'happiness',
-      'speed': 'superslow',
-      'pauseonhover': 'true',
-      'easing': 'true',
-      'spacer': '&nbsp • &nbsp'
-   });
-});
-*/ 
-
-
 /**
  * Set up the supermarquee instance. All the marquees get created 
  * here at once and set to default values. Then they are 
- * individually configured for page load. 
+ * individually configured to their custom settins as needed. 
  */
 const marqueeElement = document.querySelectorAll('.js-smq');
 const marqueeObject = []; 
@@ -63,8 +49,12 @@ marqueeObject[1].setScrollSpeed('slow');
 // marquee [2] 'feeling or showing pleasure or contentment
 marqueeObject[2].setScrollContent('feeling or showing pleasure or contentmment');
 
-
-
 marqueeObject[3].setScrollContent('an emotional state or reaction');
 marqueeObject[4].setScrollContent('allowing, or causing to be visible');
+
+
+
+window.addEventListener('load', function() {
+   init();
+})
 

@@ -29,15 +29,13 @@ Container and pure-g layout template
 }
 
 .section {
-   min-height: 100vh;
+   /* resoponsive: increases up to 100vh */ 
+   min-height: 70vh;
 
    display: flex;
    flex-direction: column;
    justify-content: center;
    
-   /* display: grid;
-   align-items: center; */
-
    border: 1px solid burlywood;
 }
 

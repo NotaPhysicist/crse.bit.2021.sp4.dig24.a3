@@ -19,6 +19,11 @@
       --text-scale-ratio: var(--base-unit);
       --space-unit: var(--base-unit);
    }
+
+   /* minimum page height */
+   section.section {
+      min-height: 80vh;
+   }
 }
 
 /* md - large tablet */ 
@@ -42,6 +47,11 @@
    section.section.lets-begin{
       height: 38rem;
    }
+
+   /* minimum page height */
+   section.section {
+      min-height: 90vh;
+   }
 }
 
 /* lg - desktop */ 
@@ -49,6 +59,11 @@
    :root {
       --text-scale-ratio: calc(var(--base-unit) * 1.2);
       --space-unit: calc(var(--base-unit) * 1.2);
+   }
+
+   /* minimum page height */ 
+   section.section {
+      min-height: 100vh;
    }
 
    /* logo */ 

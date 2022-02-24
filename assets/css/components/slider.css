@@ -6,6 +6,10 @@
  * https: //github.com/ganlanyuan/tiny-slider
  */
 
+.slider {
+   margin: var(--space-32);
+}
+
 .slider__image {
    height: 500px;
    /* width: auto; */

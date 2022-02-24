@@ -9,6 +9,7 @@
 .link:visited {
    display: inline-block;
    position: relative;
+   color: var(--color-accent);
    /* padding: 0 var(--space-4) */
 }
 
@@ -20,7 +21,7 @@
    width: 110%;
    transform: translateX(-5%) translateY(-110%);
    transition: height 0.3s ease;
-   height: 0;
+   height: 1px;
 }
 
 .link:hover::after,
@@ -42,8 +43,10 @@ div.text-wrapper {
 }
 
 .bold {
+   display: inline-block;
    color: var(--color-accent);
    font-weight: 500;
+   transform: scaleY(1.08);
 }
 
 .period {
@@ -71,7 +74,6 @@ div.text-wrapper {
 }
 
 .text__link {
-   color: var(--color-accent);
    padding: 0;
    margin: 0;
    margin-left: var(--space-32);

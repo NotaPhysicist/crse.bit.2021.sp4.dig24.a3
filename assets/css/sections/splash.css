@@ -5,13 +5,11 @@
 .splash__inner {
    height: 100vh;
    
-
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    gap: var(--space-80);
-
 }
 
 .title {

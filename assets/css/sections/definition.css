@@ -1,22 +1,9 @@
 /**************************************/
-/* SECTIONS / DEFINITIONS
+/* SECTIONS | DEFINITIONS
 /**************************************/
 
-
-
-
 /* * * * * * * * * * * * * * * * * * */
-/* LET'S BEGIN SECTION               */  
+/* Section | How It Works            */  
 /* * * * * * * * * * * * * * * * * * */
 
-section.lets-begin {
-   height: 32rem;
-}
 
-.lets-begin__inner {
-   height: 100%;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}

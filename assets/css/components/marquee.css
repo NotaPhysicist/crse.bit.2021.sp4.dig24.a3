@@ -2,7 +2,12 @@
 /* COMPONENT / MARQUEE
 /**************************************/
 
-div.smq {
+.smq-wrapper {
+   width: 100%;
+   overflow: hidden;
+}
+
+.smq {
    line-height: 1.25;
    margin: var(--space-24);
 }

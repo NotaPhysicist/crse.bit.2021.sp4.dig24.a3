@@ -2,13 +2,6 @@
  GLOBALS / UTILITIES
  **************************************/
 
-.container {
-   max-width: var(--site-width);
-   padding: 0 var(--space-16);
-   margin: 0 auto;
-   /* background-color: darkgrey; */
-}
-
 .display-block { display: block; }
 .display-inline-block { display: inline-block; }
 .display-flex { display: flex; }

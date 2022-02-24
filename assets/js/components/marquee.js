@@ -1,33 +1,4 @@
 /**
- * Instantiate and configure the tiny slider library. 
- * Slider is set without controls to provide a cointuous slideshow 
- */
-function initSlider() {
-   
-   const slider = tns({
-      container: '.js-slider',
-      mode: 'carousel',
-      items: 2,
-      startIndex: 3,
-      slideby: 'page',
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayTimeout: 3550,
-      speed: 3500,
-      autoWidth: true, 
-      center: true,
-      touch: true,
-      // mouseDrag: true,
-      controls: false,
-      nav: false,
-      loop: true,
-      autoplayButton: false
-   });
-
-}
-
-
-/**
  * Set up the supermarquee instance. All the marquees get created 
  * here at once and set to default values. Then they are 
  * individually configured to their custom settins as needed. 
@@ -61,18 +32,3 @@ function initMarquee() {
    marqueeObject[4].setScrollContent('allowing, or causing to be visible');
 
 }
-
-// @codekit-prepend './components/slider.js'
-// @codekit-prepend './components/marquee.js'
-
-
-function init() {
-   
-   initSlider();
-   initMarquee();
-
-}
-
-window.addEventListener('load', function() {
-   init();
-})

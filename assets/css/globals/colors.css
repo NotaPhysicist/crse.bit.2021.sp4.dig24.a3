@@ -10,6 +10,27 @@
  */ 
 
 :root {
+   --color-main:           #171717;
+   --color-main-tint-30:   #5d5d5d;
+   
+   --color-accent:         #9a3412;
+   
+   --color-accent-tint-10: #a4482a;
+   --color-accent-tint-20: #ae5d41;
+   --color-accent-tint-30: #b87159;
+   --color-accent-tint-40: #c28571;
+   --color-accent-tint-50: #cd9a89;
+   --color-accent-tint-60: #d7aea0;
+   --color-accent-tint-70: #e1c2b8;
+   --color-accent-tint-80: #ebd6d0;
+   --color-accent-tint-90: #f5ebe7;
+
+   
+   /* --color-white:         #fff7ed; experimental bg color */
+   
+   --color-white:          #ffffff; /* background */
+   
+   
    /**
     * Skeleton colors. Delete before final deployment
     */

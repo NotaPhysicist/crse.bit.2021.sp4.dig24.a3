@@ -2,11 +2,20 @@
  GLOBALS / TYPOGRAPHY
  **************************************/
 
-/* Adapted from: https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ */
-
+/**
+ * Fonts (both from fonts.google.com) 
+ * ----------------------------------  
+ * Body: 'Poppins', serif 
+ * Headings: 'Playfair Display', sans-serif
+ */
+ 
+/**
+ * Type scale implementation adapted from: 
+ * https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/ 
+ */
 :root {
    /* mobile-first default size */ 
-   --text-scale-ratio: calc(var(--base-size) * 0.8); 
+   --text-scale-ratio: calc(var(--base-unit) * 0.9); 
    
    /* type-scale.com - 1.500 - Perfect Fitth */ 
    --text-xxs:  calc(0.296 * var(--text-scale-ratio));
@@ -18,14 +27,86 @@
    --text-xl:   calc(3.375 * var(--text-scale-ratio));
    --text-xxl:  calc(5.063 * var(--text-scale-ratio));
    --text-xxxl: calc(7.594 * var(--text-scale-ratio));
+
+   --line-height-xs: 1.05;
+   --line-height-sm: 1.2;
+   --line-height-sl: 1.4
+   --line-height-md: 1.6;
 }
-   
-.text-xxxl        { font-size: var(--text-xxxl); }
-.text-xxl         { font-size: var(--text-xxl); }
-.text-xl          { font-size: var(--text-xl); }
-.text-lg          { font-size: var(--text-lg); }
-.text-md          { font-size: var(--text-md); }
-.text-base        { font-size: var(--text-base); }
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *="pure-u"] {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 300;
+   line-height: var(--line-height-md);
+   color: var(--color--main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Playfair Display', sans-serif;
+   font-weight: 400;
+   line-height: var(--line-height-xs);
+   color: var(--color-main);
+}
+
+a {
+   text-decoration: none;
+   color: var(--color--main);
+}
+
+.text-xxxl,
+.text-xxl,
+.text-xl,
+.text-lg,
+.text-md,
+.text-base,
+.text-sm, 
+.small,
+.text-xs,
+.text-xxs {
+   line-height: var(--line-height-xs);
+}
+
+.text-xxxl { 
+   font-size: var(--text-xxxl);
+   letter-spacing: -3px;
+}
+
+.text-xxl { 
+   font-size: var(--text-xxl); 
+   letter-spacing: -2.5px;
+}
+
+.text-xl { 
+   font-size: var(--text-xl); 
+   letter-spacing: -1.25px;
+}
+.text-lg{ 
+   font-size: var(--text-lg);
+   letter-spacing: -0.5px;
+}
+
+.text-md { 
+   font-size: var(--text-md); 
+   letter-spacing: -0.25x;
+}
+.text-base { 
+   font-size: var(--text-base); 
+   /* letter-spacing: -1px; */
+}
 .text-sm, small   { font-size: var(--text-sm); }
 .text-xs          { font-size: var(--text-xs); }
 .text-xxs         { font-size: var(--text-xxs); }
+
+
+
+

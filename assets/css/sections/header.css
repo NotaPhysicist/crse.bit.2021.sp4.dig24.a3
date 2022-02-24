@@ -1,0 +1,41 @@
+/**************************************/
+/* SECTION / MENU                     */
+/**************************************/
+
+.header {
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+}
+
+.progress-bar {
+   --track-color: none;
+   --indicator-color: var(--color-accent);
+}
+
+.progress-bar::part(base) {
+   border-radius: 0;
+}
+
+.header__inner {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   position: relative;  
+}
+
+.logo {
+   display: inline-block;
+   margin: var(--space-8) var(--space-12) 0;
+   width: 14rem;
+}
+
+.header__link {
+   margin: 0 var(--space-16);
+}
+
+
+
+
+
+

@@ -17,7 +17,7 @@
    width: 100%;
    border: 1px solid var(--color-skeleton-grey-100);
    color: var(--color-skeleton-grey-100);
-   height: calc(100vh - 3rem);
+   height: 100vh
 }
 
 .wireframe-title {
@@ -27,6 +27,7 @@
 }
 
 /*make purecss grid and unit classes visible */
+/*
 .pure-g {
    box-sizing: border-box;
    border: 1px solid #3b82f6;
@@ -36,10 +37,10 @@
    box-sizing: border-box;
    border: 1px solid #f59e0b;
 }
-
+*/
 
 /* ---- sections ---- */
-
+/*
 .wf-s1-header {
    height: 3.5rem;
    background-color: var(--color-skeleton-grey-40);
@@ -49,11 +50,11 @@
 
 .wf-s1-splash {
    background-color: var(--color-skeleton-grey-20);
-   /* position: relative; */
+  
 }
-
+*/
 .wf-s2-who-we-are {
-   background-color: var(--color-skeleton-grey-30);
+   background-color: var(--color-skeleton-grey-10);
 }
 
 .wf-s3-how-it-works {

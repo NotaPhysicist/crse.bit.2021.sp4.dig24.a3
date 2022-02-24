@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,63 +11,399 @@
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
 
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
    
    <!-- shoelace.style -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
-   
+
+   <!-- tiny slider -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
    <!-- custom css -->
-   <link rel="stylesheet" href="./assets/css/main.css">
+   <link rel="stylesheet" href="./assets/css/main-min.css">
    <!-- <link rel="stylesheet" href="./assets/css/main-min.css"> -->
    
    <title>Happiness, the word, dissected</title>
 </head>
+
 <body>
-   <!-- 
-      shoelace.style - must use 3 of:
-         * dialog
-         * progress bar
-         * switch
-         * tab panel
-         * tool tip 
-   -->
-   <div class="container">
+   
+   <!-- HEADER, MENU AND PROGRESS BAR - fixed to top -->
+   <header class="header">
+      <sl-progress-bar value="2" class="progress-bar"></sl-progress-bar>
+      <div class="header__inner">
+         <img src="./assets/svg/suiew-logo.svg" alt="SUIEW logo" class="logo">
+         <a href="#" class="header__link text-base link">Contact</a>
+      </div>
+   </header>
+   
+   <!-- SPLASH SECTION  -->
+   <section class="splash">
       
-      
-      <header class="header">
-         <div class="wireframe wf-s1-header">
-            <sl-progress-bar value="indeterminate" style="--height: 1rem;"></sl-progress-bar>
+      <!-- title text -->
+      <div class="splash__inner">
+         <div class="title">
+            <span class="title__word title__word--8">contentment</span>
+            <span class="title__word title__word--7">enjoyment</span>
+            <span class="title__word title__word--6">satisfaction</span>
+            <span class="title__word title__word--5">pleasure</span>
+            <span class="title__word title__word--4">showing</span>
+            <span class="title__word title__word--3">feeling</span>
+            <span class="title__word title__word--2">happy</span>
+            <span class="title__word title__word--1">happiness</span>
          </div>
-      </header>
-      
-
-      <section class="wireframe wf-s1-splash">
-         <span class="wireframe-title">splash</span>
-         <div class="pure-g">
-            <div class="pure-u-lg-1-3">hello</div>
-            <div class="pure-u-lg-1-3">there</div>
-            <div class="pure-u-lg-1-3">world</div>
+         <h2 class="subtitle text-base">
+            An experimental presentation bought to you by the<br>
+            Society for the Understanding of Important English 
+            Words<span class="period">.</span>
+         </h2>
+         
+         <!-- down chevron icon -->
+         <div class="scroll-indicator">
+            <sl-tooltip content="Scroll down" placement="top">
+               <div slot="content">
+                  <em>Scroll down to see the presentation.</em>
+               </div>
+               <sl-icon name="chevron-compact-down" class="scroll-indicator__icon"></sl-icon>
+            </sl-tooltip>
          </div>
-      </section>
+      </div>
       
-      <section class="wireframe wf-s2-who-we-are">who we are</section>
-      <section class="wireframe wf-s3-how-it-works">how it works</section>
-      <section class="wireframe wf-s4-defn-happiness">defn: happiness</section>
-      <section class="wireframe wf-s5-defn-happy">defn: happy</section>
-      <section class="wireframe wf-s6-defn-feeling">defn: feeling</section>
-      <section class="wireframe wf-s7-defn-showing">defn: showing</section>
-      <section class="wireframe wf-s8-defn-pleasure">defn: pleasure</section>
-      <section class="wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
-      <section class="wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
-      <section class="wireframe wf-s11-defn-contentment">defn: contentment</section>
-      <section class="wireframe wf-s12-summary">summary</section>
-      <section class="wireframe wf-s13-conclusion">conclusion</section>
-      <section class="wireframe wf-s14-contact-us">contact us</section>
-      <section class="wireframe wf-s15-rewind">rewind</section>
+   </section>
+   
+   <!-- WHO WE ARE SECTION --> 
+   <section class="section">
+      <div class="section__inner">
+         
+         <div class="container">
+   
+            <div class="pure-g">
+               <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+               </div>
+               
+               <div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
+                  <div class="text-col">
+                     
+                     <div class="text-wrapper">
+                        
+                        <h3 class="text__heading text-lg">
+                           Who we are<span class="period">.</span>
+                        </h3>                  
+                        <p class="text__p">
+                           The <b class="bold">Society for the Understanding of Important English Words</b>, is a scientific DAO dedicated to the exploration of the meanings of important English words. 
+                        </p>
+                        
+                        <h3 class="text__heading text-lg">
+                           What's a DAO<span class="period">?</span>
+                        </h3>                  
+                        <p class="text__p">
+                           A DAO is a <em>decentralized autonomous 
+                              organisation</em><span class="period">.</span>
+                        </p>
+                        <p class="text__p">
+                           <a href="https://ethereum.org/en/dao/" class="text__link link">
+                              Learn more about a DAO
+                           </a>
+                           <sl-icon name="arrow-right" class="text__i-arrow"></sl-icon>
+                        </p>
+                        
+                        <h3 class="text__heading text-lg">
+                           More about us<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           The <b class="bold">Society</b> is an invitation-only, private organization of like-minded, globally distributed language scholars with the shared mission of promoting important words of the English language. <em>And not just English words, but important words in all languages everywhere.</em> 
+                        </p>
+                        <p class="text__p">
+                           Some will say that we take this a tad too seriously; but here we are, and we love what we do; and we hope you'll stick around to view this experimental presentation.  
+                        </p>
+                     
+                     </div>
+   
+                  </div>
+               </div>
+               
+               <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+                  <div class="aside-col"></div>
+               </div>
+            </div>
+   
+         </div>
+      
+      </div>
+   </section>
+   <!-- /who we are section -->
+   
+   <!-- IMAGE SLIDER --> 
+   <div class="slider js-slider">
+      <img src="./assets/images/carousel/contemplative.jpg" alt="a man leaning against a wall" class="slider__image">
+      <img src="./assets/images/carousel/man-sculpture.jpg" alt="an image of a man made of stones on the ground" class="slider__image">
+      <img src="./assets/images/carousel/lovers.jpg" alt="a pair of lovers in an intimage embrace" class="slider__image">
+      <img src="./assets/images/carousel/smiling-woman.jpg" alt="a smiling woman" class="slider__image">
+      <img src="./assets/images/carousel/man-over-bed.jpg" alt="a man appearing to hover over a bed" class="slider__image">
+      <img src="./assets/images/carousel/smiling-child.jpg" alt="a smiling child with paint on her face" class="slider__image">
+      <img src="./assets/images/carousel/smiley-ballon.jpg" alt="a woman holding a smiley balloon in front of her face" class="slider__image">
+      <img src="./assets/images/carousel/smiling-woman-2.jpg" alt="a smiling woman" class="slider__image">
+      <img src="./assets/images/carousel/wedding.jpg" alt="" class="slider__image">
+   </div>
+   <!-- /image slider -->
 
-   </div><!-- / div.container -->
+   <!-- HOW IT WORKS SECTION -->
+   <section class="section">
+      <div class="section__inner">
+         
+         <!-- MARQUEE [0] 'happiness' -->
+         <div class="js-smq smq smq--happiness-1  mq-level-1 text-xxxl"></div>
+         
+         <div class="container">
+            <div class="pure-g">
+               <!-- image column -->
+               <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+                  <div class="image-col">
+                     <div class="circle"></div>   
+                  </div>
+               </div>
+               
+               <!-- content column -->
+               <div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
+                  <div class="text-col">
+   
+                     <div class="text-wrapper">
+                        <h3 class="text__heading text-lg">
+                           What we believe<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           We believe in the possibility of a great wisdom; and if it exists, that it is ours to discover, embedded in the language of our forebears.
+                        </p>
 
+                        <h3 class="text__heading text-lg">
+                           Why use English<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           We are primarily English speaking so we will use the English dictionary. However, it's the same for other languages, if not more so. We anticipate many fascinating discoveries comparing our analysis to the same words in different languages. 
+                        </p>
+                        <p class="text__p">
+                           For this presentation, when we say, 
+                           <b class="bold">dictionary</b>, 
+                           we refer to the 
+                           <b class="bold"><em>New Oxford Dictionary of English</em></b>. 
+                        </p>
+                        <h3 class="text__heading text-lg">
+                           How it works<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           Our work begins and ends in the dictionary. The dictionary is our scene of investigation. 
+                        </p>
+                        <p class="text__p">
+                           This presentation is about <strong>one</strong> English word,
+                           <b class="bold">happiness</b>.
+                           It could be about any word but we've arbitrarily chosen
+                           <b class="bold">happiness</b> 
+                           for <strong>this</strong> experimental presentation. 
+                        </p>
+                        <p class="text__p">
+                           Words are defined with other words. We use a simple technique of recognising and eliminating the <a href="https://en.wikipedia.org/wiki/Circular_definition" class="link bold">circularity</a> of dictionary definitions in which a word attempts define itself in terms of itself, thereby cutting through to the core of the word. 
+                        </p>
+                        <p class="text__p">
+                           <strong>Confused?</strong>
+                        </p>
+                        <p class="text__p">
+                           We will walk you through it, one step at a time.
+                        </p>
+                        <p class="text__p">
+                           <em>Please keep scrolling to see the rest of the presentation.</em>
+                        </p>
+                     </div>
+   
+                  </div>               
+               </div>
+               
+               <!-- aside column -->
+               <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+               </div> 
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <!-- /how it works section -->
+   
+   <!-- HAPPINES DEFINITION SECTION -->
+   <section class="section">
+      <div class="section__inner">
+
+         <!-- MARQUEE [1] 'the state of being happy' -->
+         <div class="js-smq smq smq--happiness-2  mq-level-2 text-xxl"></div>
+
+         <div class="container">
+            <div class="pure-g">
+               <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+                  <!-- empty column -->
+               </div>
+               
+               <div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
+                  <div class="text-col">
+                     
+                     <div class="text-wrapper"> 
+                        <h3 class="text__heading text-lg">
+                           Happiness<span class="period">.</span>
+                        </h3>                  
+                        <p class="text__p">
+                           It's a word we're likely to see, hear or use every day, if only in our thoughts. 
+                        </p>
+                        <p class="text__p">
+                           We strive for it, suffer for the lack of it, and die with the feeling we never had enough of it.   
+                        </p>
+                        <p class="text__p">
+                           But the word is not the thing. 
+                        </p>
+                        <p class="text__p">
+                           What <b class="bold">thing</b> does <b class="bold">happiness</b> describe?
+                        </p>
+                        <h3 class="text__heading text-lg">
+                           Definition<span class="period">.</span>
+                        </h3>                  
+                        <p class="text__p">
+                           The <strong>dictionary</strong> defines <b class="bold">happiness</b> as the <b class="bold">state of being happy</b>.
+                        </p>
+                        <p class="text__p">
+                           But that's not very helpful, is it?   
+                        </p>
+                        <p class="text__p">
+                           We still don't know what <b class="bold">happy</b> is.
+                        </p>
+                        <p class="text__p">
+                           So let's dig a little deeper.
+                        </p>                        
+                     </div>
+   
+                  </div>
+               </div>
+               
+               <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+                  <!-- empty column -->
+               </div>            
+            </div>         
+         </div>
+
+      </div>   
+   </section>
+   <!-- /happiness definition section -->
+   
+   <!-- HAPPY DEFINITION SECTION -->
+   <section class="section">
+      <div class="section__inner">
+
+         <!-- MARQUEE [2] ''-->
+         <div class="js-smq smq smq--happy mq-level-3 text-xl"></div>
+
+         <div class="container">
+            <div class="pure-g">
+               <!-- image column -->
+               <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+               </div>
+
+               <!-- content column --> 
+               <div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
+                  <div class="text-col">
+
+                     <div class="text-wrapper">
+                        <h3 class="text__heading text-lg">
+                           Happy<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           The dictionary defines <b class="bold">happy</b> as <b class="bold">feeling or showing pleasure or contentment</b>.  As with most words, it has  other idiomatic meanings, but we can take this is the <strong>core meaning</strong> of the word.  
+                        </p>
+                        <p class="text__p">
+                           This gets us a step closer to the meaning of <b classs="bold">happiness</b>.
+                        </p>
+
+                        <h3 class="text__heading text-lg">
+                           Next<span class="period">.</span>
+                        </h3>
+                        <p class="text__p">
+                           We'll look at <b class="bold">feeling,</b> <b class="bold">showing,</b> <b class="bold">pleasure</b> and <b class="bold">contentment,</b> each in turn. 
+                        </p>
+                        <p class="text__p">
+                           We will find that <b class="bold">pleasure</b> and <b class="bold">contentment</b> attempt to define themselves with the word we're trying to define. 
+                        </p>
+                        <p class="text__p">
+                           This is <b class="bold">circularity,</b> and we will need to find a way around it. 
+                        </p>
+                     </div>
+
+                  </div>
+               </div>
+
+               <!-- aside column --> 
+               <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+               </div>
+            </div>
+         </div>
+      
+      </div>
+   </section>
+   <!-- /happy definition section -->
    
    
+   
+   <section class="section wireframe wf-s6-defn-feeling">
+      
+      <div class="js-smq smq smq--showing      mq-level-5 text-md"></div> 
+      <div class="js-smq smq smq--feeling      mq-level-4 text-lg"></div>
+      
+      defn: feeling
+      <h1 class="text-xxs">xxs: Happiness is fun.</h1>
+      <h1 class="text-xs">xs: Happiness is fun.</h1>
+      <h1 class="text-sm">sm: Happiness is fun.</h1>
+      <h1 class="text-base">base: Happiness is fun.</h1>
+      <h1 class="text-md">md: Happiness is fun.</h1>
+      <h1 class="text-lg">lg: Happiness is fun.</h1>
+      <h1 class="text-xl">xl: Happiness is fun.</h1>
+      <h1 class="text-xxl">xxl: Happiness is fun.</h1>
+      <h1 class="text-xxxl">xxxl: Happiness is fun.</h1>
+   </section>
+   
+   <section class="section wireframe wf-s7-defn-showing">defn: showing</section>
+   <section class="section wireframe wf-s8-defn-pleasure">defn: pleasure</section>
+   <section class="section wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
+   <section class="section wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
+   <section class="section wireframe wf-s11-defn-contentment">defn: contentment</section>
+   <section class="section wireframe wf-s12-summary">summary</section>
+   <section class="section wireframe wf-s13-conclusion">conclusion</section>
+   <section class="section wireframe wf-s14-contact-us">contact us</section>
+   <section class="section wireframe wf-s15-rewind">rewind</section>
+
+
+
+   
+   <!-- shoelace.style -->
    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
+   
+   <!-- superplug.in/supermarquee -->
+   <script src="https://cdn.jsdelivr.net/npm/sp-supermarquee@latest/dist/SuperMarquee.min.js"></script>
+   
+   <!-- github.com/ganlanyuan/tiny-slider -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+   <!-- greensock.com -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+   <!-- eleminate FOUCE in shoelace.style components -->
+   <script type="module">
+      await Promise.allSettled([
+      customElements.whenDefined('sl-progress-bar'),
+      customElements.whenDefined('sl-icon')
+      ]);
+      
+      document.body.classList.add('ready');
+   </script>
+   
+   <!-- custom scripts -->
+   <script src="./assets/js/main.js"></script>
+  
 </body>
 </html>

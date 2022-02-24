@@ -1,0 +1,28 @@
+/**************************************/
+/* COMPONENT / CAROUSEL
+/**************************************/
+
+/**
+ * https: //github.com/ganlanyuan/tiny-slider
+ */
+
+.slider {
+   margin: var(--space-32);
+}
+
+.slider__image {
+   height: 500px;
+   /* width: auto; */
+   filter: grayscale(0.8) brightness(1.2) contrast(1.2);
+   display: inline-block;
+   
+}
+
+/** 
+ * hide the slider 'stop' button (that by all other means has refused
+ * to go away) 
+ */ 
+#tns1-ow > button {
+   display: none;
+}
+

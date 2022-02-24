@@ -1,3 +1,4 @@
+/* globals */ 
 @import './globals/globals.css';
 @import './globals/typography.css';
 @import './globals/spacing.css';
@@ -6,4 +7,17 @@
 @import './globals/responsive.css';
 @import './globals/util.css';
 
+/* @import './globals/debug.css'; */
+
+/* sections */ 
 @import './sections/wireframe.css';
+@import './sections/header.css';
+@import './sections/splash.css';
+@import './sections/who-we-are.css';
+@import './sections/definition.css';
+
+/* components */
+@import './components/section.css';
+@import './components/text.css';
+@import './components/slider.css';
+@import './components/marquee.css';

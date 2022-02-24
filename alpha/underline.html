@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Underline protottype</title>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display&display=swap');
+
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.4;
+         font-weight: 700;
+         background-color: rgb(17, 17, 19);
+      }
+
+      ul {
+         display: table;
+         margin: 150px auto 0;
+         list-style: none;
+         width: 600px;
+         text-align: center;
+      }
+
+      li {
+         display: table-cell;
+         position: relative;
+         padding: 15px 0;
+      }
+
+      a {
+         color: #fff;
+         text-transform: uppercase;
+         text-decoration: none;
+         letter-spacing: 0.15em;
+
+         display: inline-block;
+         padding: 15px 20px;
+         position: relative;
+      }
+
+      a::after {
+         display: block;
+         content: "";
+         height: 2px;
+         background-color: #fff;
+         bottom: 0;
+         left: 50%;
+         position: absolute;
+         transition: width 0.3s ease 0s, left 0.3s ease 0s;
+         width: 0;
+      }
+
+      a:hover::after {
+         width: 100%;
+         left: 0;
+      }
+
+   </style>
+</head>
+<body>
+   <!-- adapted from https://codepen.io/jstn/pen/mdoOZJ -->
+
+   <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Porfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+   </ul>
+
+</body>
+</html>

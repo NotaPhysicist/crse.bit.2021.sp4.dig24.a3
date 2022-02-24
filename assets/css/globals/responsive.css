@@ -11,37 +11,80 @@
  * xl @media screen and (min-width: 80em) ≥ 1280px .pure-u-xl-*
  */
  
-/* 1. default - as defined in global settings */ 
+/* default - mobile */ 
 
-/* 2. sm - mobile */  
-@media screen and (min-width: 38.5rem) { /* >= 568px */ 
+/* sm - small tablet */  
+@media screen and (min-width: 35.5rem) { /* >= 568px */ 
    :root {
-      /* text */ 
-      --text-scale-ratio: var(--base-size);
-   
-      /* spacing */ 
-      --space-unit: var(--base-size);
+      --text-scale-ratio: var(--base-unit);
+      --space-unit: var(--base-unit);
+   }
+
+   /* minimum page height */
+   section.section {
+      min-height: 80vh;
    }
 }
 
-/* 3. md - tablet */ 
+/* md - large tablet */ 
 @media screen and (min-width: 48rem) { /* >= 768px */ 
    :root {
-      /* text */ 
-      --text-scale-ratio: calc(var(--base-size) * 1.25);
-   
-      /* spacing */ 
-      --space-unit: calc(var(--base-size) * 1.25);
+      --text-scale-ratio: calc(var(--base-unit) * 1.1);
+      --space-unit: calc(var(--base-unit) * 1.1);
+   }
+
+   /* logo */ 
+   img.logo {
+      width: 16rem;
+   }
+
+   /* image carousel */ 
+   img.slider__image {
+      height: 600px;
+   }
+
+   /* let's begin section */ 
+   section.section.lets-begin{
+      height: 38rem;
+   }
+
+   /* minimum page height */
+   section.section {
+      min-height: 90vh;
    }
 }
 
-/* 4. lg - desktop */ 
+/* lg - desktop */ 
 @media screen and (min-width: 64rem) { /* >= 1024px */ 
    :root {
-      /* text */ 
-      --text-scale-ratio: calc(var(--base-size) * 1.35);
+      --text-scale-ratio: calc(var(--base-unit) * 1.2);
+      --space-unit: calc(var(--base-unit) * 1.2);
+   }
 
-      /* spacing */ 
-      --space-unit: calc(var(--base-size) * 1.35);
+   /* minimum page height */ 
+   section.section {
+      min-height: 100vh;
+   }
+
+   /* logo */ 
+   img.logo {
+      width: 18rem;
+   }
+
+   /* circle on who-we-are page */ 
+   div.circle {
+      width: 80vw;
+      height: 80vw;
+      transform: translate(-15vw, -3.25vw);
+   }
+
+   /* image carousel */
+   img.slider__image {
+      height: 700px; 
+   }
+
+   /* let's begin section */ 
+   section.section.lets-begin {
+      height: 42rem;
    }
 }

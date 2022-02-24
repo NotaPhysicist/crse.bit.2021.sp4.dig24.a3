@@ -1,0 +1,71 @@
+/**************************************/
+/* SECTION / SPLASH                   */ 
+/**************************************/
+
+.splash {
+   min-height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+
+.splash__inner {
+   height: 100vh;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: var(--space-80);
+}
+
+.title {
+   position: relative;
+}
+
+.title__word {
+   font-size: var(--text-xl);
+   text-align: center;
+   font-weight: 400;
+   
+   display: block;
+   position: absolute;
+   transform: translateX(-50%) translateY(-50%);
+}
+
+.title__word--1 { color: var(--color-main); }
+.title__word--2 { color: var(--color-accent); }
+.title__word--3 { color: var(--color-accent-tint-10); }
+.title__word--4 { color: var(--color-accent-tint-20); }
+.title__word--5 { color: var(--color-accent-tint-30); }
+.title__word--6 { color: var(--color-accent-tint-40); }
+.title__word--7 { color: var(--color-accent-tint-50); }
+.title__word--8 { color: var(--color-accent-tint-60); }
+
+.subtitle {
+   margin: 0 var(--space-12);
+   max-width: 50rem;
+   text-align: center;
+   line-height: var(--line-height-sl);
+}
+
+/* --- scroll indicator icon --- */
+
+.scroll-indicator {
+   /* display: inline-block;  */
+   /* margin: 0 auto; */
+   /* align-self: center; */
+}
+
+.scroll-indicator__icon {
+   font-size: var(--text-lg);
+   transition: all 0.3s;
+   color: var(--color-accent);
+}
+
+.scroll-indicator__icon:hover {
+   color: var(--color-main);
+}
+

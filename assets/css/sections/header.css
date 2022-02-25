@@ -6,6 +6,7 @@
    position: fixed;
    width: 100%;
    z-index: 10;
+   pointer-events: none;
 }
 
 .progress-bar {
@@ -40,7 +41,8 @@
 .header__link {
    margin: 0 var(--space-16);
    margin-bottom: var(--space-4);
-   
+   pointer-events: auto;
+
    /* animation */ 
    transition: transform 1s;
    transform: translateX(0);

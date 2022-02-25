@@ -18,8 +18,8 @@
    position: absolute;
    content: "";
    background-color: rgba(154, 52, 18, 0.50);
-   width: 110%;
-   transform: translateX(-5%) translateY(-110%);
+   width: 102%;
+   transform: translateX(-1%) translateY(-110%);
    transition: height 0.3s ease;
    height: 1px;
 }

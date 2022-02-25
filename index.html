@@ -22,9 +22,11 @@
    <!-- tiny slider -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
-   <!-- custom css -->
+   <!-- 
+      custom css -- not actually mininfied, but an unprocessed 
+      concatenation of all the css files 
+   -->
    <link rel="stylesheet" href="./assets/css/main-min.css">
-   <!-- <link rel="stylesheet" href="./assets/css/main-min.css"> -->
    
    <title>Happiness, the word, dissected</title>
 </head>
@@ -33,17 +35,23 @@
    
    <!-- HEADER, MENU AND PROGRESS BAR - fixed to top -->
    <header class="header">
-      <sl-progress-bar value="2" class="progress-bar"></sl-progress-bar>
+      
+      <sl-progress-bar value="1" class="progress-bar"></sl-progress-bar>
+      
       <div class="header__inner">
          <img src="./assets/svg/suiew-logo.svg" alt="SUIEW logo" class="logo">
          <a href="#" class="header__link text-base link">Contact</a>
       </div>
+   
    </header>
    
+
+
+
+
    <!-- SPLASH SECTION  -->
    <section class="splash">
       
-      <!-- title text -->
       <div class="splash__inner">
          <div class="title">
             <span class="title__word title__word--8">contentment</span>
@@ -55,11 +63,10 @@
             <span class="title__word title__word--2">happy</span>
             <span class="title__word title__word--1">happiness</span>
          </div>
-         <h2 class="subtitle text-base">
-            An experimental presentation bought to you by the<br>
-            Society for the Understanding of Important English 
-            Words<span class="period">.</span>
-         </h2>
+         <p class="subtitle text-base">
+            An experimental presentation on the word <b class="bold">happiness</b> bought to you by the<br>
+            <a href="#" class="link bold">Society for the Understanding of Important English Words</a><span class="period">.</span>
+         </p>
          
          <!-- down chevron icon -->
          <div class="scroll-indicator">
@@ -73,7 +80,11 @@
       </div>
       
    </section>
-   
+   <!-- /splash section -->
+
+
+
+
    <!-- WHO WE ARE SECTION --> 
    <section class="section">
       <div class="section__inner">
@@ -93,7 +104,9 @@
                            Who we are<span class="period">.</span>
                         </h3>                  
                         <p class="text__p">
-                           The <b class="bold">Society for the Understanding of Important English Words</b>, is a scientific DAO dedicated to the exploration of the meanings of important English words. 
+                           The 
+                           <b class="bold">Society for the Understanding of Important English Words</b>, 
+                           is a scientific DAO dedicated to the exploration of the meanings of important English words. 
                         </p>
                         
                         <h3 class="text__heading text-lg">
@@ -136,6 +149,9 @@
    </section>
    <!-- /who we are section -->
    
+
+
+
    <!-- IMAGE SLIDER --> 
    <div class="slider js-slider">
       <img src="./assets/images/carousel/contemplative.jpg" alt="a man leaning against a wall" class="slider__image">
@@ -149,6 +165,9 @@
       <img src="./assets/images/carousel/wedding.jpg" alt="" class="slider__image">
    </div>
    <!-- /image slider -->
+
+
+
 
    <!-- HOW IT WORKS SECTION -->
    <section class="section">
@@ -230,6 +249,9 @@
    </section>
    <!-- /how it works section -->
    
+
+
+
    <!-- HAPPINES DEFINITION SECTION -->
    <section class="section">
       <div class="section__inner">
@@ -292,6 +314,9 @@
    </section>
    <!-- /happiness definition section -->
    
+
+
+
    <!-- HAPPY DEFINITION SECTION -->
    <section class="section">
       <div class="section__inner">
@@ -349,6 +374,8 @@
    
    
    
+
+
    <section class="section wireframe wf-s6-defn-feeling">
       
       <div class="js-smq smq smq--showing      mq-level-5 text-md"></div> 
@@ -402,8 +429,11 @@
       document.body.classList.add('ready');
    </script>
    
-   <!-- custom scripts -->
-   <script src="./assets/js/main.js"></script>
+   <!-- 
+      custom javascript -- not actually mininfied, but an unprocessed 
+      concatenation of all the javascript files 
+   -->
+   <script src="./assets/js/main-min.js"></script>
   
 </body>
 </html>

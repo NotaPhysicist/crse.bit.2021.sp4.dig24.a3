@@ -18,8 +18,8 @@
    position: absolute;
    content: "";
    background-color: rgba(154, 52, 18, 0.50);
-   width: 110%;
-   transform: translateX(-5%) translateY(-110%);
+   width: 102%;
+   transform: translateX(-1%) translateY(-110%);
    transition: height 0.3s ease;
    height: 1px;
 }
@@ -43,10 +43,10 @@ div.text-wrapper {
 }
 
 .bold {
-   display: inline-block;
+   position: relative;
    color: var(--color-accent);
    font-weight: 500;
-   transform: scaleY(1.08);
+   transform: scaleY(1.1);
 }
 
 .period {

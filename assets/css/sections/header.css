@@ -24,16 +24,41 @@
    position: relative;  
 }
 
+/* svg logo sized proportional to viewport width 
+*/ 
 .logo {
    display: inline-block;
    margin: var(--space-8) var(--space-12) 0;
-   width: 14rem;
+   width: 40vw;
+   height: auto;
+
+   /* animation */ 
+   transition: transform 1s;
+   transform: translateX(0);
 }
 
 .header__link {
    margin: 0 var(--space-16);
+   margin-bottom: var(--space-4);
+   
+   /* animation */ 
+   transition: transform 1s;
+   transform: translateX(0);
 }
 
+/* move the header elements out of the way on user scroll
+*/
+.has-scrolled .logo {
+   transform: translateY(-100%);
+   transition: all 1s;
+   opacity: 0;
+}
+
+.has-scrolled .header__link {
+   transform: translateY(-100%);
+   transition: all 1s;
+   opacity: 0;
+}
 
 
 

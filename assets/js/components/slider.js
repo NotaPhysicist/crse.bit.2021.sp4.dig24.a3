@@ -1,7 +1,10 @@
 /**
+ * Slider Image Gallery
+ * ---------------------
  * Instantiate and configure the tiny slider library. 
  * Slider is set without controls to provide a cointuous slideshow 
  */
+
 function initSlider() {
    
    const slider = tns({
@@ -11,7 +14,7 @@ function initSlider() {
       startIndex: 3,
       slideby: 'page',
       autoplay: true,
-      autoplayHoverPause: true,
+      // autoplayHoverPause: true,
       autoplayTimeout: 3550,
       speed: 3500,
       autoWidth: true, 

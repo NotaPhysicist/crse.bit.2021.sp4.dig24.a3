@@ -33,9 +33,9 @@ function initSlider() {
 /**
  * Text Marquees 
  * --------------
- * Set up the supermarquee instance. All the marquees get created 
- * here at once and set to default values. Then they are 
- * individually configured to their custom settins as needed. 
+ * Set up the supermarquee instance. 
+ * All the marquees get created here at once and set to default values. 
+ * Then they are individually configured to their custom settings as needed. 
  */
 
 function initMarquee() {
@@ -69,9 +69,10 @@ function initMarquee() {
 }
 
 /**
- * Header Animation
+ * Header Animations
  * -----------------
  * Move the header elements out of the way when the user scrolls down.
+ * Set the progross bar to display progress as the user scrolls. 
  */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -89,28 +90,79 @@ function initHeader() {
       }
    });
 
-   /* move the logo and top link out of why for scrolling */ 
+   /* move the logo and top link out of why for scrolling 
+    */ 
    ScrollTrigger.create( {
       start: 150,
       end: 'bottom bottom-=20',
       toggleClass: {
          targets: 'body', 
          className: 'has-scrolled'
-      },
-      markers: true
+      }
    });
+}
+
+/**
+ * Splash Tilt Animation
+ * ----------------------
+ * 
+ */
+
+function initSplashTilt() {
+   
+   // animate in the text elements
+   gsap.defaults({
+      ease: 'power4.out'
+   })
+
+   gsap.timeline()
+      .from('.subtitle', {
+         delay: 1,
+         autoAlpha: 0, 
+         yPercent: 500,
+         duration: 3
+      })
+      .from('.scroll-indicator', {
+         autoAlpha: 0, 
+         yPercent: 500,
+         duration: 3
+      }, '<25%')
+      .from('.title__word', {
+         autoAlpha: 0,
+         scale: 15,
+         yPercent: -2000,
+         duration: 3.5,
+         stagger: {
+            each: 0.4,
+            ease: 'power2.out'
+         }
+      }, 0);
+
+
+
+   
+   // add the event listener to activatet the moveText function
+   document.querySelector('.splash').addEventListener('mousemove', moveText);
+
+}
+
+function moveText(event) {
+
+
 
 }
 
 // @codekit-prepend './components/slider.js'
 // @codekit-prepend './components/marquee.js'
 // @codekit-prepend './components/header.js'
+// @codekit-prepend './components/splash.js'
 
 function init() {
 
    initHeader();
    initSlider();
    initMarquee();
+   initSplashTilt();
 
 }
 

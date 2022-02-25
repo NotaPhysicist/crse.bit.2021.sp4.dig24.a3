@@ -1,9 +1,9 @@
 /**
  * Text Marquees 
  * --------------
- * Set up the supermarquee instance. All the marquees get created 
- * here at once and set to default values. Then they are 
- * individually configured to their custom settins as needed. 
+ * Set up the supermarquee instance. 
+ * All the marquees get created here at once and set to default values. 
+ * Then they are individually configured to their custom settings as needed. 
  */
 
 function initMarquee() {

@@ -24,6 +24,11 @@
    section.section {
       min-height: 80vh;
    }
+
+   /* splash title */
+   /* span.title__word {
+      font-size: var(--text-xxl);
+   } */
 }
 
 /* md - large tablet */ 
@@ -32,11 +37,6 @@
       --text-scale-ratio: calc(var(--base-unit) * 1.1);
       --space-unit: calc(var(--base-unit) * 1.1);
    }
-
-   /* logo */ 
-   /* img.logo {
-      width: 16rem;
-   } */
 
    /* image carousel */ 
    img.slider__image {
@@ -52,6 +52,11 @@
    section.section {
       min-height: 90vh;
    }
+
+   /* splash title */
+   span.title__word {
+      font-size: var(--text-xxl);
+   }
 }
 
 /* lg - desktop */ 
@@ -65,11 +70,6 @@
    section.section {
       min-height: 100vh;
    }
-
-   /* logo */ 
-   /* img.logo {
-      width: 18rem;
-   } */
 
    /* circle on who-we-are page */ 
    div.circle {
@@ -86,5 +86,10 @@
    /* let's begin section */ 
    section.section.lets-begin {
       height: 42rem;
+   }
+
+   /* splash title */ 
+   span.title__word {
+      font-size: var(--text-xxxl);
    }
 }

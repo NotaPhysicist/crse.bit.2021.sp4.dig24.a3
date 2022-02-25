@@ -50,13 +50,13 @@
 */
 .has-scrolled .logo {
    transform: translateY(-100%);
-   transition: all 1s;
+   transition: all 0.6s;
    opacity: 0;
 }
 
 .has-scrolled .header__link {
    transform: translateY(-100%);
-   transition: all 1s;
+   transition: all 0.6s;
    opacity: 0;
 }
 

@@ -1,7 +1,8 @@
 /**
- * Header Animation
+ * Header Animations
  * -----------------
  * Move the header elements out of the way when the user scrolls down.
+ * Set the progross bar to display progress as the user scrolls. 
  */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,15 +20,14 @@ function initHeader() {
       }
    });
 
-   /* move the logo and top link out of why for scrolling */ 
+   /* move the logo and top link out of why for scrolling 
+    */ 
    ScrollTrigger.create( {
       start: 150,
       end: 'bottom bottom-=20',
       toggleClass: {
          targets: 'body', 
          className: 'has-scrolled'
-      },
-      markers: true
+      }
    });
-
 }

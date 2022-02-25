@@ -3,36 +3,35 @@
 /**************************************/
 
 .splash {
+   /* splash screen maintains this min-height across all breakpoints */ 
    min-height: 100vh;
 
    display: flex;
    flex-direction: column;
-   justify-content: center;
-
 }
 
 .splash__inner {
-   height: 100vh;
-   
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: var(--space-80);
+   margin-top: 50vh;
 }
 
 .title {
    position: relative;
+   margin-bottom: var(--space-128);
 }
 
 .title__word {
-   font-size: var(--text-xl);
+   font-size: var(--text-xxl);
+   line-height: var(--line-height-xs);
    text-align: center;
    font-weight: 400;
-   
+
    display: block;
    position: absolute;
-   transform: translateX(-50%) translateY(-50%);
+   transform: translate(-50%, -50%);
 }
 
 .title__word--1 { color: var(--color-main); }
@@ -45,20 +44,16 @@
 .title__word--8 { color: var(--color-accent-tint-60); }
 
 .subtitle {
-   margin: 0 var(--space-12);
    max-width: 50rem;
    text-align: center;
    line-height: var(--line-height-sl);
+   margin-bottom: var(--space-64);
 }
 
-/* --- scroll indicator icon --- */
-
-.scroll-indicator {
-   /* display: inline-block;  */
-   /* margin: 0 auto; */
-   /* align-self: center; */
-}
-
+/* scroll indicator icon
+ */
+ .scroll-indicator {
+ }
 .scroll-indicator__icon {
    font-size: var(--text-lg);
    transition: all 0.3s;

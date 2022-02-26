@@ -77,6 +77,10 @@ function initMarquee() {
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({
+   markers: true
+})
+
 function initHeader() {
 
    /* attach the scroll bar to scrolltrigger plugin to display 
@@ -95,6 +99,7 @@ function initHeader() {
    ScrollTrigger.create( {
       start: 150,
       end: 'bottom bottom-=20',
+      id: 'header',
       toggleClass: {
          targets: 'body', 
          className: 'has-scrolled'
@@ -105,9 +110,14 @@ function initHeader() {
 /**
  * Splash Tilt Animation
  * ----------------------
- * 
+ * Animate splash screen. 
+ * Text fades in on page load. 
+ * Apply a text tilt animation the title text that repsonds 
+ * to mouse movement. 
  */
 
+/* animate the viusal elements into view 
+ */ 
 function initSplashTilt() {
    
    // first, animate in the text elements
@@ -144,6 +154,8 @@ function initSplashTilt() {
 
 }
 
+/* apply the text tilt effect 
+ */ 
 function moveText(event) {
 
    // deconstruct the values we need from the event object
@@ -191,14 +203,100 @@ function moveText(event) {
       ease: 'power4.out'
    });
 
-
-
 }
+
+/**
+ * Who We Are Section
+ * -------------------
+ * 
+ */
+
+function initWhoWeAre() {
+
+   let timeline = gsap.timeline({
+      scrollTrigger: {
+         trigger: '.who-we-are',
+         start: 'top center',
+         end: 'bottom bottom-=20',
+         id: 'who-we-are'
+      }
+   });
+
+   timeline
+      // drop in the headings from above
+      .from('.who-we-are .text__heading', {
+         duration: 1.8,
+         yPercent: -75,
+         autoAlpha: 0,
+         ease: 'power1.out',
+         stagger: 0.3
+      }, '+=25%')
+      .from('.who-we-are .text__p', {
+         duration: 1.6,
+         xPercent: 75,
+         autoAlpha: 0,
+         ease: 'power2.out',
+         stagger: 0.3
+      }, 0)
+      .from('.who-we-are .text-wrapper', {
+         duration: 5,
+         autoAlpha: 0,
+         ease: 'power1.out'
+      }, 0);
+      
+}
+
+
+
+
+/**
+ * How It Works Section
+ * ---------------------
+ * 
+ */
+
+function initHowItWorks() {
+
+   let timeline = gsap.timeline({
+      scrollTrigger: {
+         trigger: '.how-it-works',
+         start: 'top center',
+         end: 'bottom bottom-=20',
+         id: 'how-it-works'
+      }
+   });
+
+   timeline
+      // drop in the headings from above
+      .from('.how-it-works .text__heading', {
+         duration: 1.8,
+         yPercent: -75,
+         autoAlpha: 0,
+         ease: 'power1.out',
+         stagger: 0.3
+      }, '+=25%')
+      .from('.how-it-works .text__p', {
+         duration: 1.6,
+         xPercent: 75,
+         autoAlpha: 0,
+         ease: 'power2.out',
+         stagger: 0.3
+      }, 0)
+      .from('.how-it-works .text-wrapper', {
+         duration: 5,
+         autoAlpha: 0,
+         ease: 'power1.out'
+      }, 0);
+      
+}
+
 
 // @codekit-prepend './components/slider.js'
 // @codekit-prepend './components/marquee.js'
 // @codekit-prepend './components/header.js'
 // @codekit-prepend './components/splash.js'
+// @codekit-prepend './components/who-we-are.js'
+// @codekit-prepend './components/how-it-works.js
 
 function init() {
 
@@ -206,6 +304,8 @@ function init() {
    initSlider();
    initMarquee();
    initSplashTilt();
+   initWhoWeAre();
+   initHowItWorks();
 
 }
 

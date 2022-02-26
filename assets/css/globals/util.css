@@ -2,15 +2,10 @@
  GLOBALS / UTILITIES
  **************************************/
 
-.display-block { display: block; }
-.display-inline-block { display: inline-block; }
-.display-flex { display: flex; }
+.u-block { display: block; }
+.u-inline-block { display: inline-block; }
 
-.display-flex-column-centered {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
+
 
 
 

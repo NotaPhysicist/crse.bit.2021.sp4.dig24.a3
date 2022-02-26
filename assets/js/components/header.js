@@ -7,6 +7,10 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+ScrollTrigger.defaults({
+   markers: true
+})
+
 function initHeader() {
 
    /* attach the scroll bar to scrolltrigger plugin to display 
@@ -25,6 +29,7 @@ function initHeader() {
    ScrollTrigger.create( {
       start: 150,
       end: 'bottom bottom-=20',
+      id: 'header',
       toggleClass: {
          targets: 'body', 
          className: 'has-scrolled'

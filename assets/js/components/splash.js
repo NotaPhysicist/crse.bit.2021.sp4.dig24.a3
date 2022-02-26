@@ -1,9 +1,14 @@
 /**
  * Splash Tilt Animation
  * ----------------------
- * 
+ * Animate splash screen. 
+ * Text fades in on page load. 
+ * Apply a text tilt animation the title text that repsonds 
+ * to mouse movement. 
  */
 
+/* animate the viusal elements into view 
+ */ 
 function initSplashTilt() {
    
    // first, animate in the text elements
@@ -40,6 +45,8 @@ function initSplashTilt() {
 
 }
 
+/* apply the text tilt effect 
+ */ 
 function moveText(event) {
 
    // deconstruct the values we need from the event object
@@ -86,7 +93,5 @@ function moveText(event) {
       y: yPosition * 50,
       ease: 'power4.out'
    });
-
-
 
 }

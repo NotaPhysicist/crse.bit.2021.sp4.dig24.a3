@@ -40,6 +40,7 @@ div.text-wrapper {
    width: 100%;
 
    position: relative;
+   overflow: hidden;
 }
 
 .bold {
@@ -54,12 +55,18 @@ div.text-wrapper {
    font-size: 1.2em;
 }
 
-/* headings require a size utility class */ 
+.text__heading--mask {
+   overflow: hidden;
+}
+
 .text__heading {
+   /* note: font size provided by a utility class */ 
    margin-bottom: var(--space-12);
 }
 
-/* paragraphs are sized here */ 
+/* paragraphs are the only type style with an inherent font size
+ * everything else requires an utility class
+ */ 
 .text__p {
    font-size: var(--text-base);
    letter-spacing: 0.25px;
@@ -68,7 +75,7 @@ div.text-wrapper {
    position: relative;
 }
 
-/* add a little extra space between the text sections */
+/* add a little extra space between the text sub-sections */
 .text__p ~ .text__heading {
    margin-top: var(--space-24);
 }

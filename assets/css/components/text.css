@@ -29,6 +29,13 @@
    height: var(--space-12);
 }
 
+/* move the arrow to the right on hover */ 
+.text__link.link:hover ~ .text__i-arrow {
+   /* transform: translateX(100%); */
+   transform: translate(1.1rem, 0.3rem);
+   
+}
+
 
 /* --- text component --- */ 
 
@@ -93,4 +100,5 @@ div.text-wrapper {
 
    position: relative;
    transform: translate(0.2rem, 0.3rem);
+   transition: all 0.3s ease-in-out;
 }

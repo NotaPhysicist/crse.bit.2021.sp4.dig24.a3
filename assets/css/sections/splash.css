@@ -25,6 +25,12 @@
    perspective: 1500px;
 }
 
+.title__word,
+.subtitle,
+.scroll-indicator {
+   opacity: 0;
+}
+
 .title__word {
    font-size: var(--text-xxl);
    line-height: var(--line-height-xs);

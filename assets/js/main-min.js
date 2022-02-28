@@ -63,8 +63,8 @@ function initMarquee() {
    // marquee [2] 'feeling or showing pleasure or contentment
    marqueeObject[2].setScrollContent('feeling or showing pleasure or contentmment');
    
-   marqueeObject[3].setScrollContent('an emotional state or reaction');
-   marqueeObject[4].setScrollContent('allowing, or causing to be visible');
+   // marqueeObject[3].setScrollContent('an emotional state or reaction');
+   // marqueeObject[4].setScrollContent('allowing, or causing to be visible');
 
 }
 
@@ -128,17 +128,14 @@ function initSplashTilt() {
    gsap.timeline()
       .from('.subtitle', {
          delay: 1,
-         autoAlpha: 0, 
          yPercent: 500,
          duration: 3
       })
       .from('.scroll-indicator', {
-         autoAlpha: 0, 
          yPercent: 500,
          duration: 3
       }, '<25%')
       .from('.title__word', {
-         autoAlpha: 0,
          scale: 15,
          yPercent: -2000,
          duration: 2,
@@ -147,10 +144,21 @@ function initSplashTilt() {
             ease: 'power1.out'
          }
       }, 0)
-
+      .to('.title__word', {
+         duration: 0.3,
+         opacity: 1
+      }, 0)
+      .to('.subtitle', {
+         duration: 0.3,
+         opacity: 1
+      }, 0)
+      .to('.scroll-indicator', {
+         duration: 0.3,
+         opacity: 1
+      }, 0);
+   
    // then, add an event listener to activate the moveText function
    document.querySelector('.splash').addEventListener('mousemove', moveText);
-
 
 }
 

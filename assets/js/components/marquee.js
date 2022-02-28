@@ -31,7 +31,7 @@ function initMarquee() {
    // marquee [2] 'feeling or showing pleasure or contentment
    marqueeObject[2].setScrollContent('feeling or showing pleasure or contentmment');
    
-   marqueeObject[3].setScrollContent('an emotional state or reaction');
-   marqueeObject[4].setScrollContent('allowing, or causing to be visible');
+   // marqueeObject[3].setScrollContent('an emotional state or reaction');
+   // marqueeObject[4].setScrollContent('allowing, or causing to be visible');
 
 }

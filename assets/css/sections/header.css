@@ -6,6 +6,7 @@
    position: fixed;
    width: 100%;
    z-index: 10;
+   pointer-events: none;
 }
 
 .progress-bar {
@@ -24,16 +25,42 @@
    position: relative;  
 }
 
+/* svg logo sized proportional to viewport width 
+*/ 
 .logo {
    display: inline-block;
    margin: var(--space-8) var(--space-12) 0;
-   width: 14rem;
+   width: 40vw;
+   height: auto;
+
+   /* animation */ 
+   transition: transform 1s;
+   transform: translateX(0);
 }
 
 .header__link {
    margin: 0 var(--space-16);
+   margin-bottom: var(--space-4);
+   pointer-events: auto;
+
+   /* animation */ 
+   transition: transform 1s;
+   transform: translateX(0);
 }
 
+/* move the header elements out of the way on user scroll
+*/
+.has-scrolled .logo {
+   transform: translateY(-100%);
+   transition: all 0.6s;
+   opacity: 0;
+}
+
+.has-scrolled .header__link {
+   transform: translateY(-100%);
+   transition: all 0.6s;
+   opacity: 0;
+}
 
 
 

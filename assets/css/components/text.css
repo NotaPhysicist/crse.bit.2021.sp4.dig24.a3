@@ -18,8 +18,8 @@
    position: absolute;
    content: "";
    background-color: rgba(154, 52, 18, 0.50);
-   width: 110%;
-   transform: translateX(-5%) translateY(-110%);
+   width: 102%;
+   transform: translateX(-1%) translateY(-110%);
    transition: height 0.3s ease;
    height: 1px;
 }
@@ -27,6 +27,13 @@
 .link:hover::after,
 .link:active::after {
    height: var(--space-12);
+}
+
+/* move the arrow to the right on hover */ 
+.text__link.link:hover ~ .text__i-arrow {
+   /* transform: translateX(100%); */
+   transform: translate(1.1rem, 0.3rem);
+   
 }
 
 
@@ -40,13 +47,14 @@ div.text-wrapper {
    width: 100%;
 
    position: relative;
+   overflow: hidden;
 }
 
 .bold {
-   display: inline-block;
+   position: relative;
    color: var(--color-accent);
    font-weight: 500;
-   transform: scaleY(1.08);
+   transform: scaleY(1.1);
 }
 
 .period {
@@ -54,12 +62,18 @@ div.text-wrapper {
    font-size: 1.2em;
 }
 
-/* headings require a size utility class */ 
+.text__heading--mask {
+   overflow: hidden;
+}
+
 .text__heading {
+   /* note: font size provided by a utility class */ 
    margin-bottom: var(--space-12);
 }
 
-/* paragraphs are sized here */ 
+/* paragraphs are the only type style with an inherent font size
+ * everything else requires an utility class
+ */ 
 .text__p {
    font-size: var(--text-base);
    letter-spacing: 0.25px;
@@ -68,7 +82,7 @@ div.text-wrapper {
    position: relative;
 }
 
-/* add a little extra space between the text sections */
+/* add a little extra space between the text sub-sections */
 .text__p ~ .text__heading {
    margin-top: var(--space-24);
 }
@@ -86,4 +100,5 @@ div.text-wrapper {
 
    position: relative;
    transform: translate(0.2rem, 0.3rem);
+   transition: all 0.3s ease-in-out;
 }

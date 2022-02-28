@@ -1,18 +1,16 @@
 /**************************************/
-/* SECTION / WHO WE ARE
+/* SECTION / SECTION
 /**************************************/
-
 
 .circle {
    width: 100vw;
    height: 100vw;
    border: 2px solid var(--color-accent-tint-40);
    border-radius: 50%;
-
    position: absolute;
    top: 0;
    left: 0;
    z-index: -10;
    transform: translate(-30vw, -7.5vw);
-}
+} 
 

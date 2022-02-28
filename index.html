@@ -22,9 +22,8 @@
    <!-- tiny slider -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
-   <!-- custom css -->
+   <!-- custom css (not mininfied) -->
    <link rel="stylesheet" href="./assets/css/main-min.css">
-   <!-- <link rel="stylesheet" href="./assets/css/main-min.css"> -->
    
    <title>Happiness, the word, dissected</title>
 </head>
@@ -33,17 +32,22 @@
    
    <!-- HEADER, MENU AND PROGRESS BAR - fixed to top -->
    <header class="header">
-      <sl-progress-bar value="2" class="progress-bar"></sl-progress-bar>
+      
+      <sl-progress-bar value="1" class="progress-bar"></sl-progress-bar>
+      
       <div class="header__inner">
          <img src="./assets/svg/suiew-logo.svg" alt="SUIEW logo" class="logo">
          <a href="#" class="header__link text-base link">Contact</a>
       </div>
-   </header>
    
+   </header>   
+
+
+
+
    <!-- SPLASH SECTION  -->
    <section class="splash">
       
-      <!-- title text -->
       <div class="splash__inner">
          <div class="title">
             <span class="title__word title__word--8">contentment</span>
@@ -55,11 +59,14 @@
             <span class="title__word title__word--2">happy</span>
             <span class="title__word title__word--1">happiness</span>
          </div>
-         <h2 class="subtitle text-base">
-            An experimental presentation bought to you by the<br>
-            Society for the Understanding of Important English 
-            Words<span class="period">.</span>
-         </h2>
+         <p class="subtitle text-base">
+            <span class="block">
+               An experimental presentation on the word <b class="bold">happiness</b> bought to you by the
+            </span>
+            <span class="block">
+               <a href="./suiew.html" class="link bold">Society for the Understanding of Important English Words</a>.
+            </span>
+         </p>
          
          <!-- down chevron icon -->
          <div class="scroll-indicator">
@@ -73,9 +80,13 @@
       </div>
       
    </section>
-   
+   <!-- /splash section -->
+
+
+
+
    <!-- WHO WE ARE SECTION --> 
-   <section class="section">
+   <section class="section who-we-are">
       <div class="section__inner">
          
          <div class="container">
@@ -89,16 +100,27 @@
                      
                      <div class="text-wrapper">
                         
-                        <h3 class="text__heading text-lg">
-                           Who we are<span class="period">.</span>
-                        </h3>                  
+                        <div class="text__heading--wrapper">
+                           <div class="text__heading--mask">
+                              <h3 class="text__heading text-lg">
+                                 Who we are<span class="period">.</span>
+                              </h3>                  
+                           </div>
+                        </div>
                         <p class="text__p">
-                           The <b class="bold">Society for the Understanding of Important English Words</b>, is a scientific DAO dedicated to the exploration of the meanings of important English words. 
+                           The 
+                           <b class="bold">Society for the Understanding of Important English Words</b>, 
+                           is a scientific DAO dedicated to the exploration of the meanings of important English words. 
                         </p>
                         
-                        <h3 class="text__heading text-lg">
-                           What's a DAO<span class="period">?</span>
-                        </h3>                  
+                        <div class="text__heading--wrapper">
+                           <div class="text__heading--mask">
+                              <h3 class="text__heading text-lg">
+                                 What's a DAO<span class="period">?</span>
+                              </h3>
+                           </div>
+                        </div>
+                        
                         <p class="text__p">
                            A DAO is a <em>decentralized autonomous 
                               organisation</em><span class="period">.</span>
@@ -110,9 +132,13 @@
                            <sl-icon name="arrow-right" class="text__i-arrow"></sl-icon>
                         </p>
                         
-                        <h3 class="text__heading text-lg">
-                           More about us<span class="period">.</span>
-                        </h3>
+                        <div class="text__heading--wrapper">
+                           <div class="text__heading--mask">
+                              <h3 class="text__heading text-lg">
+                                 More about us<span class="period">.</span>
+                              </h3>
+                           </div>
+                        </div>
                         <p class="text__p">
                            The <b class="bold">Society</b> is an invitation-only, private organization of like-minded, globally distributed language scholars with the shared mission of promoting important words of the English language. <em>And not just English words, but important words in all languages everywhere.</em> 
                         </p>
@@ -136,6 +162,9 @@
    </section>
    <!-- /who we are section -->
    
+
+
+
    <!-- IMAGE SLIDER --> 
    <div class="slider js-slider">
       <img src="./assets/images/carousel/contemplative.jpg" alt="a man leaning against a wall" class="slider__image">
@@ -150,12 +179,16 @@
    </div>
    <!-- /image slider -->
 
+
+
+   
+   <!-- MARQUEE [0] 'happiness' -->
+   <div class="js-smq smq smq--happiness-1  mq-level-1 text-xxxl"></div>
+
    <!-- HOW IT WORKS SECTION -->
-   <section class="section">
+   <section class="section how-it-works">
       <div class="section__inner">
          
-         <!-- MARQUEE [0] 'happiness' -->
-         <div class="js-smq smq smq--happiness-1  mq-level-1 text-xxxl"></div>
          
          <div class="container">
             <div class="pure-g">
@@ -178,6 +211,7 @@
                            We believe in the possibility of a great wisdom; and if it exists, that it is ours to discover, embedded in the language of our forebears.
                         </p>
 
+                        <!-- THIS BELONGS IN AN FAQ 
                         <h3 class="text__heading text-lg">
                            Why use English<span class="period">.</span>
                         </h3>
@@ -190,6 +224,8 @@
                            we refer to the 
                            <b class="bold"><em>New Oxford Dictionary of English</em></b>. 
                         </p>
+                        --> 
+
                         <h3 class="text__heading text-lg">
                            How it works<span class="period">.</span>
                         </h3>
@@ -230,12 +266,15 @@
    </section>
    <!-- /how it works section -->
    
+
+
+
    <!-- HAPPINES DEFINITION SECTION -->
    <section class="section">
       <div class="section__inner">
 
          <!-- MARQUEE [1] 'the state of being happy' -->
-         <div class="js-smq smq smq--happiness-2  mq-level-2 text-xxl"></div>
+         <div class="js-smq smq text-xxl"></div>
 
          <div class="container">
             <div class="pure-g">
@@ -292,6 +331,9 @@
    </section>
    <!-- /happiness definition section -->
    
+
+
+
    <!-- HAPPY DEFINITION SECTION -->
    <section class="section">
       <div class="section__inner">
@@ -349,36 +391,91 @@
    
    
    
+
    <section class="section wireframe wf-s6-defn-feeling">
       
-      <div class="js-smq smq smq--showing      mq-level-5 text-md"></div> 
-      <div class="js-smq smq smq--feeling      mq-level-4 text-lg"></div>
+      <p class="u-text-center text-md">
+         definition: feeling
+      </p>
       
-      defn: feeling
-      <h1 class="text-xxs">xxs: Happiness is fun.</h1>
-      <h1 class="text-xs">xs: Happiness is fun.</h1>
-      <h1 class="text-sm">sm: Happiness is fun.</h1>
-      <h1 class="text-base">base: Happiness is fun.</h1>
-      <h1 class="text-md">md: Happiness is fun.</h1>
-      <h1 class="text-lg">lg: Happiness is fun.</h1>
-      <h1 class="text-xl">xl: Happiness is fun.</h1>
-      <h1 class="text-xxl">xxl: Happiness is fun.</h1>
-      <h1 class="text-xxxl">xxxl: Happiness is fun.</h1>
+      <!-- temporary staging and testing 
+         <div class="js-smq smq smq--showing      mq-level-5 text-md"></div> 
+         <div class="js-smq smq smq--feeling      mq-level-4 text-lg"></div>
+         
+         defn: feeling
+         <h1 class="text-xxs">xxs: Happiness is fun.</h1>
+         <h1 class="text-xs">xs: Happiness is fun.</h1>
+         <h1 class="text-sm">sm: Happiness is fun.</h1>
+         <h1 class="text-base">base: Happiness is fun.</h1>
+         <h1 class="text-md">md: Happiness is fun.</h1>
+         <h1 class="text-lg">lg: Happiness is fun.</h1>
+         <h1 class="text-xl">xl: Happiness is fun.</h1>
+         <h1 class="text-xxl">xxl: Happiness is fun.</h1>
+         <h1 class="text-xxxl">xxxl: Happiness is fun.</h1>
+      -->
+   
    </section>
    
-   <section class="section wireframe wf-s7-defn-showing">defn: showing</section>
-   <section class="section wireframe wf-s8-defn-pleasure">defn: pleasure</section>
-   <section class="section wireframe wf-s9-defn-satisfaction">defn: satisfaction</section>
-   <section class="section wireframe wf-s10-defn-enjoyment">defn: enjoyment</section>
-   <section class="section wireframe wf-s11-defn-contentment">defn: contentment</section>
-   <section class="section wireframe wf-s12-summary">summary</section>
-   <section class="section wireframe wf-s13-conclusion">conclusion</section>
-   <section class="section wireframe wf-s14-contact-us">contact us</section>
-   <section class="section wireframe wf-s15-rewind">rewind</section>
 
-
-
+   <section class="section wireframe wf-s7-defn-showing">
+      <p class="u-text-center text-md">
+         definition: showing
+      </p>
+   </section>
    
+   <section class="section wireframe wf-s8-defn-pleasure">
+      <p class="u-text-center text-md">
+         definition: pleasure
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s9-defn-satisfaction">
+      <p class="u-text-center text-md">
+         definition: satisfaction
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s10-defn-enjoyment">
+      <p class="u-text-center text-md">
+         definition: enjoyment
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s11-defn-contentment">
+      <p class="u-text-center text-md">
+         definition: contentment
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s12-summary">
+      <p class="u-text-center text-md">
+         summary
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s13-conclusion">
+      <p class="u-text-center text-md">
+         conclusion
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s14-contact-us">
+      <p class="u-text-center text-md">
+         contact us<br>
+         additional information
+      </p>
+   </section>
+   
+   <section class="section wireframe wf-s15-rewind">
+      <p class="u-text-center text-md">
+         rewind to the top,<br>
+         unwind all the animations
+      </p>
+   </section>
+
+
+
+
    <!-- shoelace.style -->
    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/shoelace.js"></script>
    
@@ -402,8 +499,8 @@
       document.body.classList.add('ready');
    </script>
    
-   <!-- custom scripts -->
-   <script src="./assets/js/main.js"></script>
+   <!-- custom javascript (not mininfied) -->
+   <script src="./assets/js/main-min.js"></script>
   
 </body>
 </html>

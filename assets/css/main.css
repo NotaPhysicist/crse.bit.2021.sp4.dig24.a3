@@ -17,7 +17,7 @@
 @import './sections/definition.css';
 
 /* components */
-@import './components/section.css';
+/* @import './components/section.css'; */
 @import './components/text.css';
 @import './components/slider.css';
 @import './components/marquee.css';

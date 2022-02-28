@@ -72,11 +72,11 @@
    }
 
    /* circle on who-we-are page */ 
-   div.circle {
+   /* div.circle {
       width: 80vw;
       height: 80vw;
       transform: translate(-15vw, -3.25vw);
-   }
+   } */
 
    /* image carousel */
    img.slider__image {

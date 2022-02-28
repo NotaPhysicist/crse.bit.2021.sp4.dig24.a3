@@ -1,16 +1,83 @@
 /**************************************/
-/* SECTION / SECTION
+/* COMPONENT / SECTION
 /**************************************/
 
+/*
+--------------------------------------------
+Container and pure-g HTML 3-column template
+--------------------------------------------
+<!-- image column -->
+<div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
+</div>
+
+<!-- content column --> 
+<div class="pure-u-1 pure-u-sm-19-24 pure-u-md-15-24 pure-u-lg-13-24">
+</div>
+
+<!-- aside column --> 
+<div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
+</div>
+*/
+
+.container {
+   max-width: var(--site-width);
+   padding: 0 var(--space-16);
+   margin: 0 auto;
+}
+
+.section {
+   /* resoponsive: increases up to 100vh */
+   min-height: 70vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   /* border: 1px solid burlywood; */
+}
+
+/* column one */
+.image-col {
+   position: relative;
+}
+
+/* column two */
+.text-col { 
+   position: relative;
+}
+
+/* column three */
+.aside-col {  
+   position: relative;
+}
+
+/* Circle Animation
+ */
+
 .circle {
-   width: 100vw;
-   height: 100vw;
-   border: 2px solid var(--color-accent-tint-40);
+   position: relative;
+   width: 80vw;
+   height: 80vw;
    border-radius: 50%;
+   
+   margin: var(--space-32) auto;
+   background-color: darkkhaki;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.circle__text {
    position: absolute;
-   top: 0;
-   left: 0;
-   z-index: -10;
-   transform: translate(-30vw, -7.5vw);
-} 
+   width: 100%;
+   height: 100%;
+}
+
+.circle__copy {
+   position: absolute;
+   left: 50%;
+   font-size: 4.5vw;
+   transform-origin: 0 40vw;
+}
 

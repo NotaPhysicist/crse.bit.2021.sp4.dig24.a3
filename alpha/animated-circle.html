@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
+   
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Inconsolata', monospace;
+      }
+
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+      }
+
+      .circle {
+         position: relative;
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         /* background-color: #ccc; */
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      /* .logo {
+         position: absolute;
+         width: 150px;
+         height: 150px;
+         background-image: url(./head.jpg);
+         background-size: cover;
+         border-radius: 50%;
+         filter: brightness(1.2) contrast(1.2);
+      } */
+
+      .text {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+
+         animation: rotateText 30s linear infinite;
+      }
+
+      @keyframes rotateText {
+         0% {
+            transform: rotate(360deg);
+         }
+         100% {
+            transform: rotate(0deg);
+         }
+      }
+
+      .text span {
+         position: absolute;
+         left: 50%;
+         font-size: 1.2em;
+         transform-origin: 0 100px;
+      }
+   </style>
+
+</head>
+<body>
+   
+   <div class="circle">
+      <!-- <div class="logo"></div> -->
+      <div class="text">
+         <p>Tim Carter - Not a very good designer - </p>
+      </div>
+   </div>
+
+   <script>
+
+      /**
+       * Animated Circle Text Logo Effects using CSS & Javascript
+       * https://www.youtube.com/watch?v=zwl3kZPZ8H8
+       */ 
+
+      const text = document.querySelector('.text p');
+      text.innerHTML = text.innerText.split("").map(
+         (char, i) => `<span style="transform: rotate(${i * 9}deg)">${char}</span>`
+      ).join("");
+
+   </script>
+
+</body>
+</html>

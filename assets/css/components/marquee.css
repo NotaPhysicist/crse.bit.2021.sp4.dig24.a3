@@ -2,9 +2,15 @@
 /* COMPONENT / MARQUEE
 /**************************************/
 
+.smq-wrapper {
+   margin: var(--space-16) 0;
+}
+
 .smq {
    line-height: 1.25;
-   margin: var(--space-24);
-
+   
 }
+
+
+
 

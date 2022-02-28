@@ -5,6 +5,10 @@
 // @codekit-prepend './components/who-we-are.js'
 // @codekit-prepend './components/how-it-works.js
 
+function circle() {
+   
+}
+
 function init() {
 
    initHeader();
@@ -13,6 +17,7 @@ function init() {
    initSplashTilt();
    initWhoWeAre();
    initHowItWorks();
+   initCircle();
 
 }
 

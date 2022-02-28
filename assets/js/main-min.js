@@ -41,7 +41,12 @@ function initSlider() {
 function initMarquee() {
 
    const marqueeElement = document.querySelectorAll('.js-smq');
-   const marqueeObject = []; 
+   const marqueeObject = [];
+   
+   const spacerHTMLposition = `position: relative`;
+   const spacerHTMLtranslate = `transform: translateY(0.075em)`;
+   const spacerHTMLcolor = `color: var(--color-accent)`;
+   const spacerHTML = `&nbsp<span style="${spacerHTMLcolor};${spacerHTMLposition};${spacerHTMLtranslate};">•<span>&nbsp`;
    
    for (let i = 0; i < marqueeElement.length; i++) {
       marqueeObject[i] = new SuperMarquee(marqueeElement[i], {
@@ -49,7 +54,7 @@ function initMarquee() {
          'speed': 'superslow',
          'pauseonhover': 'true',
          'easing': 'true',
-         'spacer': '&nbsp • &nbsp'
+         'spacer': spacerHTML
       }); 
    }
    
@@ -308,6 +313,10 @@ function initHowItWorks() {
 // @codekit-prepend './components/who-we-are.js'
 // @codekit-prepend './components/how-it-works.js
 
+function circle() {
+   
+}
+
 function init() {
 
    initHeader();
@@ -316,6 +325,7 @@ function init() {
    initSplashTilt();
    initWhoWeAre();
    initHowItWorks();
+   initCircle();
 
 }
 

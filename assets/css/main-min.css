@@ -449,12 +449,11 @@ select {
    }
 
    /* circle on who-we-are page */ 
-   div.circle {
+   /* div.circle {
       width: 80vw;
       height: 80vw;
-      -webkit-transform: translate(-15vw, -3.25vw);
       transform: translate(-15vw, -3.25vw);
-   }
+   } */
 
    /* image carousel */
    img.slider__image {
@@ -733,35 +732,12 @@ select {
    color: var(--color-main);
 } 
 /**************************************/ 
-/* SECTION / SECTION
-/**************************************/ 
-.circle {
-   width: 100vw;
-   height: 100vw;
-   border: 2px solid var(--color-accent-tint-40);
-   border-radius: 50%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   z-index: -10;
-   -webkit-transform: translate(-30vw, -7.5vw);
-   transform: translate(-30vw, -7.5vw);
-} 
-/**************************************/ 
-/* SECTIONS | DEFINITIONS
-/**************************************/ 
-/* * * * * * * * * * * * * * * * * * */ 
-/* Section | How It Works            */ 
-/* * * * * * * * * * * * * * * * * * */ 
-/* components */ 
-/**************************************/ 
 /* COMPONENT / SECTION
 /**************************************/ 
-/**
-------------------------------------
-Container and pure-g layout template
-------------------------------------
-
+/*
+--------------------------------------------
+Container and pure-g HTML 3-column template
+--------------------------------------------
 <!-- image column -->
 <div class="pure-u-1 pure-u-sm-4-24  pure-u-md-7-24  pure-u-lg-8-24">
 </div>
@@ -773,47 +749,69 @@ Container and pure-g layout template
 <!-- aside column --> 
 <div class="pure-u-1 pure-u-sm-1-24  pure-u-md-2-24  pure-u-lg-3-24">
 </div>
-
 */ 
 .container {
    max-width: var(--site-width);
    padding: 0 var(--space-16);
    margin: 0 auto;
-   /* background-color: darkgrey; */
 } 
 .section {
-   /* resoponsive: increases up to 100vh */ 
+   /* resoponsive: increases up to 100vh */
    min-height: 70vh;
 
    display: flex;
    flex-direction: column;
    justify-content: center;
-   
+
    /* border: 1px solid burlywood; */
 } 
 /* column one */ 
 .image-col {
-   /* height: 100vh; */
-   /* background-color: rgb(228, 227, 207);  */
-   /* border: 1px dashed rgb(196, 195, 195); */
-
    position: relative;
 } 
-/* --- column two --- */ 
-.text-col {
-   /* height: 100vh; */
-
-   /* width: 100%; */
-
-   /* display: flex;
-   flex-direction: column;
-   justify-content: center; */
-
-   /* border: 1px dashed rgb(196, 195, 195) */
-   /* background-color: rgb(192, 191, 176);   */
+/* column two */ 
+.text-col { 
+   position: relative;
 } 
 /* column three */ 
-/* .aside-col { background-color: rgb(160, 159, 147); } */ 
+.aside-col {  
+   position: relative;
+} 
+/* Circle Animation
+ */ 
+.circle {
+   position: relative;
+   width: 80vw;
+   height: 80vw;
+   border-radius: 50%;
+   
+   margin: var(--space-32) auto;
+   background-color: darkkhaki;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} 
+.circle__text {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+} 
+.circle__copy {
+   position: absolute;
+   left: 50%;
+   font-size: 4.5vw;
+   -webkit-transform-origin: 0 40vw;
+   transform-origin: 0 40vw;
+} 
+/**************************************/ 
+/* SECTIONS | DEFINITIONS
+/**************************************/ 
+/* * * * * * * * * * * * * * * * * * */ 
+/* Section | How It Works            */ 
+/* * * * * * * * * * * * * * * * * * */ 
+/* components */ 
+/* @import './components/section.css'; */ 
 /**************************************/ 
 /* COMPONENTS / TEXT
 /**************************************/ 
@@ -932,8 +930,10 @@ div.text-wrapper {
 /**************************************/ 
 /* COMPONENT / MARQUEE
 /**************************************/ 
+.smq-wrapper {
+   margin: var(--space-16) 0;
+} 
 .smq {
    line-height: 1.25;
-   margin: var(--space-24);
-
+   
 }

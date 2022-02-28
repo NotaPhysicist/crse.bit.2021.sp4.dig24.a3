@@ -36,7 +36,7 @@ Container and pure-g layout template
    flex-direction: column;
    justify-content: center;
    
-   border: 1px solid burlywood;
+   /* border: 1px solid burlywood; */
 }
 
 /* column one */

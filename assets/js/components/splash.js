@@ -37,11 +37,11 @@ function initSplashTilt() {
             each: 0.4,
             ease: 'power1.out'
          }
-      }, 0);
-
+      }, 0)
 
    // then, add an event listener to activate the moveText function
    document.querySelector('.splash').addEventListener('mousemove', moveText);
+
 
 }
 
@@ -69,8 +69,8 @@ function moveText(event) {
    words.forEach((word, index) => {
       gsap.to(word, {
          duration: 1.2,
-         x: xPosition * 35 * modifier(index),
-         y: yPosition * 35 * modifier(index),
+         x: xPosition * 50 * modifier(index),
+         y: yPosition * 40 * modifier(index),
          z: xPosition * modifier(index),
          rotationX: xPosition * 40,
          rotationY: yPosition * 40,
@@ -78,20 +78,22 @@ function moveText(event) {
       });
    });
 
+   /*
    // move the subtitle
    gsap.to('.subtitle', {
       duration: 1.8, 
       x: xPosition * 120,
-      y: yPosition * 140,
+      y: yPosition * 180,
       ease: 'power4.out'
    });
    
    // move the chevron
    gsap.to('.scroll-indicator', {
       duration: 1.8, 
-      x: xPosition * 80,
-      y: yPosition * 50,
+      x: xPosition * 100,
+      y: yPosition * 120,
       ease: 'power4.out'
    });
+   */
 
 }

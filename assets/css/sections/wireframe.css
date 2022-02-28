@@ -15,8 +15,8 @@
 .wireframe {
    display: block;
    width: 100%;
-   border: 1px solid var(--color-skeleton-grey-100);
-   color: var(--color-skeleton-grey-100);
+   border: 1px solid var(--color-skeleton-grey-50);
+   color: var(--color-skeleton-grey-50);
    height: 100vh
 }
 

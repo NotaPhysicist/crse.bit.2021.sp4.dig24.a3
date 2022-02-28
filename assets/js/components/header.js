@@ -8,7 +8,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-   markers: true
+   // markers: true
 })
 
 function initHeader() {

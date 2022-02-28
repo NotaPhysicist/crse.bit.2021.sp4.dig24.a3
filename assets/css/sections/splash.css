@@ -20,7 +20,7 @@
 
 .title {
    position: relative;
-   margin-bottom: var(--space-128);
+   margin-bottom: calc( var(--space-128) * 1.75 );
 
    perspective: 1500px;
 }
@@ -50,7 +50,7 @@
    max-width: 50rem;
    text-align: center;
    line-height: var(--line-height-sl);
-   margin-bottom: var(--space-80);
+   margin-bottom: var(--space-64);
    pointer-events: none;
 }
 

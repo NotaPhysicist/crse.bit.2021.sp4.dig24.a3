@@ -14,6 +14,14 @@
 
    <style>
 
+      :root {
+         --circle-size: 60vw;
+
+         /* outer circle of text */ 
+         --circle-fs-ratio-outer: 3.5vw;
+         --cirlce-text-radius-outer: calc(var(--circle-size) / 2);
+      }
+
       body {
          opacity: 1;
          min-height: 100vh;
@@ -25,22 +33,24 @@
 
       .circle {
          position: relative;
-         width: 60vw;
-         height: 60vw;
+         width: var(--circle-size);
+         height: var(--circle-size);
          border-radius: 50%;
          
-         /* background-color: darkkhaki; */
+         /* background-color: rgb(194, 190, 133); */
 
          display: flex;
          justify-content: center;
          align-items: center;
       }
 
-      .circle__text {
+      .circle__text--outer {
          position: absolute;
          width: 100%;
          height: 100%;
 
+         /* background-color: rgba(148, 170, 110, 0.418); */
+         
          animation: rotateText 80s linear infinite;
       }
 
@@ -49,46 +59,56 @@
          100% { transform: rotate(0deg) };
       }
 
-      .circle__copy span{
+      .circle__copy--outer span {
          position: absolute;
          left: 50%;
          font-family: 'Cutive Mono', monospace;
-         font-size: 3.5vw;
          font-weight: 400;
-         transform-origin: 0 30vw;
+
+      }
+   
+      .circle__copy--outer span{
+         font-size: var(--circle-fs-ratio-outer);
+         transform-origin: 0 var(--cirlce-text-radius-outer);
+
+         /* background-color: rgba(165, 42, 42, 0.404); */
       }
 
-
-   
    </style>
 
 </head>
 <body>
    
    <div class="circle">
-      <div class="circle__text">
-         <p class="circle__copy">
+   
+      <div class="circle__text--outer">
+         <p class="circle__copy--outer js-circle-outer">
             Happiness ➝ Happy ➝ Feeling ➝ Showing ➝ Pleasure ➝ Satisfaction ➝ Enjoyment ➝ Contentment ➝ &nbsp;
          </p>
       </div>
-
-      <!-- <p class="circle__text--inner">
-      A circular definition uses the terms being defined as part of the definition • &nbsp;
-      </p>  -->
    
    </div>
 
    <script>
 
-      const text = document.querySelector('.circle__copy');
-      
-      /* calcualte a proporation text size proportionate to viewpoint width */ 
-      const vw = document.documentElement.clientWidth;
-      const vwRatio = vw * 0.00355;
-      
-      text.innerHTML = text.innerText.split("").map(
-         (char, i) => `<span style="transform: rotate(calc(${i} * ${vwRatio}deg)">${char}</span>`
-      ).join("");
+      function createCircleText(circle, ratio) {
+
+         const text = document.querySelector(circle);
+         
+         /* calcualte a proporation text size proportionate to 
+          * viewpoint width 
+          */ 
+         const vw = document.documentElement.clientWidth;
+         const vwRatio = vw * ratio;
+         
+         /* rotate the text around the circle */ 
+         text.innerHTML = text.innerText.split("").map(
+            (char, i) => `<span style="transform: rotate(calc(${i} * ${vwRatio}deg)">${char}</span>`
+         ).join("");   
+      }
+
+      createCircleText('.js-circle-outer', 0.00325);
+
 
    </script>
 

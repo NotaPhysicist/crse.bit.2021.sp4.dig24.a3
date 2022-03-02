@@ -8,18 +8,22 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="./../assets/css/main-min.css">
 
    <style>
 
       :root {
-         --circle-size: 60vw;
-
-         /* outer circle of text */ 
+         /* outer circle */ 
+         --circle-size-outer: 60vw;
          --circle-fs-ratio-outer: 3.5vw;
-         --cirlce-text-radius-outer: calc(var(--circle-size) / 2);
+         --cirlce-text-radius-outer: calc(var(--circle-size-outer) / 2);
+         
+         /* inner circle */
+         --circle-size-inner: 50vw; 
+         --circle-fs-ratio-inner: 5vw;
+         --cirlce-text-radius-inner: calc(var(--circle-size-inner) / 2);
       }
 
       body {
@@ -30,48 +34,75 @@
          justify-content: center;
          align-items: center;
       }
-
-      .circle {
-         position: relative;
-         width: var(--circle-size);
-         height: var(--circle-size);
-         border-radius: 50%;
-         
-         /* background-color: rgb(194, 190, 133); */
-
+      
+      .circle-wrapper {
          display: flex;
          justify-content: center;
          align-items: center;
       }
 
-      .circle__text--outer {
+      .outer,
+      .inner {
+         position: absolute;
+      }
+
+      .circle {
+         position: relative;
+         border-radius: 50%;
+      }
+
+      .outer .circle {
+         width: var(--circle-size-outer);
+         height: var(--circle-size-outer);
+      }
+      
+      .inner .circle {
+         width: var(--circle-size-inner);
+         height: var(--circle-size-inner);
+      }
+
+      .outer .circle__text,
+      .inner .circle__text {
          position: absolute;
          width: 100%;
          height: 100%;
-
-         /* background-color: rgba(148, 170, 110, 0.418); */
-         
-         animation: rotateText 80s linear infinite;
+      }
+      
+      .outer .circle__text {
+         animation: rotateTextOuter 80s linear infinite;
+      }
+      
+      .inner .circle__text {
+         animation: rotateTextInner 250s linear infinite;
       }
 
-      @keyframes rotateText {
+      @keyframes rotateTextOuter {
          0%   { transform: rotate(-360deg); }
          100% { transform: rotate(0deg) };
       }
+      
+      @keyframes rotateTextInner {
+         0%   { transform: rotate(360deg); }
+         100% { transform: rotate(0deg) };
+      }
 
-      .circle__copy--outer span {
+      .outer .circle__copy span,
+      .inner .circle__copy span {
          position: absolute;
          left: 50%;
-         font-family: 'Cutive Mono', monospace;
-         font-weight: 400;
-
+         font-family: 'Roboto Mono', monospace;
       }
-   
-      .circle__copy--outer span{
+      
+      .outer .circle__copy span{
+         font-weight: 300;
          font-size: var(--circle-fs-ratio-outer);
          transform-origin: 0 var(--cirlce-text-radius-outer);
-
-         /* background-color: rgba(165, 42, 42, 0.404); */
+      }
+      
+      .inner .circle__copy span{
+         font-weight: 100;
+         font-size: var(--circle-fs-ratio-inner);
+         transform-origin: 0 var(--cirlce-text-radius-inner);
       }
 
    </style>
@@ -79,15 +110,31 @@
 </head>
 <body>
    
-   <div class="circle">
-   
-      <div class="circle__text--outer">
-         <p class="circle__copy--outer js-circle-outer">
-            Happiness ➝ Happy ➝ Feeling ➝ Showing ➝ Pleasure ➝ Satisfaction ➝ Enjoyment ➝ Contentment ➝ &nbsp;
-         </p>
+   <div class="circle-wrapper">
+      
+      <div class="outer">
+         <div class="circle">
+            <div class="circle__text">
+               <p class="circle__copy js-circle">
+                  Happiness ➝ Happy ➝ Feeling ➝ Showing ➝ Pleasure ➝ Satisfaction ➝ Enjoyment ➝ Contentment ➝ &nbsp;
+               </p>
+            </div>
+         </div>
       </div>
-   
+      
+      <div class="inner">
+         <div class="circle">
+            <div class="circle__text">
+               <p class="circle__copy js-circle">
+                  Circular Definition • Circular Definition •
+               </p>
+            </div>
+         </div>
+      </div>
+      
    </div>
+
+
 
    <script>
 
@@ -107,7 +154,8 @@
          ).join("");   
       }
 
-      createCircleText('.js-circle-outer', 0.00325);
+      createCircleText('.outer .js-circle', 0.0036);
+      createCircleText('.inner .js-circle', 0.0075);
 
 
    </script>

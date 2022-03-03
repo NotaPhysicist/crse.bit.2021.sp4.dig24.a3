@@ -8,31 +8,32 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="./../assets/css/main-min.css">
 
    <style>
 
       /** 
-       * Prototype using vw ratios  
+       * Prototype using pixels  
        */
 
       :root {
          /* outer circle */ 
-         --circle-size-outer: 60vw;
-         --circle-fs-ratio-outer: 3.5vw;
+         --circle-size-outer: 600px;
+         --circle-fs-ratio-outer: 30px;
          --cirlce-text-radius-outer: calc(var(--circle-size-outer) / 2);
          
          /* inner circle */
-         --circle-size-inner: 50vw; 
-         --circle-fs-ratio-inner: 5vw;
+         --circle-size-inner: 540px; 
+         --circle-fs-ratio-inner: 60px;
          --cirlce-text-radius-inner: calc(var(--circle-size-inner) / 2);
       }
 
       body {
          opacity: 1;
          min-height: 100vh;
+         height: calc(var(--circle-size-outer) * 1.1);
 
          display: flex;
          justify-content: center;
@@ -40,6 +41,9 @@
       }
       
       .circle-wrapper {
+         position: relative;
+         height
+
          display: flex;
          justify-content: center;
          align-items: center;
@@ -98,7 +102,7 @@
       }
       
       .outer .circle__copy span{
-         font-weight: 300;
+         font-weight: 400;
          font-size: var(--circle-fs-ratio-outer);
          transform-origin: 0 var(--cirlce-text-radius-outer);
       }
@@ -146,20 +150,14 @@
 
          const text = document.querySelector(circle);
          
-         /* calcualte a proporation text size proportionate to 
-          * viewpoint width 
-          */ 
-         const vw = document.documentElement.clientWidth;
-         const vwRatio = vw * ratio;
-         
          /* rotate the text around the circle */ 
          text.innerHTML = text.innerText.split("").map(
-            (char, i) => `<span style="transform: rotate(calc(${i} * ${vwRatio}deg)">${char}</span>`
+            (char, i) => `<span style="transform: rotate(${i*ratio}deg)">${char}</span>`
          ).join("");   
       }
 
-      createCircleText('.outer .js-circle', 0.0035);
-      createCircleText('.inner .js-circle', 0.0075);
+      createCircleText('.outer .js-circle', 3.87);
+      createCircleText('.inner .js-circle', 8.2);
 
 
    </script>

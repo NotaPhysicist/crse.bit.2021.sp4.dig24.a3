@@ -42,9 +42,10 @@
 /* wraps text in subtle background gradient */
 div.text-wrapper {
    padding: var(--space-32);
-   background-color: rgba(154, 52, 18, 0.15);
-   background: linear-gradient(300deg, rgba(154, 52, 18, 0.15) 0%, rgba(154, 52, 18, 0) 100%);
+   background-color: rgba(255, 255, 255, 0.678);
+   background-image: linear-gradient(300deg, rgba(154, 52, 18, 0.15) 0%, rgba(154, 52, 18, 0) 100%);
    width: 100%;
+   z-index: 1;
 
    position: relative;
    overflow: hidden;

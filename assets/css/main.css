@@ -14,10 +14,11 @@
 @import './sections/header.css';
 @import './sections/splash.css';
 @import './sections/section.css';
-@import './sections/definition.css';
+@import './sections/page.css';
 
 /* components */
-/* @import './components/section.css'; */
+@import './components/section.css';
 @import './components/text.css';
 @import './components/slider.css';
 @import './components/marquee.css';
+@import './components/circle.css';

@@ -39,16 +39,19 @@ Container and pure-g HTML 3-column template
 /* column one */
 .image-col {
    position: relative;
+   height: 100%;
 }
 
 /* column two */
 .text-col { 
    position: relative;
+   height: 100%;
 }
 
 /* column three */
 .aside-col {  
    position: relative;
+   height: 100%;
 }
 
 /* Circle Animation

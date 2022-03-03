@@ -1,0 +1,28 @@
+/**************************************/
+/* SECTIONS | DEFINITIONS
+/**************************************/
+
+/*
+   Stage each page here until the page warrants its own file. 
+*/ 
+
+/* * * * * * * * * * * * * * * * * * */
+/* Section | How It Works            */  
+/* * * * * * * * * * * * * * * * * * */
+
+.how-it-works .image-col {
+   /* min-height: 100vw; */
+   
+   color: var(--color-accent-tint-20);
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* background-color: bisque; */
+}
+
+
+
+
+

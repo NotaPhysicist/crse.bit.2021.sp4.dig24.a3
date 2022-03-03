@@ -1,0 +1,111 @@
+/**************************************/
+/* COMPONENT / CIRCLE ANIMATION
+/**************************************/
+
+/*
+   Attempted to set this proportional to vw to make it fully responsive. 
+   As vw changes the ratios should stay constant, but in practice 
+   the angle of rotation drifts.
+*/
+
+:root {
+   /* outer circle */
+   --circle-size-outer: 600px;
+   --circle-fs-ratio-outer: 30px;
+   --cirlce-text-radius-outer: calc(var(--circle-size-outer) / 2);
+
+   /* inner circle */
+   --circle-size-inner: 540px;
+   --circle-fs-ratio-inner: 60px;
+   --cirlce-text-radius-inner: calc(var(--circle-size-inner) / 2);
+}
+
+.circle-wrapper {
+   position: relative;
+   height: calc(var(--circle-size-outer) * 1.1);
+   z-index: -1;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.outer,
+.inner {
+   position: absolute;
+}
+
+.circle {
+   position: relative;
+   border-radius: 50%;
+}
+
+.outer .circle {
+   width: var(--circle-size-outer);
+   height: var(--circle-size-outer);
+}
+
+.inner .circle {
+   width: var(--circle-size-inner);
+   height: var(--circle-size-inner);
+}
+
+.outer .circle__text,
+.inner .circle__text {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+.outer .circle__text {
+   animation: rotateTextOuter 80s linear infinite;
+}
+
+.inner .circle__text {
+   animation: rotateTextInner 250s linear infinite;
+}
+
+@keyframes rotateTextOuter {
+   0% {
+      transform: rotate(-360deg);
+   }
+
+   100% {
+      transform: rotate(0deg)
+   }
+
+   ;
+}
+
+@keyframes rotateTextInner {
+   0% {
+      transform: rotate(360deg);
+   }
+
+   100% {
+      transform: rotate(0deg)
+   }
+
+   ;
+}
+
+.outer .circle__copy span,
+.inner .circle__copy span {
+   position: absolute;
+   left: 50%;
+
+   font-family: monospace;
+   font-family: 'Roboto Mono', monospace;
+}
+
+.outer .circle__copy span {
+   font-weight: 400;
+   font-size: var(--circle-fs-ratio-outer);
+   transform-origin: 0 var(--cirlce-text-radius-outer);
+}
+
+.inner .circle__copy span {
+   font-weight: 100;
+   font-size: var(--circle-fs-ratio-inner);
+   transform-origin: 0 var(--cirlce-text-radius-inner);
+}

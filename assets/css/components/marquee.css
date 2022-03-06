@@ -3,11 +3,11 @@
 /**************************************/
 
 .smq-wrapper {
-   margin: var(--space-16) 0;
+   /* margin: var(--space-16) 0; */
 }
 
 .smq {
-   line-height: 1.25;
+   /* line-height: 1.25; */
    
 }
 

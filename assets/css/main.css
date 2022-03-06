@@ -17,8 +17,10 @@
 @import './sections/page.css';
 
 /* components */
-@import './components/section.css';
 @import './components/text.css';
 @import './components/slider.css';
 @import './components/marquee.css';
 @import './components/circle.css';
+
+/* prototypes */ 
+

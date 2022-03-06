@@ -15,21 +15,135 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
 
-   
-   <!-- shoelace.style -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.64/dist/themes/light.css">
-
-   <!-- tiny slider -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-
    <!-- custom css (not mininfied) -->
-   <link rel="stylesheet" href="./assets/css/main-min.css">
+   <link rel="stylesheet" href="./../assets/css/main-min.css">
    
-   <title>Marquee </title>
+   <title>Marquee</title>
+
+   <style>
+
+      body {
+         height: 100vh;
+
+         opacity: 1;
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         /* align-items: center; */
+         /* gap: var(--space-32); */
+      }
+
+      h1 {
+         background-color: bisque;
+         padding: 0.5em;
+         text-align: center;
+         margin: 0;
+      }
+
+      .smq-wrapper {
+         background-color: rgb(252, 221, 182);
+         margin: var(--space-2) 0;
+      }
+
+      .smq {
+         /* color: var(--color-main); */
+         /* font-size: var(--text-xl); */
+
+      }
+
+   </style>
 </head>
 
 <body>
    
+   <h1>Marquee Prototype</h1>
+
+   <div class="smq-wrapper">
+      <div class="smq js-smq--test"></div>
+   </div>
+   
+   <div class="smq-wrapper">
+      <div class="smq js-smq--01"></div>
+   </div>
+
+   
+   <!-- superplug.in/supermarquee -->
+   <script src="https://cdn.jsdelivr.net/npm/sp-supermarquee@latest/dist/SuperMarquee.min.js"></script>
+   
+   <!-- greensock.com -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+   <script>
+
+      const smqTest = document.querySelector('.js-smq--test');
+      const testMarquee = new SuperMarquee(smqTest, {
+         'content': 'no jab for me • ',
+         'speed': 'superslow',
+         'ease': 1
+      });
+      testMarquee.setScrollSpeed('slow');
+
+   
+      // default html for the spacer
+      const spacerHTMLposition = `position: relative`;
+      const spacerHTMLtranslate = `transform: translateY(0.075em)`;
+      const spacerHTMLcolor = `color: var(--color-accent)`;
+      const spacerHTML = `&nbsp<span style="${spacerHTMLcolor};${spacerHTMLposition};${spacerHTMLtranslate};">•<span>&nbsp`;
+      
+      function createMarquee(element, content, spacer) {
+         
+         return new SuperMarquee(element, {
+            'content': content,
+            'speed': 'superslow', 
+            'pauseonhover': '1',
+            'easing': '1',
+            'spacer': spacer      
+         });
+      }
+
+      function setMarqueeFontFamily(element, fontFamily) {
+         element.style.fontFamily = fontFamily;
+      }
+      
+      function setMarqueeLineHeight(element, lineHeight) {
+         element.style.lineHeight = lineHeight;
+      }
+
+      function setMarqueeFontSize(element, fontSize) {
+         element.style.fontSize = fontSize;
+      }
+
+      function setFontWeight(element, fontWeight) {
+         element.style.fontWeight = fontWeight;
+      }
+
+      function setColor(element, color) {
+         element.style.color = color;
+      }
+
+      function setMarqueeDefaults(element) {
+         setMarqueeFontFamily(element, 'Poppins');
+         setMarqueeLineHeight(element, 2.5);
+         setMarqueeFontSize(element, 'var(--text-md)');
+         setFontWeight(element, 400);
+         setColor(element, 'var(--color-main');
+      }
+
+        
+      const smq01Element = document.querySelector('.js-smq--01');
+      const smq01 = createMarquee(smq01Element, 'happiness', spacerHTML);
+      setMarqueeDefaults(smq01Element);
+
+      function simulateScroll(element) {
+         
+      }
+      
+      smq01.setScrollSpeed('superslow');
+
+      
+   </script>
    
 
 </body>

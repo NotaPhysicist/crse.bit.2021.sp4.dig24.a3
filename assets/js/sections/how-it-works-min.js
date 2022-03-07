@@ -1,4 +1,5 @@
 /**
+ * ---------------------
  * How It Works Section
  * ---------------------
  * 
@@ -8,6 +9,7 @@ function initHowItWorks() {
 
    /**
     * Inital text presention
+    * -----------------------
     */
    
    let timeline = gsap.timeline({
@@ -28,6 +30,7 @@ function initHowItWorks() {
          ease: 'power1.out',
          stagger: 0.3
       }, '+=25%')
+      // slide in the text from the side
       .from('.how-it-works .text__p', {
          duration: 1.6,
          xPercent: 75,
@@ -35,6 +38,7 @@ function initHowItWorks() {
          ease: 'power2.out',
          stagger: 0.3
       }, 0)
+      // fade in the background
       .from('.how-it-works .text-wrapper', {
          duration: 5,
          autoAlpha: 0,
@@ -42,9 +46,11 @@ function initHowItWorks() {
       }, 0);
 
       
-      /* set the circle animation */ 
+      /* set the circle animation rotate angles */ 
       createCircleText('.outer .js-circle', 3.87);
       createCircleText('.inner .js-circle', 8.2);
+
+      
       
 }
   

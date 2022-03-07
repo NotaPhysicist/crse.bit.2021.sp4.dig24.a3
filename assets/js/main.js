@@ -1,9 +1,10 @@
 // @codekit-prepend './components/slider.js'
 // @codekit-prepend './components/marquee.js'
 // @codekit-prepend './components/header.js'
-// @codekit-prepend './components/splash.js'
-// @codekit-prepend './components/who-we-are.js'
-// @codekit-prepend './components/how-it-works.js
+
+// @codekit-prepend './sections/splash.js'
+// @codekit-prepend './sections/who-we-are.js'
+// @codekit-prepend './sections/how-it-works.js
 
 function circle() {
    
@@ -11,13 +12,15 @@ function circle() {
 
 function init() {
 
+   // components
    initHeader();
    initSlider();
-   initMarquee();
+   // initMarquee();
+   
+   // page sections 
    initSplashTilt();
    initWhoWeAre();
    initHowItWorks();
-   initCircle();
 
 }
 

@@ -32,7 +32,7 @@ Container and pure-g HTML 3-column template
    flex-direction: column;
    justify-content: center;
 
-   /* border: 1px solid burlywood; */
+   border: 1px solid burlywood;
 }
 
 /* column one */

@@ -31,15 +31,100 @@ function initSlider() {
 
 
 /**
+ * --------------
  * Text Marquees 
  * --------------
- * Set up the supermarquee instance. 
- * All the marquees get created here at once and set to default values. 
- * Then they are individually configured to their custom settings as needed. 
+ * 
  */
 
+
+/**
+ * Constructor function. 
+ * Create a SuperMarquee with a set of default values  
+ */
+function createMarquee(element, content) {
+   
+   // default html for the spacer
+   const spacerHTMLposition = `position: relative`;
+   const spacerHTMLtranslate = `transform: translateY(0.075em)`;
+   const spacerHTMLcolor = `color: var(--color-accent)`;
+   const spacerHTML = `&nbsp<span style="${spacerHTMLcolor};${spacerHTMLposition};${spacerHTMLtranslate};">•<span>&nbsp`;
+   
+   return new SuperMarquee(element, {
+      'content': content,
+      'speed': 'slow', 
+      'pauseonhover': '1',
+      'easing': '1',
+      'spacer': spacerHTML   
+   });
+
+}
+
+/**
+ * A set of functions to set a CSS value to a SuperMarquee
+ */
+function setMarqueeFontFamily(element, fontFamily) {
+   element.style.fontFamily = fontFamily;
+}
+
+function setMarqueeLineHeight(element, lineHeight) {
+   element.style.lineHeight = lineHeight;
+}
+
+function setMarqueeFontSize(element, fontSize) {
+   element.style.fontSize = fontSize;
+}
+
+function setFontWeight(element, fontWeight) {
+   element.style.fontWeight = fontWeight;
+}
+
+function setColor(element, color) {
+   element.style.color = color;
+}
+
+function setLetterSpacing(element, letterspacing) {
+   element.style.letterSpacing = letterspacing;
+}
+
+/**
+ * Set the SuperMarquee to a set of default CSS values
+ */
+function setMarqueeDefaults(element) {
+   setMarqueeFontFamily(element, 'Poppins');
+   setMarqueeLineHeight(element, 2.6);
+   setMarqueeFontSize(element, 'var(--text-lg)');
+   setFontWeight(element, 100);
+   setColor(element, 'var(--color-main');
+   setLetterSpacing(element, '0.092rem');
+}
+
+function quickMarqueeSpeedup1 (marquee) {
+
+   // speed it up
+   marquee.setScrollSpeed('superfast');
+
+   // wait a moment, then spin it down to a readable speed
+   setTimeout(() => {
+      marquee.setScrollSpeed('medium');
+   }, 6500);
+
+}
+
+
+
+
+
+
+
+/*
 function initMarquee() {
 
+   // Instantiate all the marquees with a set of default values
+   // Each 
+   
+   
+   
    const marqueeElement = document.querySelectorAll('.js-smq');
    const marqueeObject = [];
    
@@ -72,6 +157,7 @@ function initMarquee() {
    // marqueeObject[4].setScrollContent('allowing, or causing to be visible');
 
 }
+*/
 
 /**
  * Header Animations
@@ -221,6 +307,7 @@ function moveText(event) {
 }
 
 /**
+ * -------------------
  * Who We Are Section
  * -------------------
  * 
@@ -228,12 +315,22 @@ function moveText(event) {
 
 function initWhoWeAre() {
 
+   //instantiate a marquee
+   const content = 'This website is an investigation into a single word, <i>happiness</i>. We did deep into the dictionary to discover what it might mean';
+   const smqWhoWeAreEl = document.querySelector('.smq--who-we-are');
+   const smqWhoWeAreOb = createMarquee(smqWhoWeAreEl, content);
+   setMarqueeDefaults(smqWhoWeAreEl);
+
+   // animate in the main text for this page
    let timeline = gsap.timeline({
       scrollTrigger: {
          trigger: '.who-we-are',
          start: 'top center',
          end: 'bottom bottom-=20',
-         id: 'who-we-are'
+         id: 'who-we-are',
+         onEnter: () => quickMarqueeSpeedup1(smqWhoWeAreOb),
+         
+         markers: false
       }
    });
 
@@ -246,6 +343,7 @@ function initWhoWeAre() {
          ease: 'power1.out',
          stagger: 0.3
       }, '+=25%')
+      // slide in the text from the side
       .from('.who-we-are .text__p', {
          duration: 1.6,
          xPercent: 75,
@@ -253,6 +351,7 @@ function initWhoWeAre() {
          ease: 'power2.out',
          stagger: 0.3
       }, 0)
+      // fade in the background
       .from('.who-we-are .text-wrapper', {
          duration: 5,
          autoAlpha: 0,
@@ -265,6 +364,7 @@ function initWhoWeAre() {
 
 
 /**
+ * ---------------------
  * How It Works Section
  * ---------------------
  * 
@@ -274,6 +374,7 @@ function initHowItWorks() {
 
    /**
     * Inital text presention
+    * -----------------------
     */
    
    let timeline = gsap.timeline({
@@ -294,6 +395,7 @@ function initHowItWorks() {
          ease: 'power1.out',
          stagger: 0.3
       }, '+=25%')
+      // slide in the text from the side
       .from('.how-it-works .text__p', {
          duration: 1.6,
          xPercent: 75,
@@ -301,6 +403,7 @@ function initHowItWorks() {
          ease: 'power2.out',
          stagger: 0.3
       }, 0)
+      // fade in the background
       .from('.how-it-works .text-wrapper', {
          duration: 5,
          autoAlpha: 0,
@@ -308,9 +411,11 @@ function initHowItWorks() {
       }, 0);
 
       
-      /* set the circle animation */ 
+      /* set the circle animation rotate angles */ 
       createCircleText('.outer .js-circle', 3.87);
       createCircleText('.inner .js-circle', 8.2);
+
+      
       
 }
   
@@ -333,9 +438,10 @@ function createCircleText(circle, ratio) {
 // @codekit-prepend './components/slider.js'
 // @codekit-prepend './components/marquee.js'
 // @codekit-prepend './components/header.js'
-// @codekit-prepend './components/splash.js'
-// @codekit-prepend './components/who-we-are.js'
-// @codekit-prepend './components/how-it-works.js
+
+// @codekit-prepend './sections/splash.js'
+// @codekit-prepend './sections/who-we-are.js'
+// @codekit-prepend './sections/how-it-works.js
 
 function circle() {
    
@@ -343,13 +449,15 @@ function circle() {
 
 function init() {
 
+   // components
    initHeader();
    initSlider();
-   initMarquee();
+   // initMarquee();
+   
+   // page sections 
    initSplashTilt();
    initWhoWeAre();
    initHowItWorks();
-   initCircle();
 
 }
 

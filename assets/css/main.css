@@ -6,6 +6,7 @@
 @import './globals/reset.css';
 @import './globals/responsive.css';
 @import './globals/util.css';
+@import './globals/section.css';
 
 /* @import './globals/debug.css'; */
 
@@ -13,7 +14,6 @@
 @import './sections/wireframe.css';
 @import './sections/header.css';
 @import './sections/splash.css';
-@import './sections/section.css';
 @import './sections/page.css';
 
 /* components */
@@ -21,6 +21,4 @@
 @import './components/slider.css';
 @import './components/marquee.css';
 @import './components/circle.css';
-
-/* prototypes */ 
 

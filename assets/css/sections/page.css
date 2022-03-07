@@ -1,5 +1,5 @@
 /**************************************/
-/* SECTIONS | DEFINITIONS
+/* SECTIONS | DEFINITIONS             */
 /**************************************/
 
 /*
@@ -10,6 +10,7 @@
 /* Section | How It Works            */  
 /* * * * * * * * * * * * * * * * * * */
 
+/* image column holds the rotating text */
 .how-it-works .image-col {
    /* min-height: 100vw; */
    
@@ -21,6 +22,8 @@
 
    /* background-color: bisque; */
 }
+
+
 
 
 

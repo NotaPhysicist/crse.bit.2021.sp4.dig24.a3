@@ -99,65 +99,39 @@ function setMarqueeDefaults(element) {
    setLetterSpacing(element, '0.092rem');
 }
 
-function quickMarqueeSpeedup1 (marquee) {
+/**
+ * Set to speed1, wait for a period, time, then set to speed2.
+ * Speed settings: 
+ *    "superslow"
+ *    "slow"
+ *    "medium"
+ *    "fast"
+ *    "superfast"
+ * Or number ~ 0.0125 - 0.2
+ */
 
-   // speed it up
-   marquee.setScrollSpeed('superfast');
+function marqueeChangeSpeed(marqueeObj, speed1, time, speed2) {
 
-   // wait a moment, then spin it down to a readable speed
+   // set first speed
+   marqueeObj.setScrollSpeed(speed1);
+
+   // wait, then set second speed
    setTimeout(() => {
-      marquee.setScrollSpeed('medium');
-   }, 6500);
+      marqueeObj.setScrollSpeed(speed2);
+   }, time);
 
 }
 
+function marqueeSpeedAnimation1(marqueeObj, speed1, time1, speed2, time2, speed3) {
 
+   marqueeChangeSpeed(marqueeObj, speed1, time1, speed2);
 
-
-
-
-
-/*
-function initMarquee() {
-
-   // Instantiate all the marquees with a set of default values
-   // Each 
+   setTimeout(() => {
+      marqueeChangeSpeed(marqueeObj, speed2, time2, speed3);
+   }, time1);
    
-   
-   
-   const marqueeElement = document.querySelectorAll('.js-smq');
-   const marqueeObject = [];
-   
-   const spacerHTMLposition = `position: relative`;
-   const spacerHTMLtranslate = `transform: translateY(0.075em)`;
-   const spacerHTMLcolor = `color: var(--color-accent)`;
-   const spacerHTML = `&nbsp<span style="${spacerHTMLcolor};${spacerHTMLposition};${spacerHTMLtranslate};">•<span>&nbsp`;
-   
-   for (let i = 0; i < marqueeElement.length; i++) {
-      marqueeObject[i] = new SuperMarquee(marqueeElement[i], {
-         'content': 'you don\'t know what happiness is',
-         'speed': 'superslow',
-         'pauseonhover': 'true',
-         'easing': 'true',
-         'spacer': spacerHTML
-      }); 
-   }
-   
-   // marquee [0] 'happiness' 
-   marqueeObject[0].setScrollContent('happiness');
-   
-   // marquee [1] 'the state of being happy' 
-   marqueeObject[1].setScrollContent('the state of being happy');
-   marqueeObject[1].setScrollSpeed('slow');
-   
-   // marquee [2] 'feeling or showing pleasure or contentment
-   marqueeObject[2].setScrollContent('feeling or showing pleasure or contentmment');
-   
-   // marqueeObject[3].setScrollContent('an emotional state or reaction');
-   // marqueeObject[4].setScrollContent('allowing, or causing to be visible');
-
 }
-*/
+
 
 /**
  * Header Animations
@@ -196,6 +170,53 @@ function initHeader() {
          className: 'has-scrolled'
       }
    });
+}
+
+/**
+ * ---------------------
+ * Body Text Animations
+ * ---------------------
+ *  
+ */
+
+function animateBodyText(section) {
+
+      // animate in the main text for this page
+   let timeline = gsap.timeline({
+      scrollTrigger: {
+         trigger: section,
+         start: 'top center',
+         end: 'bottom bottom-=20',
+         id: section,
+         
+         markers: false
+      }
+   });
+
+   timeline
+      // drop in the headings from above
+      .from(`${section} .text__heading`, {
+         duration: 1.8,
+         yPercent: -75,
+         autoAlpha: 0,
+         ease: 'power1.out',
+         stagger: 0.3
+      }, '+=25%')
+      // slide in the text from the side
+      .from(`${section} .text__p`, {
+         duration: 1.6,
+         xPercent: 75,
+         autoAlpha: 0,
+         ease: 'power2.out',
+         stagger: 0.3
+      }, 0)
+      // fade in the background
+      .from(`${section} .text-wrapper`, {
+         duration: 5,
+         autoAlpha: 0,
+         ease: 'power1.out'
+      }, 0);
+
 }
 
 /**
@@ -313,51 +334,38 @@ function moveText(event) {
  * 
  */
 
-function initWhoWeAre() {
 
-   //instantiate a marquee
-   const content = 'This website is an investigation into a single word, <i>happiness</i>. We did deep into the dictionary to discover what it might mean';
+function initWhoWeAre() {
+   
+   //instantiate set up the marquee to its initial settings
+   const boldOpen = `<span style="font-weight: 200;">`;
+   const boldClose = `</span>`;
+   const content = `This website is an investigation into a single word, ${boldOpen}happiness${boldClose}. We dig deep into the dictionary to discover what it might mean`;
+   
    const smqWhoWeAreEl = document.querySelector('.smq--who-we-are');
    const smqWhoWeAreOb = createMarquee(smqWhoWeAreEl, content);
    setMarqueeDefaults(smqWhoWeAreEl);
+   
+   // animate the marquee on scroll
+   ScrollTrigger.create({
+      trigger: '.who-we-are',
+      start: 'top center',
+      end: 'bottom bottom-=20',
+      id: 'marquee1',
+      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 5500, 'superslow', 3000, 'medium'),
 
-   // animate in the main text for this page
-   let timeline = gsap.timeline({
-      scrollTrigger: {
-         trigger: '.who-we-are',
-         start: 'top center',
-         end: 'bottom bottom-=20',
-         id: 'who-we-are',
-         onEnter: () => quickMarqueeSpeedup1(smqWhoWeAreOb),
-         
-         markers: false
-      }
+      markers: true
+
    });
 
-   timeline
-      // drop in the headings from above
-      .from('.who-we-are .text__heading', {
-         duration: 1.8,
-         yPercent: -75,
-         autoAlpha: 0,
-         ease: 'power1.out',
-         stagger: 0.3
-      }, '+=25%')
-      // slide in the text from the side
-      .from('.who-we-are .text__p', {
-         duration: 1.6,
-         xPercent: 75,
-         autoAlpha: 0,
-         ease: 'power2.out',
-         stagger: 0.3
-      }, 0)
-      // fade in the background
-      .from('.who-we-are .text-wrapper', {
-         duration: 5,
-         autoAlpha: 0,
-         ease: 'power1.out'
-      }, 0);
-      
+   
+
+   
+   
+   
+   // animate in the body text as we scroll into view
+   animateBodyText('.who-we-are');
+  
 }
 
 
@@ -373,64 +381,28 @@ function initWhoWeAre() {
 function initHowItWorks() {
 
    /**
-    * Inital text presention
-    * -----------------------
-    */
+    * Circle animation   
+    */ 
+   function createCircleText(circle, ratio) {
    
-   let timeline = gsap.timeline({
-      scrollTrigger: {
-         trigger: '.how-it-works',
-         start: 'top center',
-         end: 'bottom bottom-=20',
-         id: 'how-it-works'
-      }
-   });
-
-   timeline
-      // drop in the headings from above
-      .from('.how-it-works .text__heading', {
-         duration: 1.8,
-         yPercent: -75,
-         autoAlpha: 0,
-         ease: 'power1.out',
-         stagger: 0.3
-      }, '+=25%')
-      // slide in the text from the side
-      .from('.how-it-works .text__p', {
-         duration: 1.6,
-         xPercent: 75,
-         autoAlpha: 0,
-         ease: 'power2.out',
-         stagger: 0.3
-      }, 0)
-      // fade in the background
-      .from('.how-it-works .text-wrapper', {
-         duration: 5,
-         autoAlpha: 0,
-         ease: 'power1.out'
-      }, 0);
+      const text = document.querySelector(circle);
+      
+      /* rotate the text around the circle */ 
+      text.innerHTML = text.innerText.split("").map(
+         (char, i) => `<span style="transform: rotate(${i*ratio}deg)">${char}</span>`
+      ).join("");   
+   }
+   
+   animateBodyText('.how-it-works');   
 
       
-      /* set the circle animation rotate angles */ 
-      createCircleText('.outer .js-circle', 3.87);
-      createCircleText('.inner .js-circle', 8.2);
-
-      
+   /* set the circle animation rotate angles */ 
+   createCircleText('.outer .js-circle', 3.87);
+   createCircleText('.inner .js-circle', 8.2);
+   
       
 }
   
-/**
- * Circle animation   
- */ 
-function createCircleText(circle, ratio) {
-
-   const text = document.querySelector(circle);
-   
-   /* rotate the text around the circle */ 
-   text.innerHTML = text.innerText.split("").map(
-      (char, i) => `<span style="transform: rotate(${i*ratio}deg)">${char}</span>`
-   ).join("");   
-}
       
       
    
@@ -438,6 +410,7 @@ function createCircleText(circle, ratio) {
 // @codekit-prepend './components/slider.js'
 // @codekit-prepend './components/marquee.js'
 // @codekit-prepend './components/header.js'
+// @codekit-prepend './components/body-text.js'
 
 // @codekit-prepend './sections/splash.js'
 // @codekit-prepend './sections/who-we-are.js'

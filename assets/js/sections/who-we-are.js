@@ -5,51 +5,38 @@
  * 
  */
 
-function initWhoWeAre() {
 
-   //instantiate a marquee
-   const content = 'This website is an investigation into a single word, <i>happiness</i>. We did deep into the dictionary to discover what it might mean';
+function initWhoWeAre() {
+   
+   //instantiate set up the marquee to its initial settings
+   const boldOpen = `<span style="font-weight: 200;">`;
+   const boldClose = `</span>`;
+   const content = `This website is an investigation into a single word, ${boldOpen}happiness${boldClose}. We dig deep into the dictionary to discover what it might mean`;
+   
    const smqWhoWeAreEl = document.querySelector('.smq--who-we-are');
    const smqWhoWeAreOb = createMarquee(smqWhoWeAreEl, content);
    setMarqueeDefaults(smqWhoWeAreEl);
+   
+   // animate the marquee on scroll
+   ScrollTrigger.create({
+      trigger: '.who-we-are',
+      start: 'top center',
+      end: 'bottom bottom-=20',
+      id: 'marquee1',
+      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 5500, 'superslow', 3000, 'medium'),
 
-   // animate in the main text for this page
-   let timeline = gsap.timeline({
-      scrollTrigger: {
-         trigger: '.who-we-are',
-         start: 'top center',
-         end: 'bottom bottom-=20',
-         id: 'who-we-are',
-         onEnter: () => quickMarqueeSpeedup1(smqWhoWeAreOb),
-         
-         markers: false
-      }
+      markers: true
+
    });
 
-   timeline
-      // drop in the headings from above
-      .from('.who-we-are .text__heading', {
-         duration: 1.8,
-         yPercent: -75,
-         autoAlpha: 0,
-         ease: 'power1.out',
-         stagger: 0.3
-      }, '+=25%')
-      // slide in the text from the side
-      .from('.who-we-are .text__p', {
-         duration: 1.6,
-         xPercent: 75,
-         autoAlpha: 0,
-         ease: 'power2.out',
-         stagger: 0.3
-      }, 0)
-      // fade in the background
-      .from('.who-we-are .text-wrapper', {
-         duration: 5,
-         autoAlpha: 0,
-         ease: 'power1.out'
-      }, 0);
-      
+   
+
+   
+   
+   
+   // animate in the body text as we scroll into view
+   animateBodyText('.who-we-are');
+  
 }
 
 

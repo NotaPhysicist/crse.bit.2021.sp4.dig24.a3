@@ -8,64 +8,28 @@
 function initHowItWorks() {
 
    /**
-    * Inital text presention
-    * -----------------------
-    */
+    * Circle animation   
+    */ 
+   function createCircleText(circle, ratio) {
    
-   let timeline = gsap.timeline({
-      scrollTrigger: {
-         trigger: '.how-it-works',
-         start: 'top center',
-         end: 'bottom bottom-=20',
-         id: 'how-it-works'
-      }
-   });
-
-   timeline
-      // drop in the headings from above
-      .from('.how-it-works .text__heading', {
-         duration: 1.8,
-         yPercent: -75,
-         autoAlpha: 0,
-         ease: 'power1.out',
-         stagger: 0.3
-      }, '+=25%')
-      // slide in the text from the side
-      .from('.how-it-works .text__p', {
-         duration: 1.6,
-         xPercent: 75,
-         autoAlpha: 0,
-         ease: 'power2.out',
-         stagger: 0.3
-      }, 0)
-      // fade in the background
-      .from('.how-it-works .text-wrapper', {
-         duration: 5,
-         autoAlpha: 0,
-         ease: 'power1.out'
-      }, 0);
+      const text = document.querySelector(circle);
+      
+      /* rotate the text around the circle */ 
+      text.innerHTML = text.innerText.split("").map(
+         (char, i) => `<span style="transform: rotate(${i*ratio}deg)">${char}</span>`
+      ).join("");   
+   }
+   
+   animateBodyText('.how-it-works');   
 
       
-      /* set the circle animation rotate angles */ 
-      createCircleText('.outer .js-circle', 3.87);
-      createCircleText('.inner .js-circle', 8.2);
-
-      
+   /* set the circle animation rotate angles */ 
+   createCircleText('.outer .js-circle', 3.87);
+   createCircleText('.inner .js-circle', 8.2);
+   
       
 }
   
-/**
- * Circle animation   
- */ 
-function createCircleText(circle, ratio) {
-
-   const text = document.querySelector(circle);
-   
-   /* rotate the text around the circle */ 
-   text.innerHTML = text.innerText.split("").map(
-      (char, i) => `<span style="transform: rotate(${i*ratio}deg)">${char}</span>`
-   ).join("");   
-}
       
       
    

@@ -67,62 +67,35 @@ function setMarqueeDefaults(element) {
    setLetterSpacing(element, '0.092rem');
 }
 
-function quickMarqueeSpeedup1 (marquee) {
+/**
+ * Set to speed1, wait for a period, time, then set to speed2.
+ * Speed settings: 
+ *    "superslow"
+ *    "slow"
+ *    "medium"
+ *    "fast"
+ *    "superfast"
+ * Or number ~ 0.0125 - 0.2
+ */
 
-   // speed it up
-   marquee.setScrollSpeed('superfast');
+function marqueeChangeSpeed(marqueeObj, speed1, time, speed2) {
 
-   // wait a moment, then spin it down to a readable speed
+   // set first speed
+   marqueeObj.setScrollSpeed(speed1);
+
+   // wait, then set second speed
    setTimeout(() => {
-      marquee.setScrollSpeed('medium');
-   }, 6500);
+      marqueeObj.setScrollSpeed(speed2);
+   }, time);
 
 }
 
+function marqueeSpeedAnimation1(marqueeObj, speed1, time1, speed2, time2, speed3) {
 
+   marqueeChangeSpeed(marqueeObj, speed1, time1, speed2);
 
-
-
-
-
-/*
-function initMarquee() {
-
-   // Instantiate all the marquees with a set of default values
-   // Each 
+   setTimeout(() => {
+      marqueeChangeSpeed(marqueeObj, speed2, time2, speed3);
+   }, time1);
    
-   
-   
-   const marqueeElement = document.querySelectorAll('.js-smq');
-   const marqueeObject = [];
-   
-   const spacerHTMLposition = `position: relative`;
-   const spacerHTMLtranslate = `transform: translateY(0.075em)`;
-   const spacerHTMLcolor = `color: var(--color-accent)`;
-   const spacerHTML = `&nbsp<span style="${spacerHTMLcolor};${spacerHTMLposition};${spacerHTMLtranslate};">•<span>&nbsp`;
-   
-   for (let i = 0; i < marqueeElement.length; i++) {
-      marqueeObject[i] = new SuperMarquee(marqueeElement[i], {
-         'content': 'you don\'t know what happiness is',
-         'speed': 'superslow',
-         'pauseonhover': 'true',
-         'easing': 'true',
-         'spacer': spacerHTML
-      }); 
-   }
-   
-   // marquee [0] 'happiness' 
-   marqueeObject[0].setScrollContent('happiness');
-   
-   // marquee [1] 'the state of being happy' 
-   marqueeObject[1].setScrollContent('the state of being happy');
-   marqueeObject[1].setScrollSpeed('slow');
-   
-   // marquee [2] 'feeling or showing pleasure or contentment
-   marqueeObject[2].setScrollContent('feeling or showing pleasure or contentmment');
-   
-   // marqueeObject[3].setScrollContent('an emotional state or reaction');
-   // marqueeObject[4].setScrollContent('allowing, or causing to be visible');
-
 }
-*/

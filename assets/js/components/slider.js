@@ -6,7 +6,30 @@
  */
 
 function initSlider() {
-   
+
+   // instantiate "happiness" marquee to sit above the image slider
+   const smqHappinessEl = document.querySelector('.smq--happiness');
+   const smqHappinessOb = createMarquee(smqHappinessEl, 'happiness');
+   setMarqueeDefaults(smqHappinessEl);
+
+   setMarqueeFontSize(smqHappinessEl, 'var(--text-xl');
+   // setMarqueeFontWeight(smqHappinessEl, '200');
+   setMarqueeLineHeight(smqHappinessEl, '1');
+   smqHappinessOb.setScrollSpeed('superslow');   
+
+
+
+   //instantiate "what say you" marquee to sit below the image slider
+   const whatSayYou = 'What do you think it means?';
+   const smqWhatSayYouEl = document.querySelector('.smq--what-say-you');
+   const smqWhatSayYouOb = createMarquee(smqWhatSayYouEl, whatSayYou);
+   setMarqueeDefaults(smqWhatSayYouEl);
+
+   setMarqueeLineHeight(smqWhatSayYouEl, '1.8');
+   smqWhatSayYouOb.setScrollSpeed('slow');
+
+
+   // instantiate the image slider and set it in motion. 
    const slider = tns({
       container: '.js-slider',
       mode: 'carousel',

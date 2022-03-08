@@ -6,7 +6,30 @@
  */
 
 function initSlider() {
-   
+
+   // instantiate "happiness" marquee to sit above the image slider
+   const smqHappinessEl = document.querySelector('.smq--happiness');
+   const smqHappinessOb = createMarquee(smqHappinessEl, 'happiness');
+   setMarqueeDefaults(smqHappinessEl);
+
+   setMarqueeFontSize(smqHappinessEl, 'var(--text-xl');
+   // setMarqueeFontWeight(smqHappinessEl, '200');
+   setMarqueeLineHeight(smqHappinessEl, '1');
+   smqHappinessOb.setScrollSpeed('superslow');   
+
+
+
+   //instantiate "what say you" marquee to sit below the image slider
+   const whatSayYou = 'What do you think it means?';
+   const smqWhatSayYouEl = document.querySelector('.smq--what-say-you');
+   const smqWhatSayYouOb = createMarquee(smqWhatSayYouEl, whatSayYou);
+   setMarqueeDefaults(smqWhatSayYouEl);
+
+   setMarqueeLineHeight(smqWhatSayYouEl, '1.8');
+   smqWhatSayYouOb.setScrollSpeed('slow');
+
+
+   // instantiate the image slider and set it in motion. 
    const slider = tns({
       container: '.js-slider',
       mode: 'carousel',
@@ -75,15 +98,15 @@ function setMarqueeFontSize(element, fontSize) {
    element.style.fontSize = fontSize;
 }
 
-function setFontWeight(element, fontWeight) {
+function setMarqueeFontWeight(element, fontWeight) {
    element.style.fontWeight = fontWeight;
 }
 
-function setColor(element, color) {
+function setMarqueeColor(element, color) {
    element.style.color = color;
 }
 
-function setLetterSpacing(element, letterspacing) {
+function setMarqueeLetterSpacing(element, letterspacing) {
    element.style.letterSpacing = letterspacing;
 }
 
@@ -91,12 +114,14 @@ function setLetterSpacing(element, letterspacing) {
  * Set the SuperMarquee to a set of default CSS values
  */
 function setMarqueeDefaults(element) {
+
    setMarqueeFontFamily(element, 'Poppins');
    setMarqueeLineHeight(element, 2.6);
    setMarqueeFontSize(element, 'var(--text-lg)');
-   setFontWeight(element, 100);
-   setColor(element, 'var(--color-main');
-   setLetterSpacing(element, '0.092rem');
+   setMarqueeFontWeight(element, 100);
+   setMarqueeColor(element, 'var(--color-main');
+   setMarqueeLetterSpacing(element, '0.092rem');
+
 }
 
 /**
@@ -352,9 +377,9 @@ function initWhoWeAre() {
       start: 'top center',
       end: 'bottom bottom-=20',
       id: 'marquee1',
-      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 5500, 'superslow', 3000, 'medium'),
+      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 3500, 'superslow', 3500, 'medium'),
 
-      markers: true
+      markers: false
 
    });
 

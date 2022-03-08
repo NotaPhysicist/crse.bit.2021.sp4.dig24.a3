@@ -7,7 +7,7 @@
  */
 
 .slider {
-   margin: var(--space-32);
+   /* margin: var(--space-32); */
 }
 
 .slider__image {
@@ -15,7 +15,6 @@
    /* width: auto; */
    filter: grayscale(0.8) brightness(1.2) contrast(1.2);
    display: inline-block;
-   
 }
 
 /** 

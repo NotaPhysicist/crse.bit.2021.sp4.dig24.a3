@@ -23,9 +23,9 @@ function initWhoWeAre() {
       start: 'top center',
       end: 'bottom bottom-=20',
       id: 'marquee1',
-      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 5500, 'superslow', 3000, 'medium'),
+      onEnter: () => marqueeSpeedAnimation1(smqWhoWeAreOb, 0.4, 3500, 'superslow', 3500, 'medium'),
 
-      markers: true
+      markers: false
 
    });
 

@@ -43,15 +43,15 @@ function setMarqueeFontSize(element, fontSize) {
    element.style.fontSize = fontSize;
 }
 
-function setFontWeight(element, fontWeight) {
+function setMarqueeFontWeight(element, fontWeight) {
    element.style.fontWeight = fontWeight;
 }
 
-function setColor(element, color) {
+function setMarqueeColor(element, color) {
    element.style.color = color;
 }
 
-function setLetterSpacing(element, letterspacing) {
+function setMarqueeLetterSpacing(element, letterspacing) {
    element.style.letterSpacing = letterspacing;
 }
 
@@ -59,12 +59,14 @@ function setLetterSpacing(element, letterspacing) {
  * Set the SuperMarquee to a set of default CSS values
  */
 function setMarqueeDefaults(element) {
+
    setMarqueeFontFamily(element, 'Poppins');
    setMarqueeLineHeight(element, 2.6);
    setMarqueeFontSize(element, 'var(--text-lg)');
-   setFontWeight(element, 100);
-   setColor(element, 'var(--color-main');
-   setLetterSpacing(element, '0.092rem');
+   setMarqueeFontWeight(element, 100);
+   setMarqueeColor(element, 'var(--color-main');
+   setMarqueeLetterSpacing(element, '0.092rem');
+
 }
 
 /**

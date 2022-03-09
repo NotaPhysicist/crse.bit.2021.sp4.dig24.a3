@@ -32,15 +32,15 @@ Container and pure-g HTML 3-column template
    flex-direction: column;
    justify-content: center;
 
-   /* border: 1px solid burlywood; */
+   border: 1px solid burlywood;
 }
 
-/*
+/* wraps the content of the section which gets positioned in a 
+ * vertically centered flex column
+ */
 .section__inner {
-   wraps all the content of the 'page' section, to be positioned 
-   in a vertically centered llex column in the parent .section
+   position: relative;
 }
-*/
 
 /* column one */
 .image-col {

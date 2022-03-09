@@ -55,6 +55,11 @@ function setMarqueeLetterSpacing(element, letterspacing) {
    element.style.letterSpacing = letterspacing;
 }
 
+function setMarqueeToSticky(element, offset) {
+   element.style.position = 'sticky';
+   element.style.top = offset;
+}
+
 /**
  * Set the SuperMarquee to a set of default CSS values
  */
@@ -92,12 +97,14 @@ function marqueeChangeSpeed(marqueeObj, speed1, time, speed2) {
 
 }
 
-function marqueeSpeedAnimation1(marqueeObj, speed1, time1, speed2, time2, speed3) {
+function marqueeSpeedAnimation1(marqueeObj, speed1, pause1, speed2, pause2, speed3) {
 
-   marqueeChangeSpeed(marqueeObj, speed1, time1, speed2);
+   // from speed1, pause, to speed2
+   marqueeChangeSpeed(marqueeObj, speed1, pause1, speed2);
 
+   // pause, then from speed2, pause, to speed 3
    setTimeout(() => {
-      marqueeChangeSpeed(marqueeObj, speed2, time2, speed3);
-   }, time1);
+      marqueeChangeSpeed(marqueeObj, speed2, pause2, speed3);
+   }, pause1);
    
 }

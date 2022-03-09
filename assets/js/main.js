@@ -13,15 +13,13 @@ function circle() {
 
 function init() {
 
-   // components
+   
    initHeader();
    initSlider();
-   // initMarquee();
-   
-   // page sections 
    initSplashTilt();
    initWhoWeAre();
    initHowItWorks();
+   // happiness();
 
 }
 

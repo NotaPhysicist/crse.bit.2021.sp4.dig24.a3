@@ -1,4 +1,5 @@
 /**
+ * ---------------------
  * Slider Image Gallery
  * ---------------------
  * Instantiate and configure the tiny slider library. 
@@ -8,7 +9,7 @@
 function initSlider() {
 
    // instantiate "happiness" marquee to sit above the image slider
-   const smqHappinessEl = document.querySelector('.smq--happiness');
+   const smqHappinessEl = document.querySelector('.smq--happiness > .smq');
    const smqHappinessOb = createMarquee(smqHappinessEl, 'happiness');
    setMarqueeDefaults(smqHappinessEl);
 
@@ -17,18 +18,17 @@ function initSlider() {
    setMarqueeLineHeight(smqHappinessEl, '1');
    smqHappinessOb.setScrollSpeed('superslow');   
 
+   // become sticky at the correct offset from the top
+   // becoming sticky animation
+   //   - marqueeSpeedAnimation1()
+   //   - shrink down to a smaller size
+   // become unsticky and rejoin the flow of the page
+   //   - marqueeSpeedAnimation1()
+   //   - shrink up to it's prior size
 
-
-   //instantiate "what say you" marquee to sit below the image slider
-   const whatSayYou = 'What do you think it means?';
-   const smqWhatSayYouEl = document.querySelector('.smq--what-say-you');
-   const smqWhatSayYouOb = createMarquee(smqWhatSayYouEl, whatSayYou);
-   setMarqueeDefaults(smqWhatSayYouEl);
-
-   setMarqueeLineHeight(smqWhatSayYouEl, '1.8');
-   smqWhatSayYouOb.setScrollSpeed('slow');
-
-
+   // setMarqueeToSticky(smqHappinessOb, 0);
+   
+   
    // instantiate the image slider and set it in motion. 
    const slider = tns({
       container: '.js-slider',
@@ -43,11 +43,23 @@ function initSlider() {
       autoWidth: true, 
       center: true,
       touch: true,
-      // mouseDrag: true,
+      mouseDrag: false,
       controls: false,
       nav: false,
       loop: true,
       autoplayButton: false
    });
+
+   
+   //instantiate "what say you" marquee to sit below the image slider
+   const whatSayYou = 'What does it mean?';
+   const smqWhatSayYouEl = document.querySelector('.smq--what-say-you > .smq');
+   const smqWhatSayYouOb = createMarquee(smqWhatSayYouEl, whatSayYou);
+   setMarqueeDefaults(smqWhatSayYouEl);
+
+   setMarqueeLineHeight(smqWhatSayYouEl, '1.8');
+   smqWhatSayYouOb.setScrollSpeed('slow');
+
+
 
 }
